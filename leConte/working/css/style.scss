@@ -531,6 +531,10 @@ img.aligncenter {
   padding: 5px;
     width: 100%;
 }
+.jumbotron.callout img.aligncenter {
+  margin: 0;
+  padding: 0;
+}
 figure.wp-caption.alignnone {
    border: 1px solid lighten($text-color, 65%);
     float: right;

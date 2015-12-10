@@ -7895,7 +7895,13 @@ figure.wp-caption.alignright {
   width: 50%;
 }
 
-figure.wp-caption.alignnone,
+img.alignright {
+  float: right;
+  margin: 0 0 20px 20px;
+  padding: 5px;
+  width: 50%;
+}
+
 figure.wp-caption.aligncenter {
   border: 1px solid #d9d9d9;
   margin: 0 0 20px;
@@ -7903,8 +7909,54 @@ figure.wp-caption.aligncenter {
   width: 100%;
 }
 
+img.aligncenter {
+  margin: 0 0 20px;
+  padding: 5px;
+  width: 100%;
+}
+
+.jumbotron.callout img.aligncenter {
+  margin: 0;
+  padding: 0;
+}
+
+figure.wp-caption.alignnone {
+  border: 1px solid #d9d9d9;
+  float: right;
+  margin: 0 0 20px 20px;
+  padding: 5px;
+  width: 50%;
+}
+
+img.alignnone {
+  float: right;
+  height: auto;
+  margin: 0 0 20px 20px;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  figure.wp-caption.alignnone {
+    border: 1px solid #d9d9d9;
+    float: right;
+    margin: 0 0 20px 20px;
+    padding: 5px;
+    width: 25%;
+  }
+
+  img.alignnone {
+    width: 25%;
+  }
+}
 figure.wp-caption.alignleft {
   border: 1px solid #d9d9d9;
+  float: left;
+  margin: 0 20px 20px 0;
+  padding: 5px;
+  width: 50%;
+}
+
+img.alignleft {
   float: left;
   margin: 0 20px 20px 0;
   padding: 5px;
@@ -7931,7 +7983,8 @@ figure.wp-caption.aligncenter figcaption.wp-caption-text {
 
 @media screen and (max-width: 767px) {
   figure.wp-caption.alignright,
-  figure.wp-caption.alignleft {
+  figure.wp-caption.alignleft,
+  img.alignright {
     width: 100%;
   }
 }
