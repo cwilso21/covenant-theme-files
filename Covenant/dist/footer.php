@@ -1,0 +1,55 @@
+    </div> <!-- /content-wrapper -->
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 brand-section pull-right">
+            <p>
+              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/covenant-health-logo.png" width="150" height="38" alt="Covenant Health logo" title="Covenant Health logo"></a><br><br>
+              &copy; 2009 &ndash; <?php echo date('Y'); ?> Covenant Health<br>
+              100 Fort Sanders West Blvd.<br>
+              Knoxville, TN 37922<br>
+              (865) 374-1000
+            </p>
+          </div> <!-- /.brand-section -->
+          <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 link-section pull-left">
+            <div class="row">
+              <div class="col-xs-12">
+                <?php
+                  $defaults = array(
+                    'theme_location'  => 'social-links',
+                    'menu'            => 'social-links',
+                    'container'       => false,
+                    'menu_class'      => '',
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'depth'           => 0,
+                  );
+
+                  wp_nav_menu( $defaults );
+                ?>
+                <hr>
+              </div> <!-- /.socialLinks columns -->
+              <div class="col-xs-12">
+                <?php
+                  $defaults = array(
+                    'theme_location'  => 'footer-links',
+                    'menu'            => 'footer-links',
+                    'container'       => false,
+                    'menu_class'      => 'footer-links',
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'depth'           => 0,
+                  );
+
+                  wp_nav_menu( $defaults );
+                ?>
+              </div> <!-- /.footer-links column -->
+            </div> <!-- /.row -->
+          </div> <!-- /.link-section -->
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </footer> <!-- /.footer -->
+    <?php wp_footer(); ?>
+  </body>
+</html>
