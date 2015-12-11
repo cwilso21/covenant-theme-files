@@ -538,27 +538,15 @@ img.aligncenter {
 figure.wp-caption.alignnone {
    border: 1px solid lighten($text-color, 65%);
     float: right;
-   margin: 0 0 20px 20px;
+   margin: 0 0 20px;
   padding: 5px;
-    width: 50%;
+    width: 100%;
 }
 img.alignnone {
    float: right;
-  height: auto;
-  margin: 0 0 20px 20px;
-   width: 50%;
-}
-@media screen and (min-width: 768px) {
-  figure.wp-caption.alignnone {
-     border: 1px solid lighten($text-color, 65%);
-      float: right;
-     margin: 0 0 20px 20px;
-    padding: 5px;
-      width: 25%;
-  }
-  img.alignnone {
-    width: 25%;
-  }
+   margin: 0 0 20px;
+  padding: 5px;
+    width: 100%;
 }
 figure.wp-caption.alignleft {
    border: 1px solid lighten($text-color, 65%);
@@ -593,6 +581,11 @@ figure.wp-caption.aligncenter figcaption.wp-caption-text {
   figure.wp-caption.alignright,
   figure.wp-caption.alignleft,
   img.alignright {
+    width: 100%;
+  }
+}
+@media screen and (min-width:768px) {
+  figure.wp-caption.alignnone {
     width: 100%;
   }
 }

@@ -5,7 +5,7 @@
  * Author     : John Galyon | @galyon_j
  * Author URI : http://www.covenanthealth.com
  * Created    : November 9, 2015
- * Updated    : December 1, 2015
+ * Updated    : December 11, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -26,7 +26,7 @@ get_header(); ?>
           </div> <!-- /col-xs-12 -->
         </div> <!-- /row headline-row -->
         <div class="row content-row">
-          <main class="col-xs-12 main-content" role="main">
+          <main class="col-xs-12 col-sm-12 col-md-8 col-lg-8 main-content" role="main">
             <article id="post-<?php the_ID(); ?>" <?php post_class($post->post_name); ?>>
               <?php edit_post_link('<i class="fa fa-pencil"></i> Edit This Page'); ?>
               <?php the_content(); ?>

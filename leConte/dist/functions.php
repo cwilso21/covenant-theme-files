@@ -198,3 +198,8 @@ function my_theme_add_editor_styles() {
     add_editor_style('editor-style.css');
 }
 add_action( 'admin_init', 'my_theme_add_editor_styles' );
+
+function add_page_excerpts() {
+  add_post_type_support('page', 'excerpt');
+}
+add_action('init', 'add_page_excerpts');

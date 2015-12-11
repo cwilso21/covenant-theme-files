@@ -84,25 +84,6 @@ function remove_width_attribute( $html )
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
-
-// add responsive class to images inside the content area
-function add_responsive_class_img($content){
-
-  $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
-  $document = new DOMDocument();
-  libxml_use_internal_errors(true);
-  $document->loadHTML(utf8_decode($content));
-
-  $imgs = $document->getElementsByTagName('img');
-  foreach ($imgs as $img) {
-     $img->setAttribute('class','img-responsive');
-  }
-
-  $html = $document->saveHTML();
-  return $html;
-}
-add_filter('the_content', 'add_responsive_class_img');
-
 function wp_trim_all_excerpt($text) {
 // Creates an excerpt if needed; and shortens the manual excerpt as well
 global $post;
@@ -214,6 +195,11 @@ function wp_bs_pagination($pages = '', $range = 4)
 }
 
 function my_theme_add_editor_styles() {
-    add_editor_style();
+    add_editor_style('editor-style.css');
 }
 add_action( 'admin_init', 'my_theme_add_editor_styles' );
+
+function add_page_excerpts() {
+  add_post_type_support('page', 'excerpt');
+}
+add_action('init', 'add_page_excerpts');
