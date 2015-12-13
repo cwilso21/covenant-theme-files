@@ -23,6 +23,7 @@ get_header(); ?>
             </article>
           </div>
         </div>
+        <hr>
       </div> <!-- /welcome-container -->
       <div class="container resources-container clearfix">
         <div class="row resources-row">

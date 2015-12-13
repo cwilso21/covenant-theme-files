@@ -5,8 +5,8 @@
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 brand-section pull-right">
             <p>
-              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/leconte-logo.png" width="150" height="auto" alt="LeConte Medical Center logo" title="LeConte Medical Center logo"></a><br><br>
-              &copy; 2009 &ndash; <?php echo date('Y'); ?> LeConte Medical Center<br>
+              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/leconte-logo.png" width="150" height="auto" alt="LeConte Medical Center logo" title="LeConte Medical Center logo"></a><br>
+              &copy; <?php echo date('Y'); ?> LeConte Medical Center<br>
               742 Middle Creek Road<br>
               Sevierville, TN 37862<br>
               (865) 453-WELL

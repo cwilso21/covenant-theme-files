@@ -19,11 +19,20 @@ if ( ! function_exists('custom_theme_features') ) {
 }
 
 // enqueue style and script for covenant health theme
-function wpdocs_theme_name_scripts() {
-    wp_enqueue_style( 'covenant-main', get_stylesheet_uri() );
-    wp_enqueue_script( 'covenant-main-js', get_template_directory_uri() . '/js/ch-main.js', array(), '1.0.0', true );
+function covenant_scripts() {
+    // deregister the version of jquery that gets loaded with Wordpress
+    wp_deregister_script('jquery');
+
+    // register the scrips that need to be loaded with the theme
+    wp_register_script('main', get_template_directory_uri() . '/js/ch-main.js');
+
+    // enqeue the master stylesheet
+    wp_enqueue_style('covenant-main', get_stylesheet_uri());
+
+    // enqueue the master scripts
+    wp_enqueue_script('main');
 }
-add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
+add_action( 'wp_enqueue_scripts', 'covenant_scripts' );
 
 // registration for menus that exist outside of the main page navigation
 if ( ! function_exists( 'covenant_nav_menus' ) ) {

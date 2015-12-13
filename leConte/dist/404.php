@@ -20,8 +20,8 @@ get_header(); ?>
           <main>
             <div class="row content-row">
               <div class="col-xs-12">
-                <article id="post-<?php the_ID(); ?>" <?php post_class($post->post_name); ?>>
-                  <p>The page you were trying to reach doesn't seem to exist. This is usually the result of a bad or outdated link. We apologize for any inconvenience.</p>
+                <article>
+                  <p class="lead">The page you were trying to reach doesn't seem to exist. This is usually the result of a bad or outdated link. We apologize for any inconvenience.</p>
                   <h2>What can I do now?</h2>
                   <p>If this is your first time visiting LeConte Medical Center, welcome! We apologize for the circumstances under which we’re meeting. Here’s where you can go from here:</p>
                   <ul>

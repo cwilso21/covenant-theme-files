@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
- * Theme Name: Covenant Health Theme
+ * Theme Name: LeConte Medical Center Theme
  * Description: Bootstrap-based theme for covenanthealth.com
  * Author: John Galyon | @galyon_j
  * Author URI: http://www.covenanthealth.com/
@@ -7390,12 +7390,13 @@ header:hover {
   font-size: 11px;
   font-weight: 600;
   padding: 6px 5px 5px;
+  text-decoration: none;
 }
 
 .top-links li a:active,
+.top-links li a:focus,
 .top-links li a:hover {
   color: #fff;
-  text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -7606,6 +7607,7 @@ header:hover {
 
 .jumbotron.callout {
   background: none;
+  border-bottom: 1px solid #427730;
   margin-bottom: 0;
   padding: 0;
 }
@@ -7747,6 +7749,10 @@ h2[id^="post"] {
 p,
 .content-container ul li {
   font-weight: 300;
+}
+
+.introduction-row article p:last-of-type {
+  margin-bottom: 0;
 }
 
 p a:link,
