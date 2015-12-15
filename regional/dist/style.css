@@ -6023,13 +6023,16 @@ header:hover {
 
 .jumbotron.callout {
   background: none;
-  border-bottom: 1px solid #981e32;
   margin-bottom: 0;
   padding: 0; }
 
 .jumbotron.callout .alignnone,
-.jumbotron.callout a img.alignnone {
-  margin: 0; }
+.jumbotron.callout a img.alignnone,
+.jumbotron.callout .aligncenter,
+.jumbotron.callout a img.aligncenter {
+  border-bottom: 1px solid #981e32;
+  margin: 0;
+  padding: 0; }
 
 .jumbotron.callout img {
   height: auto;
@@ -6134,10 +6137,10 @@ h2[id^="post"] {
 
 p,
 .content-container ul li,
-.introduction-row article ul li {
+.introduction-row main ul li {
   font-weight: 300; }
 
-.introduction-row article p:last-of-type {
+.introduction-row main p:last-of-type {
   margin-bottom: 0; }
 
 p a:link,
@@ -6186,7 +6189,7 @@ blockquote > footer {
 
 .content-container p ul,
 .content-container ul,
-.introduction-row article ul {
+.introduction-row main ul {
   list-style-type: square;
   padding-left: 20px; }
 

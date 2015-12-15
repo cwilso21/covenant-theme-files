@@ -18,9 +18,9 @@ get_header(); ?>
         <div class="row introduction-row">
           <div class="col-xs-12">
             <h1><?php the_title(); ?></h1>
-            <article id="post-<?php the_ID(); ?>" <?php post_class($post->post_name); ?>>
+            <main id="post-<?php the_ID(); ?>" <?php post_class($post->post_name); ?>>
               <?php the_content(); ?>
-            </article>
+            </main>
           </div>
         </div>
         <hr>

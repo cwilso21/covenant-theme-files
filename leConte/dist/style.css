@@ -7607,14 +7607,17 @@ header:hover {
 
 .jumbotron.callout {
   background: none;
-  border-bottom: 1px solid #427730;
   margin-bottom: 0;
   padding: 0;
 }
 
 .jumbotron.callout .alignnone,
-.jumbotron.callout a img.alignnone {
+.jumbotron.callout a img.alignnone,
+.jumbotron.callout .aligncenter,
+.jumbotron.callout a img.aligncenter {
+  border-bottom: 1px solid #427730;
   margin: 0;
+  padding: 0;
 }
 
 .jumbotron.callout img {
@@ -7747,11 +7750,12 @@ h2[id^="post"] {
 }
 
 p,
-.content-container ul li {
+.content-container ul li,
+.introduction-row main ul li {
   font-weight: 300;
 }
 
-.introduction-row article p:last-of-type {
+.introduction-row main p:last-of-type {
   margin-bottom: 0;
 }
 

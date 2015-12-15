@@ -18,9 +18,9 @@ get_header(); ?>
         <div class="row introduction-row">
           <div class="col-xs-12">
             <h1><?php the_title(); ?></h1>
-            <article id="post-<?php the_ID(); ?>" <?php post_class($post->post_name); ?>>
+            <main id="post-<?php the_ID(); ?>" <?php post_class($post->post_name); ?>>
               <?php the_content(); ?>
-            </article>
+            </main>
           </div>
         </div>
         <hr>
@@ -83,13 +83,13 @@ get_header(); ?>
           </div>
         </div> <!-- /resources-row -->
       </div> <!-- /resources-container -->
-      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/img/front-page-assets/covenant-facilities-map.jpg">
+      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/img/front-page-assets/regional-mob-bkg.jpg">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <div class="well translucent-well">
-                <h3>Our Hospitals</h3>
-                <p>Visit our <a href="<?php echo get_page_link(18); ?>">hospitals page</a> for more information about each of our acute care facilities, or to find the facility closest to you.</p>
+                <h3>Our Services</h3>
+                <p>Visit our <a href="<?php echo get_page_link(189); ?>">services page</a> for more information about each of the services offered at Fort Sanders Regional Medical Center.</p>
               </div>
             </div>
           </div>
