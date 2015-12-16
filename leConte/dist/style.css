@@ -7436,7 +7436,7 @@ header:hover {
   border-color: #2e5321;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
   margin-bottom: 0;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .navbar-default .navbar-toggle:hover,
@@ -7460,7 +7460,7 @@ header:hover {
 }
 
 .navbar-brand {
-  padding-top: 15px;
+  padding-top: 5px;
 }
 
 .navbar-brand img {
@@ -7501,7 +7501,7 @@ header:hover {
 @media (min-width: 768px) {
   .navbar-default .navbar-nav {
     padding-bottom: 10px;
-    padding-top: 45px;
+    padding-top: 35px;
   }
 
   .navbar-fixed-top .navbar-default .container .navbar-collapse .nav.navbar-nav {
@@ -7575,7 +7575,7 @@ header:hover {
 
   .navbar-default .navbar-nav {
     padding-bottom: 0;
-    padding-top: 50px;
+    padding-top: 42px;
   }
 
   .navbar-nav > li > .dropdown-menu {
@@ -7811,7 +7811,8 @@ blockquote > footer {
 }
 
 .content-container p ul,
-.content-container ul {
+.content-container ul,
+.introduction-row main ul {
   list-style-type: square;
   padding-left: 20px;
 }
@@ -8454,13 +8455,34 @@ li.tribe-bar-views-option.tribe-bar-views-option-month.tribe-bar-active,
   padding-right: 15px;
 }
 
+#tribe-bar-form {
+  background: none;
+}
+
 @media screen and (max-width: 992px) {
-  .tribe-bar-date-filter {
-    padding: 0 0 10px 0;
+  #tribe-bar-form #tribe-bar-views + .tribe-bar-filters {
+    right: 20%;
+    width: auto;
+  }
+
+  #tribe-bar-form #tribe-bar-views {
+    left: 80%;
+    width: 20%;
+  }
+
+  .tribe-bar-date-filter,
+  .tribe-bar-search-filter {
+    padding: 0 10px 0 0;
   }
 
   .tribe-bar-submit {
     padding-left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  #tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title {
+    font-weight: 600;
+    padding: 5px;
   }
 }
 ul.nav.sidenav-menu {

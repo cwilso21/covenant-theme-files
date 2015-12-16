@@ -29,7 +29,7 @@ get_header(); ?>
         <div class="row resources-row">
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col services-col">
             <div class="well">
-              <h3>Services Quick Links</h3>
+              <h2>Services Quick Links</h2>
               <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha.</p>
               <ul class="list--block-display">
                 <li><a href="#">Bariatrics</a></li>
@@ -45,7 +45,7 @@ get_header(); ?>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col account-col">
             <div class="well">
-              <h3>Patient Resources</h3>
+              <h2>Patient Resources</h2>
               <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha leberkas cupim dolor ea.</p>
               <ul class="front-page-subnav fa-ul">
                 <li>
@@ -78,7 +78,7 @@ get_header(); ?>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col twitter-feed-col">
             <div class="well">
-              <?php echo do_shortcode('[twitter-widget username="fsregional" title="Fort Sanders Regional Twitter Feed" before_title="<h3>" after_title="</h3>" items="3" errmsg="The twitter service doesn\'t appear to be responding. Please check back later." hiderss="true" showintents="false" hidefrom="true" showfollow="false"]') ?>
+              <?php echo do_shortcode('[twitter-widget username="fsregional" title="Fort Sanders Regional Twitter Feed" before_title="<h2>" after_title="</h2>" items="3" errmsg="The twitter service doesn\'t appear to be responding. Please check back later." hiderss="true" showintents="false" hidefrom="true" showfollow="false"]') ?>
             </div>
           </div>
         </div> <!-- /resources-row -->
@@ -88,7 +88,7 @@ get_header(); ?>
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <div class="well translucent-well">
-                <h3>Our Services</h3>
+                <h2>Our Services</h2>
                 <p>Visit our <a href="<?php echo get_page_link(189); ?>">services page</a> for more information about each of the services offered at Fort Sanders Regional Medical Center.</p>
               </div>
             </div>

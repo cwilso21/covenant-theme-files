@@ -1007,13 +1007,32 @@ li.tribe-bar-views-option.tribe-bar-views-option-month.tribe-bar-active,
 .tribe-select2-results-views span[class^=tribe-icon-] i.fa {
   padding-right: 15px;
 }
+#tribe-bar-form {
+  background: none;
+}
 
 @media screen and (max-width: 992px) {
-  .tribe-bar-date-filter {
-    padding: 0 0 10px 0;
+  #tribe-bar-form #tribe-bar-views+.tribe-bar-filters {
+    right: 20%;
+    width: auto;
+  }
+  #tribe-bar-form #tribe-bar-views {
+     left: 80%;
+    width: 20%;
+  }
+  .tribe-bar-date-filter,
+  .tribe-bar-search-filter {
+    padding: 0 10px 0 0;
   }
   .tribe-bar-submit {
     padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title {
+    font-weight: 600;
+    padding: 5px;
   }
 }
 

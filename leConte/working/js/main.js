@@ -38,8 +38,10 @@ $(document).ready(function () {
   // have been output at a given display width
   if ((mqlg.matches || mqmd.matches) && $('.post-wrapper').length) {
     $('.post-wrapper:nth-of-type(4)').after('<div class="clearfix visible-lg-block visible-md-block"></div>');
-  } else {
+  } else if ((mqsm.matches) && $('.post-wrapper').length){
     $('.post-wrapper:nth-of-type(2n)').after('<div class="clearfix visible-sm-block"></div>');
+  } else {
+    $('.row .col-xs-6.col-sm-3:nth-of-type(2n)').after('<div class="clearfix visible-xs-block"></div>');
   }
 
   // if the screen width is less than 767px and
@@ -107,5 +109,13 @@ $(document).ready(function () {
   $('.tribe-icon-list').html('<i class="fa fa-list-alt"></i>List');
   $('.tribe-icon-day').html('<i class="fa fa-calendar-check-o"></i>Day');
 
-
+  /*if ((mqxs.matches) && $('.tribe-events-calendar').length) {
+    //alert('this page is small and has a calendar');
+    var $cell = $('.tribe-events-calendar thead tr th');
+    //alert('There are ' + $cell.length + ' cells in the header row of this table');
+    //alert('The day is ' + $cell.first().attr('data-day-abbr'));
+    for (var i = 0; i <= $cell.length; i++) {
+      $cell.each().html().replaceWith($cell.attr('data-day-abbr'));
+    }
+  }*/
 });
