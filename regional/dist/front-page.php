@@ -78,7 +78,7 @@ get_header(); ?>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col twitter-feed-col">
             <div class="well">
-              <?php echo do_shortcode('[twitter-widget username="fsregional" title="Twitter Feed" before_title="<h2>" after_title="</h2>" items="3" errmsg="The twitter service doesn\'t appear to be responding. Please check back later." hiderss="true" showintents="false" hidefrom="true" showfollow="false"]') ?>
+              <?php echo do_shortcode('[twitter-widget username="fortsanders" before_widget="" after_widget="" title="Twitter Feed" before_title="<h2>" after_title="</h2>" items="3" errmsg="The twitter service doesn\'t appear to be responding. Please check back later." hiderss="true" showintents="false" hidefrom="true" showfollow="false"]') ?>
             </div>
           </div>
         </div> <!-- /resources-row -->

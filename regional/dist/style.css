@@ -6458,7 +6458,7 @@ ol.hfeed.vcalendar li {
 .translucent-well {
   background: rgba(245, 245, 245, 0.8); }
 
-.well > h3 {
+.well h2:first-of-type {
   margin-top: 0; }
 
 .well > p:last-of-type {
