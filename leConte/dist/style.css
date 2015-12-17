@@ -7749,6 +7749,20 @@ h2[id^="post"] {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+}
 p,
 .content-container ul li,
 .introduction-row main ul li {
@@ -7834,9 +7848,6 @@ ul.pagination {
 }
 
 ul.list--multi-col {
-  -webkit-columns: 2 20px;
-  -moz-columns: 2 20px;
-  columns: 2 20px;
   list-style-type: none;
   padding-left: 0;
 }
@@ -7859,6 +7870,13 @@ ul.list--block-display li a:visited {
   font-weight: 600;
 }
 
+@media screen and (min-width: 767px) {
+  ul.list--multi-col {
+    -webkit-columns: 2 20px;
+    -moz-columns: 2 20px;
+    columns: 2 20px;
+  }
+}
 .table thead tr th {
   color: #427730;
   font-weight: 600;
@@ -7893,9 +7911,10 @@ ul.list--block-display li a:visited {
   }
 }
 .breadcrumb {
+  background: none;
+  font-size: 13px;
   margin: 0;
   padding: 20px 0 0 !important;
-  font-size: 13px;
 }
 
 figure.wp-caption.alignright {
@@ -8483,6 +8502,29 @@ li.tribe-bar-views-option.tribe-bar-views-option-month.tribe-bar-active,
   #tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title {
     font-weight: 600;
     padding: 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #tribe-bar-form #tribe-bar-views {
+    left: 0;
+    padding: 0 0 10px;
+    width: 100%;
+  }
+
+  #tribe-bar-form #tribe-bar-views + .tribe-bar-filters {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  .tribe-bar-date-filter,
+  .tribe-bar-search-filter {
+    padding: 0;
+    width: 100%;
+  }
+
+  .tribe-bar-submit {
+    padding: 0;
   }
 }
 ul.nav.sidenav-menu {

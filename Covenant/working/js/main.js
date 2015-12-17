@@ -109,13 +109,15 @@ $(document).ready(function () {
   $('.tribe-icon-list').html('<i class="fa fa-list-alt"></i>List');
   $('.tribe-icon-day').html('<i class="fa fa-calendar-check-o"></i>Day');
 
-  /*if ((mqxs.matches) && $('.tribe-events-calendar').length) {
-    //alert('this page is small and has a calendar');
-    var $cell = $('.tribe-events-calendar thead tr th');
-    //alert('There are ' + $cell.length + ' cells in the header row of this table');
-    //alert('The day is ' + $cell.first().attr('data-day-abbr'));
-    for (var i = 0; i <= $cell.length; i++) {
-      $cell.each().html().replaceWith($cell.attr('data-day-abbr'));
-    }
-  }*/
+  var $cell = $('.tribe-events-calendar th');
+
+  if ($('.tribe-events-calendar').length) {
+
+    //alert('The day name is ' + $cell.first().attr('data-day-abbr'));
+
+    $cell.each(function() {
+      var $cellDayAbbr = $('.tribe-events-calendar th').attr('data-day-abbr');
+      $(this).text(($cellDayAbbr));
+    });
+  }
 });

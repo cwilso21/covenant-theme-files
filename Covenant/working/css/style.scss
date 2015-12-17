@@ -1025,6 +1025,10 @@ li.tribe-bar-views-option.tribe-bar-views-option-month.tribe-bar-active,
 .tribe-select2-results-views span[class^=tribe-icon-] i.fa {
   padding-right: 15px;
 }
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-],
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a {
+  background-color: $brand-primary;
+}
 #tribe-bar-form {
   background: none;
 }
