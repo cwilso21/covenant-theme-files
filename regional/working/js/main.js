@@ -87,7 +87,7 @@ $(document).ready(function () {
   });
 
   // collect everything that might contain embedded content
-  var $allIframes = $("iframe[src*='//player.vimeo.com'], iframe[src*='//www.youtube.com'], iframe[src*='//www.google.com/maps'], object, embed");
+  var $allIframes = $("iframe[src^='//player.vimeo.com'], iframe[src*='//www.youtube.com'], iframe[src*='//www.google.com/maps'], object, embed");
 
   $allIframes.each(function() {
 
@@ -96,8 +96,14 @@ $(document).ready(function () {
     $(this).removeAttr('height width').addClass('embed-responsive-item');
 
     // add a wrapper around the iframe
-    $(this).wrap('<div class="embed-responsive embed-responsive-16by9"></div');
+    $(this).wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
   });
+
+  // facebook feed styling fixes
+  $('.header-text').removeAttr('style');
+
+  // fix silliness with the account page content widths
+  $('.widecolumn').wrap('<div class="container signup-container><div class="row signup-row"><main class="col-xs-12 col-sm-12 col-md-8 col-lg-8 main-content" role="main"></main></div></div>');
 
   $('.tribe-events-ical.tribe-events-button').removeClass('tribe-events-ical tribe-events-button').addClass('btn btn-primary btn-sm');
   $('.tribe-events-gcal.tribe-events-button').removeClass('tribe-events-gcal tribe-events-button').addClass('btn btn-primary btn-sm');
@@ -109,13 +115,15 @@ $(document).ready(function () {
   $('.tribe-icon-list').html('<i class="fa fa-list-alt"></i>List');
   $('.tribe-icon-day').html('<i class="fa fa-calendar-check-o"></i>Day');
 
-  /*if ((mqxs.matches) && $('.tribe-events-calendar').length) {
-    //alert('this page is small and has a calendar');
-    var $cell = $('.tribe-events-calendar thead tr th');
-    //alert('There are ' + $cell.length + ' cells in the header row of this table');
-    //alert('The day is ' + $cell.first().attr('data-day-abbr'));
-    for (var i = 0; i <= $cell.length; i++) {
-      $cell.each().html().replaceWith($cell.attr('data-day-abbr'));
-    }
-  }*/
+  var $cell = $('.tribe-events-calendar th');
+
+  if ($('.tribe-events-calendar').length) {
+
+    //alert('The day name is ' + $cell.first().attr('data-day-abbr'));
+
+    $cell.each(function() {
+      var $cellDayAbbr = $('.tribe-events-calendar th').attr('data-day-abbr');
+      $(this).text(($cellDayAbbr));
+    });
+  }
 });

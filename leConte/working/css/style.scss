@@ -235,9 +235,16 @@ header:hover {
   }
 }
 
-// twitter widget styling
-#twitter-widget-0 {
-  width: 100% !important;
+// facebook widget styling
+.cff-header i,
+.cff-post-desc {
+  display: none;
+}
+#cff.cff-fixed-height {
+  padding: 0;
+}
+#cff h3 {
+  margin-top: 0;
 }
 
 // row styling
@@ -367,6 +374,7 @@ article > h2 {
 .sidebar h3:first-of-type {
   margin-top: 0;
 }
+.news-col h2,
 .intro-col h3 {
   margin-top: 0;
 }
@@ -397,9 +405,6 @@ p,
 .content-container ul li,
 .introduction-row main ul li {
   font-weight: 300;
-}
-.introduction-row main p:last-of-type {
-  margin-bottom: 0;
 }
 p a:link,
 p a:visited,

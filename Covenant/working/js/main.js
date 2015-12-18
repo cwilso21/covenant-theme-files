@@ -87,7 +87,7 @@ $(document).ready(function () {
   });
 
   // collect everything that might contain embedded content
-  var $allIframes = $("iframe[src*='//player.vimeo.com'], iframe[src*='//www.youtube.com'], iframe[src*='//www.google.com/maps'], object, embed");
+  var $allIframes = $("iframe[src^='//player.vimeo.com'], iframe[src*='//www.youtube.com'], iframe[src*='//www.google.com/maps'], object, embed");
 
   $allIframes.each(function() {
 
@@ -96,8 +96,14 @@ $(document).ready(function () {
     $(this).removeAttr('height width').addClass('embed-responsive-item');
 
     // add a wrapper around the iframe
-    $(this).wrap('<div class="embed-responsive embed-responsive-16by9"></div');
+    $(this).wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
   });
+
+  // facebook feed styling fixes
+  $('.header-text').removeAttr('style');
+
+  // fix silliness with the account page content widths
+  $('.widecolumn').wrap('<div class="container signup-container><div class="row signup-row"><main class="col-xs-12 col-sm-12 col-md-8 col-lg-8 main-content" role="main"></main></div></div>');
 
   $('.tribe-events-ical.tribe-events-button').removeClass('tribe-events-ical tribe-events-button').addClass('btn btn-primary btn-sm');
   $('.tribe-events-gcal.tribe-events-button').removeClass('tribe-events-gcal tribe-events-button').addClass('btn btn-primary btn-sm');

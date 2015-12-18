@@ -235,9 +235,13 @@ header:hover {
   }
 }
 
-// twitter widget styling
-#twitter-widget-0 {
-  width: 100% !important;
+// facebook widget styling
+.cff-header i,
+.cff-post-desc {
+  display: none;
+}
+#cff h3 {
+  margin-top: 0;
 }
 
 // row styling
@@ -367,6 +371,7 @@ article > h2 {
 .sidebar h3:first-of-type {
   margin-top: 0;
 }
+.news-col h2,
 .intro-col h3 {
   margin-top: 0;
 }
@@ -397,9 +402,6 @@ p,
 .content-container ul li,
 .introduction-row main ul li {
   font-weight: 300;
-}
-.introduction-row main p:last-of-type {
-  margin-bottom: 0;
 }
 p a:link,
 p a:visited,
@@ -702,38 +704,6 @@ ol.hfeed.vcalendar li {
 .post-date {
   display: block;
   font-size: 13px;
-}
-
-// front page twitter feed styling
-.twitter-feed-col ul {
-  list-style-type: none;
-      font-weight: 300;
-    margin-bottom: 0;
-     padding-left: 0;
-}
-.twitter-feed-col ul li {
-   border-bottom: 1px solid #dedede;
-   margin-bottom: 13px;
-  padding-bottom: 13px;
-}
-.twitter-feed-col ul li:last-of-type {
-   border: 0;
-   margin: 0;
-  padding: 0;
-}
-.twitter-feed-col ul li .entry-meta {
-     display: block;
-   font-size: 13px;
-  margin-top: 5px;
-}
-.twitter-feed-col ul li a:link,
-.twitter-feed-col ul li a:visited  {
-  font-weight: 600;
-}
-.twitter-feed-col ul li a:active,
-.twitter-feed-col ul li a:focus,
-.twitter-feed-col ul li a:hover {
-  color: darken($brand-primary, 20%);
 }
 
 // additional well styling

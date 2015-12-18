@@ -19,17 +19,17 @@ get_header(); ?>
           <div class="col-xs-12">
             <h1><?php the_title(); ?></h1>
             <main id="post-<?php the_ID(); ?>" <?php post_class($post->post_name); ?>>
+              <?php edit_post_link('<i class="fa fa-pencil"></i> Edit This Page'); ?>
               <?php the_content(); ?>
             </main>
           </div>
         </div>
-        <hr>
       </div> <!-- /welcome-container -->
       <div class="container resources-container clearfix">
         <div class="row resources-row">
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col services-col">
             <div class="well">
-              <h2>Services Quick Links</h2>
+              <h3>Services Quick Links</h3>
               <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha.</p>
               <ul class="list--block-display">
                 <li><a href="#">Bariatrics</a></li>
@@ -45,7 +45,7 @@ get_header(); ?>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col account-col">
             <div class="well">
-              <h2>Patient Resources</h2>
+              <h3>Patient Resources</h3>
               <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha leberkas cupim dolor ea.</p>
               <ul class="front-page-subnav fa-ul">
                 <li>
@@ -76,9 +76,9 @@ get_header(); ?>
               </ul>
             </div>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col twitter-feed-col">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col feed-col">
             <div class="well">
-              <?php echo do_shortcode('[twitter-widget username="lecontemedctr" title="Twitter Feed" before_title="<h2>" after_title="</h2>" items="3" errmsg="The twitter service doesn\'t appear to be responding. Please check back later." hiderss="true" showintents="false" hidefrom="true" showfollow="false"]') ?>
+              <?php echo do_shortcode('[custom-facebook-feed]') ?>
             </div>
           </div>
         </div> <!-- /resources-row -->
@@ -97,9 +97,8 @@ get_header(); ?>
       </div> <!-- parallax-window -->
       <div class="container system-news">
         <div class="row news-intro-text">
-          <div class="col-xs-12">
-            <h2>System News</h2>
-            <p>Bacon ipsum dolor amet ullamco exercitation shank in chicken ad occaecat capicola elit doner. Fugiat quis fatback culpa dolor ball tip pork beef. Spare ribs velit commodo nisi picanha pork loin consectetur. Kielbasa occaecat pork loin corned beef cillum, aliqua tongue turkey eiusmod irure cow ullamco beef ribs. Bresaola frankfurter proident, ullamco ea bacon laborum et. Leberkas hamburger ribeye velit. Laborum ham sed tempor shank ground round.</p>
+          <div class="col-xs-12 news-col">
+            <?php the_field('news_content') ?>
           </div>
         </div> <!-- /news-intro-text -->
         <div class="row posts-row">
