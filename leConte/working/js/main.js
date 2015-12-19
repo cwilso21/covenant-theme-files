@@ -8,13 +8,19 @@ smoothScroll.init({
   offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
 });
 
-global Modernizr;
-
 $(document).ready(function () {
 
   // Modernizr polyfills
   if (!Modernizr.svg) {
-    $(".navbar-brand img").attr("src", "wp-content/themes/covenant-main/img/logos/covenant-health.png");
+    var imgs = document.getElementsByTagName('img');
+    var svgExtension = /.*\.svg$/
+    var l = imgs.length;
+    for(var i = 0; i < l; i++) {
+      if(imgs[i].src.match(svgExtension)) {
+          imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+          console.log(imgs[i].src);
+      }
+    }
   }
 
   //fade in/out for scroll to top button
@@ -123,15 +129,20 @@ $(document).ready(function () {
   $('.tribe-icon-list').html('<i class="fa fa-list-alt"></i>List');
   $('.tribe-icon-day').html('<i class="fa fa-calendar-check-o"></i>Day');
 
-  var $cell = $('.tribe-events-calendar th');
+  // make the footer sticky. Ewww.
+  $(window).resize(function () {
+    // assign a whole mess of variables
+    var windowHeight = $(window).height();
+    var contentHeight = $('.content-wrapper').height();
+    var surroundHeight = $('header').outerHeight() + $('footer').outerHeight();
 
-  if ($('.tribe-events-calendar').length) {
+    if (contentHeight < windowHeight - (surroundHeight)) {
 
-    //alert('The day name is ' + $cell.first().attr('data-day-abbr'));
-
-    $cell.each(function() {
-      var $cellDayAbbr = $('.tribe-events-calendar th').attr('data-day-abbr');
-      $(this).text(($cellDayAbbr));
-    });
-  }
+      // if the content-wrapper height is less than the
+      // combined heights of the footer and the header
+      // subtracted from the height of the container window,
+      // set the bottom margin of the content-wrapper element
+      $('.content-wrapper').css('margin-bottom', windowHeight - surroundHeight - contentHeight);
+    }
+  }).resize();
 });

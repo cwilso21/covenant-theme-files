@@ -9,6 +9,7 @@ smoothScroll.init({
 });
 
 $(document).ready(function () {
+
   // Modernizr polyfills
   if (!Modernizr.svg) {
     var imgs = document.getElementsByTagName('img');
@@ -118,6 +119,7 @@ $(document).ready(function () {
   // fix silliness with the account page content widths
   $('.widecolumn').wrap('<div class="container signup-container><div class="row signup-row"><main class="col-xs-12 col-sm-12 col-md-8 col-lg-8 main-content" role="main"></main></div></div>');
 
+  // holy crap look at all the things I have to fix with the events calendar
   $('.tribe-events-ical.tribe-events-button').removeClass('tribe-events-ical tribe-events-button').addClass('btn btn-primary btn-sm');
   $('.tribe-events-gcal.tribe-events-button').removeClass('tribe-events-gcal tribe-events-button').addClass('btn btn-primary btn-sm');
   $('.tribe-bar-views-inner select').addClass('form-control');
@@ -128,15 +130,20 @@ $(document).ready(function () {
   $('.tribe-icon-list').html('<i class="fa fa-list-alt"></i>List');
   $('.tribe-icon-day').html('<i class="fa fa-calendar-check-o"></i>Day');
 
-  var $cell = $('.tribe-events-calendar th');
+  // make the footer sticky. Ewww.
+  $(window).resize(function () {
+    // assign a whole mess of variables
+    var windowHeight = $(window).height();
+    var contentHeight = $('.content-wrapper').height();
+    var surroundHeight = $('header').outerHeight() + $('footer').outerHeight();
 
-  if ($('.tribe-events-calendar').length) {
+    if (contentHeight < windowHeight - (surroundHeight)) {
 
-    //alert('The day name is ' + $cell.first().attr('data-day-abbr'));
-
-    $cell.each(function() {
-      var $cellDayAbbr = $('.tribe-events-calendar th').attr('data-day-abbr');
-      $(this).text(($cellDayAbbr));
-    });
-  }
+      // if the content-wrapper height is less than the
+      // combined heights of the footer and the header
+      // subtracted from the height of the container window,
+      // set the bottom margin of the content-wrapper element
+      $('.content-wrapper').css('margin-bottom', windowHeight - surroundHeight - contentHeight);
+    }
+  }).resize();
 });

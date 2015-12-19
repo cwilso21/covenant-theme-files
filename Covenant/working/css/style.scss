@@ -240,8 +240,15 @@ header:hover {
 .cff-post-desc {
   display: none;
 }
+#cff.cff-fixed-height {
+  padding: 0;
+}
 #cff h3 {
   margin-top: 0;
+}
+.cff-item:last-of-type {
+   border: none !important;
+  padding: 20px 0 0;
 }
 
 // row styling

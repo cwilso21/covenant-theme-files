@@ -5,6 +5,7 @@
  * Author     : John Galyon | @galyon_j
  * Author URI : http://www.covenanthealth.com
  * Created    : December 12, 2015
+ * Updated    : December 18, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */

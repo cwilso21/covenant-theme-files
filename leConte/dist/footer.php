@@ -1,3 +1,15 @@
+<?php
+/**
+ * LeConte Medical Center Theme Footer File
+ * Version    : 1.0.0
+ * Author     : John Galyon | @galyon_j
+ * Author URI : http://www.covenanthealth.com
+ * Created    : December 12, 2015
+ * Updated    : December 18, 2015
+ * @package WordPress
+ * @subpackage Covenant_Health
+*/
+?>
     </div> <!-- /content-wrapper -->
 
     <footer>
