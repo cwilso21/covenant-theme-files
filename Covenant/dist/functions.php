@@ -30,7 +30,8 @@ function covenant_scripts() {
     wp_enqueue_style('covenant-main', get_stylesheet_uri());
 
     // enqueue the master scripts
-    wp_enqueue_script('main');
+    wp_enqueue_script('main', get_template_directory_uri() . '/js/ch-main.js', false, false, true);
+    // wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
 }
 add_action( 'wp_enqueue_scripts', 'covenant_scripts' );
 

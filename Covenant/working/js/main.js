@@ -9,6 +9,19 @@ smoothScroll.init({
 });
 
 $(document).ready(function () {
+
+  // Modernizr polyfills
+  if (!Modernizr.svg) {
+    var imgs = document.getElementsByTagName('img');
+    var svgExtension = /.*\.svg$/
+    var l = imgs.length;
+    for(var i = 0; i < l; i++) {
+      if(imgs[i].src.match(svgExtension)) {
+          imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
+          console.log(imgs[i].src);
+      }
+    }
+  }
   //fade in/out for scroll to top button
   //Check to see if the window is top if not then display button
   $(window).scroll(function () {

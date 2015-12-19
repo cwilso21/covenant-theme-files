@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 brand-section pull-right">
             <p>
-              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/leconte-logo.png" width="150" height="auto" alt="LeConte Medical Center logo" title="LeConte Medical Center logo"></a><br>
+              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/leconte-logo.png" alt="LeConte Medical Center logo" title="LeConte Medical Center logo"></a><br>
               &copy; <?php echo date('Y'); ?> LeConte Medical Center<br>
               742 Middle Creek Road<br>
               Sevierville, TN 37862<br>
@@ -14,7 +14,7 @@
           </div> <!-- /.brand-section -->
           <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 link-section pull-left">
             <div class="row">
-              <div class="col-xs-12">
+              <div class="col-xs-12 social-links-col">
                 <?php
                   $defaults = array(
                     'theme_location'  => 'social-links',
@@ -29,8 +29,8 @@
                   wp_nav_menu( $defaults );
                 ?>
                 <hr>
-              </div> <!-- /.socialLinks columns -->
-              <div class="col-xs-12">
+              </div> <!-- /.social-links-col -->
+              <div class="col-xs-12 footer-links-col">
                 <?php
                   $defaults = array(
                     'theme_location'  => 'footer-links',
@@ -44,7 +44,7 @@
 
                   wp_nav_menu( $defaults );
                 ?>
-              </div> <!-- /.footer-links column -->
+              </div> <!-- /.footer-links-col -->
             </div> <!-- /.row -->
           </div> <!-- /.link-section -->
         </div> <!-- /.row -->

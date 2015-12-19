@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- initialize Modernizr so that we can track feature adoption on client browsers -->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.cov.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr-covenant.js"></script>
 
     <?php wp_head(); ?>
   </head>
@@ -61,7 +61,7 @@
               <span class="toggle-text">menu</span>
             </button> <!-- /navbar-toggle -->
             <a class="navbar-brand" href="<?php echo site_url(); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/covenant-health-logo.png" title="Covenant Health logo" alt="Covenant Health">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/covenant-health.svg" title="Covenant Health logo" alt="Covenant Health">
               <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
             </a>
           </div> <!-- /navbar-header -->

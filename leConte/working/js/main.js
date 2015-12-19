@@ -8,7 +8,15 @@ smoothScroll.init({
   offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
 });
 
+global Modernizr;
+
 $(document).ready(function () {
+
+  // Modernizr polyfills
+  if (!Modernizr.svg) {
+    $(".navbar-brand img").attr("src", "wp-content/themes/covenant-main/img/logos/covenant-health.png");
+  }
+
   //fade in/out for scroll to top button
   //Check to see if the window is top if not then display button
   $(window).scroll(function () {

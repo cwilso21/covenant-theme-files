@@ -110,6 +110,7 @@ get_header(); ?>
             while ( have_posts() ) : the_post(); ?>
           <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 post-wrapper">
             <article class="well">
+              <h2 class="sr-only"><?php the_title_attribute(); ?></h2>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail('post-thumbnail', array( 'class' => "img-responsive post-thumbnail-img")); ?></a>
               <?php the_excerpt(); ?>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read more</a>

@@ -61,7 +61,7 @@
               <span class="toggle-text">menu</span>
             </button> <!-- /navbar-toggle -->
             <a class="navbar-brand" href="<?php echo site_url(); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/fort-sanders-regional-medical-center.png" title="Fort Sanders Regional Medical Center logo" alt="Fort Sanders Regional Medical Center">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/fort-sanders-regional.svg" title="Fort Sanders Regional Medical Center logo" alt="Fort Sanders Regional Medical Center">
               <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
             </a>
           </div> <!-- /navbar-header -->
