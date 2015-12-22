@@ -1,10 +1,11 @@
 <?php
 /**
  * Header file for LeConte Medical Center Theme
- * Version    : 1.0.0
- * Author     : John Galyon | @galyon_j
+ * Version    : 1.1.0
+ * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : December 8, 2015
+ * Updated    : December 21, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -61,7 +62,7 @@
               <span class="toggle-text">menu</span>
             </button> <!-- /navbar-toggle -->
             <a class="navbar-brand" href="<?php echo site_url(); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/leconte-logo.png" title="LeConte Medical Center logo" alt="LeConte Medical Center">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/leconte-medical-center.svg" title="LeConte Medical Center logo" alt="LeConte Medical Center">
               <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
             </a>
           </div> <!-- /navbar-header -->

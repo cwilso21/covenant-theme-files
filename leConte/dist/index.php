@@ -1,11 +1,14 @@
 <?php
-/**
- * Template   : Index Master Template
- * Version    : 1.0.1
- * Author     : John Galyon | @galyon_j
+/*
+ * Index Master Template
+ * Version    : 1.1.2
+ * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : November 9, 2015
- */
+ * Updated    : December 21, 2015
+ * @package WordPress
+ * @subpackage Covenant_Health
+*/
 get_header(); ?>
 
       <div class="container content-container">

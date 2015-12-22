@@ -1,11 +1,11 @@
 <?php
 /*
  * Template Name: Two Column Page With Content
- * Version    : 1.1.3
- * Author     : John Galyon | @galyon_j
+ * Version    : 1.1.4
+ * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : November 9, 2015
- * Updated    : December 1, 2015
+ * Updated    : December 21, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */

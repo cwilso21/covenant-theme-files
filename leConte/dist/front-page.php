@@ -1,11 +1,11 @@
 <?php
 /*
  * Template Name: Front-Page Template
- * Version    : 1.0.0
- * Author     : John Galyon | @galyon_j
+ * Version    : 1.0.1
+ * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : December 7, 2015
- * Updated    : December 9 , 2015
+ * Updated    : December 21, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */

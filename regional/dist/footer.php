@@ -1,11 +1,10 @@
 <?php
 /**
- * Fort Sanders Regional Theme Footer File
- * Version    : 1.0.0
- * Author     : John Galyon | @galyon_j
+ * Version    : 1.1.0
+ * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : December 12, 2015
- * Updated    : December 18, 2015
+ * Updated    : December 21, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */

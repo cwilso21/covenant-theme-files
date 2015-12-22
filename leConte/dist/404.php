@@ -1,11 +1,11 @@
 <?php
 /*
  * The template file for displaying 404 Page
- * Version    : 1.1.3
- * Author     : John Galyon | @galyon_j
+ * Version    : 1.1.4
+ * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : November 9, 2015
- * Updated    : December 1, 2015
+ * Updated    : December 21, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -25,12 +25,11 @@ get_header(); ?>
                   <h2>What can I do now?</h2>
                   <p>If this is your first time visiting LeConte Medical Center, welcome! We apologize for the circumstances under which we’re meeting. Here’s where you can go from here:</p>
                   <ul>
-                    <li>View our complete list of medical and community-based efforts at our <a href="<?php echo get_page_link(19); ?>">services</a> page.</li>
-                    <li>Browse our roster of affiliated physicians, or search for a specific provider at our <a href="<?php echo get_page_link(21); ?>">physicians</a> page.</li>
-                    <li>Learn more about the amenities provided to our <a href="<?php echo get_page_link(74); ?>">patients and visitors</a>.</li>
-                    <li>Search for and learn more about specific health-related topics in our <a href="<?php echo get_page_link(23); ?>">health library</a>.</li>
-                    <li>Learn more about the amazing things we do in the community, and maybe help out with a donation at the section of our site dedicated to charitable <a href="<?php echo get_page_link(22); ?>">giving</a>.</li>
-                    <li>Learn about Covenant Health, our community, and search for employment at our <a href="<?php echo get_page_link(29); ?>">careers</a> site.</li>
+                    <li>View our complete list of medical and community-based efforts at our <a href="<?php echo get_permalink( get_page_by_path( 'services' ) ) ?>">services</a> page.</li>
+                    <li>Browse our roster of affiliated physicians, or search for a specific provider at our <a href="<?php echo get_permalink( get_page_by_path( 'physicians' ) ) ?>">physicians</a> page.</li>
+                    <li>Learn more about the amenities provided to our <a href="<?php echo get_permalink( get_page_by_path( 'patients-visitors' ) ) ?>">patients and visitors</a>.</li>
+                    <li>Search for and learn more about specific health-related topics in our <a href="<?php echo get_permalink( get_page_by_path( 'health-library' ) ) ?>">health library</a>.</li>
+                    <li>Learn about Covenant Health, our community, and search for employment at our <a href="<?php echo get_permalink( get_page_by_path( 'careers' ) ) ?>">careers</a> site.</li>
                   </ul>
 
                   <hr>

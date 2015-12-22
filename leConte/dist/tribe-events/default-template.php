@@ -1,10 +1,11 @@
 <?php
 /*
- * Default Events Template
- * Version    : 1.0.0
- * Author     : John Galyon | @galyon_j
+ * Covenant Health Events Template
+ * Version    : 1.0.1
+ * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : December 2, 2015
+ * Updated    : December 21, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */

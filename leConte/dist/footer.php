@@ -1,11 +1,11 @@
 <?php
 /**
  * LeConte Medical Center Theme Footer File
- * Version    : 1.0.0
- * Author     : John Galyon | @galyon_j
+ * Version    : 1.1.0
+ * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : December 12, 2015
- * Updated    : December 18, 2015
+ * Updated    : December 21, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 brand-section pull-right">
             <p>
-              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/leconte-logo.png" alt="LeConte Medical Center logo" title="LeConte Medical Center logo"></a><br>
+              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/leconte-medical-center.svg" alt="LeConte Medical Center logo" title="LeConte Medical Center logo"></a><br>
               &copy; <?php echo date('Y'); ?> LeConte Medical Center<br>
               742 Middle Creek Road<br>
               Sevierville, TN 37862<br>

@@ -1,10 +1,10 @@
 <?php
 /**
- * Version    : 1.1.0
- * Author     : John Galyon | @galyon_j
+ * Version    : 1.2.0
+ * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : November 9, 2015
- * Updated    : December 1, 2015
+ * Updated    : December 21, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */

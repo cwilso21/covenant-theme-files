@@ -1,9 +1,15 @@
 <?php
 /*
- Template Name: Landing Page with Hero Image
+ * Template Name: Two Column Page With Content
+ * Version    : 1.0.1
+ * Author     : John Galyon
+ * Author URI : http://www.covenanthealth.com
+ * Created    : November 9, 2015
+ * Updated    : December 21, 2015
+ * @package WordPress
+ * @subpackage Covenant_Health
 */
-?>
-<?php get_header( 'landing-page' ); ?>
+get_header('landing-page'); ?>
 
       <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 

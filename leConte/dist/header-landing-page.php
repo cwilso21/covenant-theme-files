@@ -1,11 +1,15 @@
 <?php
-/**
- * Version    : 1.0.0
- * Author     : John Galyon | @galyon_j
+/*
+ * Header file for landing pages
+ * Version    : 1.1.1
+ * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : November 9, 2015
- */
-?>
+ * Updated    : December 21, 2015
+ * @package WordPress
+ * @subpackage Covenant_Health
+*/
+get_header(); ?>
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
   <head>

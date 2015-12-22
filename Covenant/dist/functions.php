@@ -1,5 +1,9 @@
 <?php
-/* Custom code goes below this line. */
+/*
+ * Functions.php file for
+ * the Covenant Health family
+ * of Wordpress themes
+ */
 
 if ( ! function_exists('custom_theme_features') ) {
   // Register Theme Features

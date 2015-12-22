@@ -10,19 +10,20 @@ smoothScroll.init({
 
 $(document).ready(function () {
 
-  // Modernizr polyfills
+  // Modernizr polyfill for SVG
+  // to replace with similarly-named
+  // PNG file in the event of nonsupport
   if (!Modernizr.svg) {
     var imgs = document.getElementsByTagName('img');
-    var svgExtension = /.*\.svg$/
+    var svgExtension = /.*\.svg$/;
     var l = imgs.length;
     for(var i = 0; i < l; i++) {
       if(imgs[i].src.match(svgExtension)) {
           imgs[i].src = imgs[i].src.slice(0, -3) + 'png';
-          console.log(imgs[i].src);
+          //console.log(imgs[i].src);
       }
     }
   }
-
   //fade in/out for scroll to top button
   //Check to see if the window is top if not then display button
   $(window).scroll(function () {
@@ -36,8 +37,10 @@ $(document).ready(function () {
     }
   });
 
+  // add sidenav-menu functionality to navigation
+  // sidebars that don't have it already
   if ($('.nav-sidebar')) {
-    if ($('.sidenav-menu').length === 0) {
+    if (!($('.nav.sidenav-menu').length)) {
       $('.nav-sidebar ul').addClass('nav sidenav-menu');
     }
   }
@@ -101,7 +104,7 @@ $(document).ready(function () {
   });
 
   // collect everything that might contain embedded content
-  var $allIframes = $("iframe[src^='//player.vimeo.com'], iframe[src*='//www.youtube.com'], iframe[src*='//www.google.com/maps'], object, embed");
+  var $allIframes = $("iframe[src*='//player.vimeo.com'], iframe[src*='//www.youtube.com'], iframe[src*='//www.google.com/maps'], object, embed");
 
   $allIframes.each(function() {
 
@@ -119,9 +122,9 @@ $(document).ready(function () {
   // fix silliness with the account page content widths
   $('.widecolumn').wrap('<div class="container signup-container><div class="row signup-row"><main class="col-xs-12 col-sm-12 col-md-8 col-lg-8 main-content" role="main"></main></div></div>');
 
-  // holy crap look at all the things I have to fix with the events calendar
   $('.tribe-events-ical.tribe-events-button').removeClass('tribe-events-ical tribe-events-button').addClass('btn btn-primary btn-sm');
   $('.tribe-events-gcal.tribe-events-button').removeClass('tribe-events-gcal tribe-events-button').addClass('btn btn-primary btn-sm');
+  $('.tribe-events-sub-nav').css('display','none');
   $('.tribe-bar-views-inner select').addClass('form-control');
   $('.tribe-bar-date-filter, .tribe-bar-search-filter').wrapInner('<div class="form-group"></div>');
   $('#tribe-bar-date, #tribe-bar-search').addClass('form-control');

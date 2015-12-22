@@ -10,7 +10,9 @@ smoothScroll.init({
 
 $(document).ready(function () {
 
-  // Modernizr polyfills
+  // Modernizr polyfill for SVG
+  // to replace with similarly-named
+  // PNG file in the event of nonsupport
   if (!Modernizr.svg) {
     var imgs = document.getElementsByTagName('img');
     var svgExtension = /.*\.svg$/;
@@ -35,8 +37,10 @@ $(document).ready(function () {
     }
   });
 
+  // add sidenav-menu functionality to navigation
+  // sidebars that don't have it already
   if ($('.nav-sidebar')) {
-    if ($('.sidenav-menu').length === 0) {
+    if (!($('.nav.sidenav-menu').length)) {
       $('.nav-sidebar ul').addClass('nav sidenav-menu');
     }
   }
@@ -100,7 +104,7 @@ $(document).ready(function () {
   });
 
   // collect everything that might contain embedded content
-  var $allIframes = $("iframe[src^='//player.vimeo.com'], iframe[src*='//www.youtube.com'], iframe[src*='//www.google.com/maps'], object, embed");
+  var $allIframes = $("iframe[src*='//player.vimeo.com'], iframe[src*='//www.youtube.com'], iframe[src*='//www.google.com/maps'], object, embed");
 
   $allIframes.each(function() {
 
@@ -120,6 +124,7 @@ $(document).ready(function () {
 
   $('.tribe-events-ical.tribe-events-button').removeClass('tribe-events-ical tribe-events-button').addClass('btn btn-primary btn-sm');
   $('.tribe-events-gcal.tribe-events-button').removeClass('tribe-events-gcal tribe-events-button').addClass('btn btn-primary btn-sm');
+  $('.tribe-events-sub-nav').css('display','none');
   $('.tribe-bar-views-inner select').addClass('form-control');
   $('.tribe-bar-date-filter, .tribe-bar-search-filter').wrapInner('<div class="form-group"></div>');
   $('#tribe-bar-date, #tribe-bar-search').addClass('form-control');
