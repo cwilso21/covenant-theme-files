@@ -10,17 +10,16 @@
  * @subpackage Covenant_Health
 */
 get_header(); ?>
-
-      <div class="container content-container">
-        <div class="row breadcrumb-row">
-          <div class="col-xs-12 breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
-            <?php if ( function_exists('yoast_breadcrumb') ) {
-              $breadcrumbs = yoast_breadcrumb( '<ul class="breadcrumb"><li>', '</li></ul>', false );
-              echo str_replace( '|', ' <span class="divider">/</span></li><li>', $breadcrumbs );
-            } ?>
-          </div>
-        </div>
-        <div class="row headline-row">
+    <div class="container content-container">
+      <div class="row breadcrumb-row">
+        <div class="col-xs-12 breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+          <?php if ( function_exists('yoast_breadcrumb') ) {
+            $breadcrumbs = yoast_breadcrumb( '<ul class="breadcrumb"><li>', '</li></ul>', false );
+            echo str_replace( '|', ' <span class="divider">/</span></li><li>', $breadcrumbs );
+          } ?>
+        </div> <!-- /.col-xs-12.breadcrumbs -->
+      </div> <!-- /.breadcrumb-row -->
+      <div class="row headline-row">
           <div class="col-xs-12">
             <h1><?php the_title(); ?></h1>
           </div>

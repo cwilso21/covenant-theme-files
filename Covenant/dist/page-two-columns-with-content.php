@@ -10,7 +10,6 @@
  * @subpackage Covenant_Health
 */
 get_header(); ?>
-
       <div class="container content-container">
         <div class="row breadcrumb-row">
           <div class="col-xs-12 breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
@@ -18,8 +17,8 @@ get_header(); ?>
               $breadcrumbs = yoast_breadcrumb( '<ul class="breadcrumb"><li>', '</li></ul>', false );
               echo str_replace( '|', ' <span class="divider">/</span></li><li>', $breadcrumbs );
             } ?>
-          </div>
-        </div>
+          </div> <!-- /breadcrumbs -->
+        </div> <!-- /breadcrumbs-row -->
         <div class="row headline-row">
           <div class="col-xs-12">
             <h1><?php the_title(); ?></h1>

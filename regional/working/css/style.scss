@@ -1,6 +1,6 @@
 /*
- * Theme Name: Fort Sanders Regional Medical Center Theme
- * Description: Bootstrap-based theme for covenanthealth.com/regional/
+ * Theme Name: Covenant Health Theme
+ * Description: Bootstrap-based theme for covenanthealth.com
  * Author: John Galyon
  * Author URI: http://www.covenanthealth.com/
  * Version: 1.1.5
@@ -8,13 +8,19 @@
  *Twitter Bootstrap v3.3.5 used under MIT license, h/t @fat & @mdo; Bourbon Mixin Library used under MIT license, h/t @thoughtbot.
  */
 
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Oswald:700);
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,300italic,400italic,500italic,600italic|Oswald:700);
 
 // import bootstrap
 @import "assets/bootstrap/_bootstrap";
 
 // import bourbon
 @import "bourbon";
+
+/* ------------------------------------------------------
+ *
+ * General structure styles
+ *
+ * --------------------------------------------------- */
 
 * {
   box-sizing: border-box;
@@ -46,7 +52,110 @@ header:hover {
   }
 }
 
-// top-links
+// in-page collapsible panel styles
+// =================================
+.panel.panel-default {
+  border: 0;
+}
+.panel-default > .panel-heading {
+  border: 0;
+  padding: 0;
+}
+
+//scrollToTop style and position
+.scrollToTop {
+  background-color: $brand-primary;
+     border-radius: 5px 5px 0 0;
+            bottom: 0;
+             color: rgba(255,255,255,0.7);
+           display: none;
+         font-size: 13px;
+           padding: 6px 16px 6px;
+          position: fixed;
+             right: 20px;
+        text-align: center;
+           z-index: 1000;
+}
+.scrollToTop:active,
+.scrollToTop:focus,
+.scrollToTop:hover {
+       color: #fff;
+}
+
+// grids
+// =================================
+.row.breadcrumb-row ~ .row.content-row {
+  padding-top: 15px;
+}
+
+// jumbotrons
+// =================================
+.jumbotron.callout {
+     background: none;
+  margin-bottom: 0;
+        padding: 0;
+}
+.jumbotron.callout .alignnone,
+.jumbotron.callout a img.alignnone,
+.jumbotron.callout .aligncenter,
+.jumbotron.callout a img.aligncenter {
+  border-bottom: 1px solid $brand-primary;
+         margin: 0;
+        padding: 0;
+}
+.jumbotron.callout img {
+  height: auto;
+   width: 100%;
+}
+.jumbotron.parallax-window {
+  background: transparent;
+  min-height: 450px;
+}
+.jumbotron.parallax-window .container {
+  padding-top: 5%;
+}
+
+.jumbotron.parallax-window.landing-page {
+  min-height: 250px;
+}
+@media screen and (min-width: 768px) {
+  .jumbotron.parallax-window.landing-page {
+    min-height: 350px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .jumbotron.parallax-window.landing-page {
+    min-height: 400px;
+  }
+}
+
+// additional well styling
+.translucent-well {
+  background: rgba(245, 245, 245, 0.8);
+}
+
+// horizontal rules
+// =================================
+
+hr {
+  border-top: 1px solid lighten($text-color, 65%);
+}
+hr ~ div.row div[class*=col] h2 {
+  margin-top: 0;
+}
+
+// sidenav menu styles
+// =================================
+ul.nav.sidenav-menu {
+  padding-left: 0;
+}
+
+/* ------------------------------------------------------
+ *
+ * Top link styles
+ *
+ * --------------------------------------------------- */
+
 .top-links {
   list-style-type: none;
   text-align: right;
@@ -91,16 +200,12 @@ header:hover {
   }
 }
 
-// in-page collapsible panel styles
-.panel.panel-default {
-  border: 0;
-}
-.panel-default > .panel-heading {
-  border: 0;
-  padding: 0;
-}
+/* ------------------------------------------------------
+ *
+ * Navbar styles
+ *
+ * --------------------------------------------------- */
 
-// navbar styling
 .navbar-default {
      background: none;
          border: none;
@@ -113,7 +218,7 @@ header:hover {
    border-color: darken($brand-primary, 10%);
      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.4);
   margin-bottom: 0;
-     margin-top: 18px;
+     margin-top: 25px;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
@@ -132,7 +237,7 @@ header:hover {
   margin-bottom: 10px;
 }
 .navbar-brand {
-  padding-top: 5px;
+  padding-top: 10px;
 }
 .navbar-brand img {
   width: 150px;
@@ -163,9 +268,12 @@ header:hover {
   font-weight: 300;
 }
 @media (min-width: 768px) {
+  .navbar-brand {
+    padding-top: 0;
+  }
   .navbar-default .navbar-nav {
     padding-bottom: 10px;
-    padding-top: 45px;
+    padding-top: 40px;
   }
   .navbar-fixed-top .navbar-default .container .navbar-collapse .nav.navbar-nav {
     padding-right: 15px;
@@ -223,7 +331,7 @@ header:hover {
   }
   .navbar-default .navbar-nav {
     padding-bottom: 0;
-    padding-top: 53px;
+    padding-top: 50px;
   }
   .navbar-nav > li > .dropdown-menu {
     margin-top: 10px;
@@ -235,101 +343,21 @@ header:hover {
   }
 }
 
-// facebook widget styling
-.cff-header i,
-.cff-post-desc {
-  display: none;
-}
-#cff.cff-fixed-height {
-  padding: 0;
-}
-#cff h3 {
-  margin-top: 0;
-}
-.cff-item:last-of-type {
-   border: none !important;
-  padding: 20px 0 0;
-}
+/* ------------------------------------------------------
+ *
+ * Type styles
+ *
+ * --------------------------------------------------- */
 
-// row styling
-.error-row {
-  text-align: center;
-}
-.error-headline {
+// headers
+// =================================
+
+h1.error-headline {
      font-family: 'Oswald', 'Helvetica Neue', sans-serif;
        font-size: 100px;
   text-transform: uppercase;
 }
-.row.breadcrumb-row ~ .row.content-row {
-  padding-top: 15px;
-}
 
-//jumbotron
-.jumbotron.callout {
-     background: none;
-  margin-bottom: 0;
-        padding: 0;
-}
-.jumbotron.callout .alignnone,
-.jumbotron.callout a img.alignnone,
-.jumbotron.callout .aligncenter,
-.jumbotron.callout a img.aligncenter {
-  border-bottom: 1px solid $brand-primary;
-         margin: 0;
-        padding: 0;
-}
-.jumbotron.callout img {
-  height: auto;
-   width: 100%;
-}
-.jumbotron.parallax-window {
-  background: transparent;
-  min-height: 450px;
-}
-.jumbotron.parallax-window .container {
-  padding-top: 5%;
-}
-
-.jumbotron.parallax-window.landing-page {
-  min-height: 250px;
-}
-@media screen and (min-width: 768px) {
-  .jumbotron.parallax-window.landing-page {
-    min-height: 350px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .jumbotron.parallax-window.landing-page {
-    min-height: 400px;
-  }
-}
-
-// responsive iframe container
-.bjd-responsive-iframe-cntr {
-  margin-bottom: 13px;
-}
-
-//scrollToTop style and position
-.scrollToTop {
-  background-color: $brand-primary;
-     border-radius: 5px 5px 0 0;
-            bottom: 0;
-             color: rgba(255,255,255,0.7);
-           display: none;
-         font-size: 13px;
-           padding: 6px 16px 6px;
-          position: fixed;
-             right: 20px;
-        text-align: center;
-           z-index: 1000;
-}
-.scrollToTop:active,
-.scrollToTop:focus,
-.scrollToTop:hover {
-       color: #fff;
-}
-
-// typography
 .landing-page-headline-row h1 {
            color: $brand-primary;
      font-family: $font-family-display;
@@ -340,29 +368,6 @@ header:hover {
   .landing-page-headline-row h1 {
     font-size: 60px;
   }
-}
-.front-page-subnav {
-  list-style-type: none !important;
-    margin-bottom: 0;
-}
-.front-page-subnav li {
-     font-weight: 300;
-  padding-bottom: 10px;
-}
-.front-page-subnav li:first-of-type {
-  margin-top: 10px;
-}
-.front-page-subnav li:last-of-type {
-  padding-bottom: 0;
-}
-.front-page-subnav a:link,
-.front-page-subnav a:visited {
-    font-size: 24px;
-  font-weight: 600;
-}
-::selection {
-  background-color: $text-color;
-             color: #fff;
 }
 h1 {
   font-weight: 600;
@@ -405,9 +410,11 @@ h2[id^="post"] {
     font-size: 22px;
   }
 }
-p,
-.content-container ul li,
-.introduction-row main ul li {
+
+// paragraph elements and links
+// =================================
+
+p {
   font-weight: 300;
 }
 p a:link,
@@ -417,7 +424,7 @@ p a:visited,
 .tribe-events-address a:link,
 .tribe-events-address a:visited,
 dd.url a:link,
-dd.url a:visited  {
+dd.url a:visited {
   color: $brand-primary;
   font-weight: 600;
 }
@@ -435,9 +442,7 @@ dd.url a:focus,
 dd.url a:hover {
   color: darken($brand-primary, 20%);
 }
-/*p a {
-  color: darken($brand-primary, 20%);
-}*/
+
 .post-date {
   font-weight: 400;
 }
@@ -460,7 +465,32 @@ blockquote > footer {
   margin-top: 0;
 }
 
-//bulleted lists
+// lists
+// =================================
+
+.front-page-subnav {
+  list-style-type: none !important;
+    margin-bottom: 0;
+}
+.front-page-subnav li {
+     font-weight: 300;
+  padding-bottom: 10px;
+}
+.front-page-subnav li:first-of-type {
+  margin-top: 10px;
+}
+.front-page-subnav li:last-of-type {
+  padding-bottom: 0;
+}
+.front-page-subnav a:link,
+.front-page-subnav a:visited {
+    font-size: 24px;
+  font-weight: 600;
+}
+.content-container ul li,
+.introduction-row main ul li {
+  font-weight: 300;
+}
 .content-container p ul,
 .content-container ul,
 .introduction-row main ul {
@@ -478,12 +508,9 @@ blockquote > footer {
 .content-container ul li a:hover {
   color: darken($brand-primary, 20%);
 }
-
 ul.pagination {
   padding-left: 0;
 }
-
-//mutil-col-list
 ul.list--multi-col {
   list-style-type: none;
   padding-left: 0;
@@ -507,8 +534,18 @@ ul.list--block-display li a:visited {
     @include columns(2 20px);
   }
 }
+// sitemap list styles
+.sitemap ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.sitemap ul .children {
+  padding-left: 30px;
+}
 
 // table styling
+// =================================
+
 .table thead tr th {
         color: $brand-primary;
   font-weight: 600;
@@ -517,7 +554,19 @@ ul.list--block-display li a:visited {
   font-weight: 300;
 }
 
-//buttons
+// breadcrumbs
+// =================================
+
+.breadcrumb {
+  background: none;
+   font-size: 13px;
+      margin: 0;
+     padding: 20px 0 0 !important;
+}
+
+// button styling
+// =================================
+
 .btn-primary {
   color: rgba(255, 255, 255, 0.8) !important;
 }
@@ -539,15 +588,27 @@ ul.list--block-display li a:visited {
   }
 }
 
-// breadcrumbs
-.breadcrumb {
-  background: none;
-   font-size: 13px;
-      margin: 0;
-     padding: 20px 0 0 !important;
+// sidenav menu styles
+// =================================
+@media screen and (max-width: 1023px) {
+  .sidenav-menu.dropdown-menu {
+    list-style-type: none;
+    padding: 5px 0;
+    width: 100%;
+    margin-top: -20px;
+  }
+  .sidenav-menu.dropdown-menu li a {
+    color: $brand-primary;
+    font-weight: 600;
+  }
 }
 
-// image and figure styling
+/* ------------------------------------------------------
+ *
+ * Image styles
+ *
+ * --------------------------------------------------- */
+
 figure.wp-caption.alignright {
    border: 1px solid lighten($text-color, 65%);
     float: right;
@@ -631,16 +692,6 @@ figure.wp-caption.aligncenter figcaption.wp-caption-text {
   }
 }
 
-// sitemap list styling
-
-.sitemap ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-.sitemap ul .children {
-  padding-left: 30px;
-}
-
 // content-wrapper special image and figure styling
 .half,
 .caption-half,
@@ -674,14 +725,12 @@ figure.wp-caption.aligncenter figcaption.wp-caption-text {
   }
 }
 
-hr {
-  border-top: 1px solid lighten($text-color, 65%);
-}
-hr ~ div.row div[class*=col] h2 {
-  margin-top: 0;
-}
+/* ------------------------------------------------------
+ *
+ * Widget styles
+ *
+ * --------------------------------------------------- */
 
-// widget styles
 .widget {
   list-style-type: none;
 }
@@ -690,14 +739,14 @@ hr ~ div.row div[class*=col] h2 {
   list-style-type: none;
   padding: 0 0 13px 0;
 }
+.widget ul li {
+  font-size: 15px;
+}
 .tribe-events-list-widget {
   border-bottom: 1px solid lighten($gray, 50%);
   list-style-type: none;
   margin-bottom: 5px;
   padding: 0;
-}
-.widget ul li {
-  font-size: 15px;
 }
 ol.tribe-list-widget {
   padding-left: 0;
@@ -708,7 +757,7 @@ ol.tribe-list-widget li {
 .tribe-events-list-widget-events h4 {
   margin: 0;
 }
-.tribe-events-list-widget-events .duration {
+.tribe-event-duration {
   font-size: 13px;
   font-weight: 300;
 }
@@ -721,133 +770,28 @@ ol.tribe-list-widget li {
   font-size: 13px;
 }
 
-
-// additional well styling
-.translucent-well {
-  background: rgba(245, 245, 245, 0.8);
-}
-.well h2:first-of-type {
+// facebook widget
+#cff h3 {
   margin-top: 0;
 }
-.well > p:last-of-type {
-  margin-bottom: 0;
+.cff-header i,
+.cff-post-desc {
+  display: none;
 }
-
-// brand styling
-.brand-section {
-  text-align: right;
-  font-size: 12px;
-}
-.brand-section p a img {
-  height: auto;
-   width: 150px;
-}
-
-// footer
-footer {
-  background: $gray-lighter;
-  border-top: 1px solid $gray-light;
-  margin-top: 30px;
-       width: 100%;
-}
-footer hr {
-  border-top: 1px solid $gray-light;
-}
-footer .container {
-      background: $gray-lighter;
-  padding-bottom: 20px;
-     padding-top: 20px;
-}
-footer p {
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 1.4;
-}
-footer p img {
-  margin-bottom: 10px;
-}
-
-// social links styling
-#menu-social-links {
-  list-style-type: none;
-           margin: 0 !important;
-          padding: 0;
-}
-@media screen and (max-width: 767px) {
-  #menu-social-links {
-    margin-top: 14px;
-    text-align: center;
-  }
-}
-#menu-social-links li.menu-item {
-       display: inline;
-  margin-right: 10px;
-}
-#menu-social-links li.menu-item:last-of-type {
-  margin-right: 0;
-}
-#menu-social-links li.menu-item a {
-  color: $text-color;
-}
-#menu-social-links li a[href*="facebook"]:active,
-#menu-social-links li a[href*="facebook"]:focus,
-#menu-social-links li a[href*="facebook"]:hover {
-  color: rgb(59, 89, 152);
-}
-#menu-social-links li a[href*="twitter"]:active,
-#menu-social-links li a[href*="twitter"]:focus,
-#menu-social-links li a[href*="twitter"]:hover {
-  color: rgb(0, 172, 237);
-}
-#menu-social-links li a[href*="youtube"]:active,
-#menu-social-links li a[href*="youtube"]:focus,
-#menu-social-links li a[href*="youtube"]:hover {
-  color: rgb(187, 0, 0);
-}
-
-// footer links
-#menu-footer-links {
-  list-style-type: none;
+#cff.cff-fixed-height {
   padding: 0;
-  margin: 0;
+}
+.cff-item:last-of-type {
+   border: none !important;
+  padding: 20px 0 0;
 }
 
-@media screen and (min-width: 768px) {
-  #menu-footer-links {
-    margin-top: -10px;
-  }
-}
-#menu-footer-links li {
-  display: inline-block;
-  margin-right: 10px;
-}
-#menu-footer-links li a {
-            color: $text-color;
-        font-size: 13px;
-      font-weight: 400;
-  text-decoration: none;
-      white-space: nowrap;
-}
-#menu-footer-links li a:active,
-#menu-footer-links li a:focus,
-#menu-footer-links li a:hover {
-            color: $brand-primary;
-  text-decoration: underline;
-}
-@media screen and (max-width: 767px) {
-  .brand-section,
-  .social-links,
-  .footer-links {
-    text-align: center;
-  }
-  #menu-social-links {
-     border-top: 1px solid $gray-light;
-     margin-top: 10px;
-    padding-top: 27px;
-  }
-}
+/* ------------------------------------------------------
+ *
+ * Calendar and event styles
+ *
+ * --------------------------------------------------- */
 
-// calendar and events styling
 #tribe-events-bar {
   margin-bottom: 0;
 }
@@ -1074,30 +1018,139 @@ li.tribe-bar-views-option.tribe-bar-views-option-month.tribe-bar-active,
   }
 }
 
-// sidenav menu styles
-ul.nav.sidenav-menu {
-  padding-left: 0;
+/* ------------------------------------------------------
+ *
+ * Footer styles
+ *
+ * --------------------------------------------------- */
+
+footer {
+  background: $gray-lighter;
+  border-top: 1px solid $gray-light;
+  margin-top: 30px;
+       width: 100%;
 }
-@media screen and (max-width: 1023px) {
-  .sidenav-menu.dropdown-menu {
-    list-style-type: none;
-    padding: 5px 0;
-    width: 100%;
-    margin-top: -20px;
+footer hr {
+  border-top: 1px solid $gray-light;
+}
+footer .container {
+      background: $gray-lighter;
+  padding-bottom: 20px;
+     padding-top: 20px;
+}
+footer p {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+footer p img {
+  margin-bottom: 10px;
+}
+
+// social links styling
+#menu-social-links {
+  list-style-type: none;
+           margin: 0 !important;
+          padding: 0;
+}
+@media screen and (max-width: 767px) {
+  #menu-social-links {
+    margin-top: 14px;
+    text-align: center;
   }
-  .sidenav-menu.dropdown-menu li a {
-    color: $brand-primary;
-    font-weight: 600;
+}
+#menu-social-links li.menu-item {
+       display: inline;
+  margin-right: 10px;
+}
+#menu-social-links li.menu-item:last-of-type {
+  margin-right: 0;
+}
+#menu-social-links li.menu-item a {
+  color: $text-color;
+}
+#menu-social-links li a[href*="facebook"]:active,
+#menu-social-links li a[href*="facebook"]:focus,
+#menu-social-links li a[href*="facebook"]:hover {
+  color: rgb(59, 89, 152);
+}
+#menu-social-links li a[href*="twitter"]:active,
+#menu-social-links li a[href*="twitter"]:focus,
+#menu-social-links li a[href*="twitter"]:hover {
+  color: rgb(0, 172, 237);
+}
+#menu-social-links li a[href*="youtube"]:active,
+#menu-social-links li a[href*="youtube"]:focus,
+#menu-social-links li a[href*="youtube"]:hover {
+  color: rgb(187, 0, 0);
+}
+
+// footer links
+#menu-footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  #menu-footer-links {
+    margin-top: -10px;
+  }
+}
+#menu-footer-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+#menu-footer-links li a {
+            color: $text-color;
+        font-size: 13px;
+      font-weight: 400;
+  text-decoration: none;
+      white-space: nowrap;
+}
+#menu-footer-links li a:active,
+#menu-footer-links li a:focus,
+#menu-footer-links li a:hover {
+            color: $brand-primary;
+  text-decoration: underline;
+}
+@media screen and (max-width: 767px) {
+  .brand-section,
+  .social-links,
+  .footer-links {
+    text-align: center;
+  }
+  #menu-social-links {
+     border-top: 1px solid $gray-light;
+     margin-top: 10px;
+    padding-top: 27px;
   }
 }
 
-// formilla chat styles
-#divFormillaChatCtr,
-#divFormillaOfflineMessageCtr {
-  font-family: $font-family-sans-serif;
+// brand styling
+.brand-section {
+  text-align: right;
+  font-size: 12px;
+}
+.brand-section p a img {
+  height: auto;
+   width: 150px;
+}
+.brand-section {
+  text-align: right;
+  font-size: 12px;
+}
+.brand-section p a img {
+  height: auto;
+   width: 150px;
 }
 
-// print styles
+/* ------------------------------------------------------
+ *
+ * Additional print styles
+ *
+ * --------------------------------------------------- */
+
 @media print {
   header,
   footer,

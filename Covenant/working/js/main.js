@@ -98,6 +98,10 @@ $(document).ready(function () {
   // remove last hr from blog archive pages
   $('.text-center').prev('hr').css('display','none');
 
+  // remove last hr element on a page
+  // if it appears after a link
+  $('.main-content a ~ hr:last-of-type').remove();
+
   // add 'data scroll' selector to anchor links
   $('a[href^="#"]').each(function() {
     $(this).attr('data-scroll', '');

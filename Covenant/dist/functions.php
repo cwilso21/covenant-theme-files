@@ -23,21 +23,28 @@ if ( ! function_exists('custom_theme_features') ) {
 }
 
 // enqueue style and script for covenant health theme
-function covenant_scripts() {
-    // deregister the version of jquery that gets loaded with Wordpress
-    wp_deregister_script('jquery');
+function add_covenant_scripts() {
 
-    // register the scrips that need to be loaded with the theme
-    wp_register_script('main', get_template_directory_uri() . '/js/ch-main.js');
+  // deregister the version of jquery that gets loaded with Wordpress
+  wp_deregister_script('jquery');
 
-    // enqeue the master stylesheet
-    wp_enqueue_style('covenant-main', get_stylesheet_uri());
+  // register the script that need to be loaded with the theme
+  // jquery is included here, along with bootstrap.js, parallax.js
+  // and smoothscroll.js
+  wp_register_script('master-script', get_template_directory_uri() . '/js/ch-main.js', false, false, true);
 
-    // enqueue the master scripts
-    wp_enqueue_script('main', get_template_directory_uri() . '/js/ch-main.js', false, false, true);
-    // wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
+  // register the master stylesheet for the theme
+  wp_register_style('master-stylesheet', get_stylesheet_uri());
+
+  // enqueue the master scripts
+  wp_enqueue_script('master-script');
+
+  // enqeue the master stylesheet for the theme
+  wp_enqueue_style('master-stylesheet');
+
 }
-add_action( 'wp_enqueue_scripts', 'covenant_scripts' );
+
+add_action( 'wp_enqueue_scripts', 'add_covenant_scripts' );
 
 // registration for menus that exist outside of the main page navigation
 if ( ! function_exists( 'covenant_nav_menus' ) ) {
