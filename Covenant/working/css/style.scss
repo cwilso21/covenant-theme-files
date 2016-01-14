@@ -735,18 +735,18 @@ figure.wp-caption.aligncenter figcaption.wp-caption-text {
   list-style-type: none;
 }
 .widget ul {
-  border-bottom: 1px solid lighten($gray, 50%);
+    border-bottom: 1px solid lighten($gray, 50%);
   list-style-type: none;
-  padding: 0 0 13px 0;
+          padding: 0 0 13px 0;
 }
 .widget ul li {
   font-size: 15px;
 }
 .tribe-events-list-widget {
-  border-bottom: 1px solid lighten($gray, 50%);
+    border-bottom: 1px solid lighten($gray, 50%);
   list-style-type: none;
-  margin-bottom: 5px;
-  padding: 0;
+    margin-bottom: 5px;
+          padding: 0;
 }
 ol.tribe-list-widget {
   padding-left: 0;
@@ -758,16 +758,38 @@ ol.tribe-list-widget li {
   margin: 0;
 }
 .tribe-event-duration {
-  font-size: 13px;
+   font-size: 13px;
   font-weight: 300;
 }
 .widget:last-of-type ul {
-  border: 0;
+   border: 0;
+   margin: 0;
   padding: 0;
 }
+ul.bloglist {
+         border: 0;
+  margin-bottom: 0;
+        padding: 0;
+}
 .post-date {
-  display: block;
+    display: block;
   font-size: 13px;
+}
+
+// facebook widget
+#cff h3 {
+  margin-top: 0;
+}
+.cff-header i,
+.cff-post-desc {
+  display: none;
+}
+#cff.cff-fixed-height {
+  padding: 0;
+}
+.cff-item:last-of-type {
+   border: none !important;
+  padding: 20px 0 0;
 }
 
 // facebook widget
@@ -1049,15 +1071,11 @@ footer p img {
 
 // social links styling
 #menu-social-links {
+       border-top: 1px solid $gray-light;
   list-style-type: none;
-           margin: 0 !important;
-          padding: 0;
-}
-@media screen and (max-width: 767px) {
-  #menu-social-links {
-    margin-top: 14px;
-    text-align: center;
-  }
+           margin: 14px 0 0 0 !important;
+          padding: 27px 0 0 0;
+       text-align: center;
 }
 #menu-social-links li.menu-item {
        display: inline;
@@ -1092,7 +1110,28 @@ footer p img {
   margin: 0;
 }
 
+// brand styling
+.brand-section {
+  text-align: center;
+  font-size: 12px;
+}
+.brand-section p a img {
+  height: auto;
+   width: 150px;
+}
+.brand-section p a img {
+  height: auto;
+   width: 150px;
+}
+
 @media screen and (min-width: 768px) {
+  #menu-social-links {
+         border-top: none;
+    list-style-type: none;
+             margin: 0 !important;
+            padding: 0;
+         text-align: left;
+  }
   #menu-footer-links {
     margin-top: -10px;
   }
@@ -1125,24 +1164,6 @@ footer p img {
      margin-top: 10px;
     padding-top: 27px;
   }
-}
-
-// brand styling
-.brand-section {
-  text-align: right;
-  font-size: 12px;
-}
-.brand-section p a img {
-  height: auto;
-   width: 150px;
-}
-.brand-section {
-  text-align: right;
-  font-size: 12px;
-}
-.brand-section p a img {
-  height: auto;
-   width: 150px;
 }
 
 /* ------------------------------------------------------
