@@ -1060,8 +1060,9 @@ footer .container {
   padding-bottom: 20px;
      padding-top: 20px;
 }
+
 footer p {
-  font-size: 11px;
+    font-size: 11px;
   font-weight: 400;
   line-height: 1.4;
 }
@@ -1069,11 +1070,27 @@ footer p img {
   margin-bottom: 10px;
 }
 
-// social links styling
+.brand-section {
+  text-align: center;
+}
+
+.brand-section p a img {
+  height: auto;
+   width: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  .brand-section {
+    text-align: right;
+  }
+}
+
+// social/app links section
+
 #menu-social-links {
        border-top: 1px solid $gray-light;
   list-style-type: none;
-           margin: 14px 0 0 0 !important;
+           margin: 14px 0 0 0;
           padding: 27px 0 0 0;
        text-align: center;
 }
@@ -1084,7 +1101,8 @@ footer p img {
 #menu-social-links li.menu-item:last-of-type {
   margin-right: 0;
 }
-#menu-social-links li.menu-item a {
+#menu-social-links li.menu-item a,
+#menu-app-links li.menu-item a {
   color: $text-color;
 }
 #menu-social-links li a[href*="facebook"]:active,
@@ -1102,45 +1120,35 @@ footer p img {
 #menu-social-links li a[href*="youtube"]:hover {
   color: rgb(187, 0, 0);
 }
-
-// footer links
-#menu-footer-links {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-// brand styling
-.brand-section {
-  text-align: center;
-  font-size: 12px;
-}
-.brand-section p a img {
-  height: auto;
-   width: 150px;
-}
-.brand-section p a img {
-  height: auto;
-   width: 150px;
+#menu-social-links li a[href*="instagram"]:active,
+#menu-social-links li a[href*="instagram"]:focus,
+#menu-social-links li a[href*="instagram"]:hover {
+  color: rgb(18, 86, 136);
 }
 
 @media screen and (min-width: 768px) {
   #menu-social-links {
-         border-top: none;
-    list-style-type: none;
-             margin: 0 !important;
-            padding: 0;
-         text-align: left;
-  }
-  #menu-footer-links {
-    margin-top: -10px;
+        border: none;
+        margin: 0;
+       padding: 0;
+    text-align: left;
   }
 }
-#menu-footer-links li {
+
+// footer links
+#menu-footer-links {
+  list-style-type: none;
+          padding: 0;
+           margin: 0;
+       text-align: left;
+}
+#menu-footer-links li,
+#menu-app-links li {
   display: inline-block;
-  margin-right: 10px;
+   margin: 0 10px 0 0;
 }
-#menu-footer-links li a {
+#menu-footer-links li a,
+#menu-app-links li a {
             color: $text-color;
         font-size: 13px;
       font-weight: 400;
@@ -1149,20 +1157,31 @@ footer p img {
 }
 #menu-footer-links li a:active,
 #menu-footer-links li a:focus,
-#menu-footer-links li a:hover {
+#menu-footer-links li a:hover,
+#menu-app-links li a:active,
+#menu-app-links li a:focus,
+#menu-app-links li a:hover {
             color: $brand-primary;
   text-decoration: underline;
 }
-@media screen and (max-width: 767px) {
-  .brand-section,
-  .social-links,
-  .footer-links {
-    text-align: center;
+
+@media screen and (max-width: 768px) {
+  #menu-footer-links {
+         list-style-type: none;
+                 padding: 0;
+                  margin: 0;
+              text-align: center;
+       -moz-column-count: 2;
+         -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+      -webkit-column-gap: 20px;
+            column-count: 2;
+              column-gap: 20px;
   }
-  #menu-social-links {
-     border-top: 1px solid $gray-light;
-     margin-top: 10px;
-    padding-top: 27px;
+  #menu-footer-links li,
+  #menu-app-links li {
+    display: block;
+    margin: 0;
   }
 }
 

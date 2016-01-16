@@ -34,7 +34,7 @@ get_header(); ?>
               <ul class="list--block-display">
                 <li><a href="#">Aquatics</a></li>
                 <li><a href="#">Group Fitness</a></li>
-                <li><a href="#">Nutrition &amp; Weight Management</a></li>
+                <li><a href="#">Weight Management</a></li>
                 <li><a href="#">Performance Training</a></li>
                 <li><a href="#">Personal Training</a></li>
                 <li><a href="#">Racquet Sports</a></li>
@@ -45,33 +45,20 @@ get_header(); ?>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col account-col">
             <div class="well">
-              <h3>Patient Resources</h3>
-              <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha leberkas cupim dolor ea.</p>
+              <h3>Member Resources</h3>
+              <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha.</p>
               <ul class="front-page-subnav fa-ul">
                 <li>
-                  <a href="<?php echo get_page_link(16); ?>"><i class="fa-li fa fa-user-md"></i> Physician Directory</a>
-                  <select class="form-control">
-                    <option>Select from the list below</option>
-                    <option value="#">Show all facilities</option>
-                    <option value="#">Claiborne Medical Center</option>
-                    <option value="#">Cumberland Medical Center</option>
-                    <option value="#">Fort Sanders Regional Medical Center</option>
-                    <option value="#">Fort Loudoun Medical Center</option>
-                    <option value="#">LeConte Medical Center</option>
-                    <option value="#">Methodist Medical Center of Oak Ridge</option>
-                    <option value="#">Morristown-Hamblen Health System</option>
-                    <option value="#">Parkwest Medical Center</option>
-                    <option value="#">Roane Medical Center</option>
-                    <option value="#">Thompson Cancer Survival Center</option>
-                  </select>
+                  <a href="https://clients.mindbodyonline.com/classic/home?studioid=28506"><i class="fa-li fa fa-user-md"></i> Class Schedule</a><br>
+                  Browse our group fitness classes.
                 </li>
                 <li>
-                  <a href="<?php echo site_url(); ?>/events"><i class="fa-li fa fa-calendar"></i> Classes and Events</a><br>
-                  Register for a class or event.
+                  <a href="<?php echo site_url(); ?>/events"><i class="fa-li fa fa-calendar"></i> Events Calendar</a><br>
+                  Programming and special events.
                 </li>
                 <li>
-                  <a href="<?php echo get_page_link(32); ?>"><i class="fa-li fa fa-sign-in"></i> Your Account</a><br>
-                  Register for a new account or log into an existing account.
+                  <a href="<?php echo get_page_link(32); ?>"><i class="fa-li fa fa-sign-in"></i> Member Rewards</a><br>
+                  Benefits for loyal members.
                 </li>
               </ul>
             </div>

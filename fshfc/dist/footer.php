@@ -1,9 +1,10 @@
 <?php
 /**
- * Version    : 1.1.1
+ * Version    : 1.2.0
  * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
- * Created    : January 13, 2015
+ * Created    : January 13, 2016
+ * Modified   : January 14, 2016
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -31,6 +32,19 @@
                     'menu'            => 'social-links',
                     'container'       => false,
                     'menu_class'      => '',
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'depth'           => 0,
+                  );
+
+                  wp_nav_menu( $defaults );
+                ?>
+                <?php
+                  $defaults = array(
+                    'theme_location'  => 'app-links',
+                    'menu'            => 'app-links',
+                    'container'       => false,
+                    'menu_class'      => 'app-links',
                     'echo'            => true,
                     'fallback_cb'     => 'wp_page_menu',
                     'depth'           => 0,

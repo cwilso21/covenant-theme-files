@@ -100,7 +100,7 @@ $(document).ready(function () {
 
   // remove last hr element on a page
   // if it appears after a link
-  $('.main-content a ~ hr:last-of-type').remove();
+  // $('.main-content a ~ hr:last-of-type').remove();
 
   // add 'data scroll' selector to anchor links
   $('a[href^="#"]').each(function() {

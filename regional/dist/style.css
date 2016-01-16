@@ -8474,10 +8474,24 @@ footer p img {
   margin-bottom: 10px;
 }
 
+.brand-section {
+  text-align: center;
+}
+
+.brand-section p a img {
+  height: auto;
+  width: 150px;
+}
+
+@media screen and (min-width: 768px) {
+  .brand-section {
+    text-align: right;
+  }
+}
 #menu-social-links {
   border-top: 1px solid #777777;
   list-style-type: none;
-  margin: 14px 0 0 0 !important;
+  margin: 14px 0 0 0;
   padding: 27px 0 0 0;
   text-align: center;
 }
@@ -8491,7 +8505,8 @@ footer p img {
   margin-right: 0;
 }
 
-#menu-social-links li.menu-item a {
+#menu-social-links li.menu-item a,
+#menu-app-links li.menu-item a {
   color: #333333;
 }
 
@@ -8513,46 +8528,35 @@ footer p img {
   color: #bb0000;
 }
 
-#menu-footer-links {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.brand-section {
-  text-align: center;
-  font-size: 12px;
-}
-
-.brand-section p a img {
-  height: auto;
-  width: 150px;
-}
-
-.brand-section p a img {
-  height: auto;
-  width: 150px;
+#menu-social-links li a[href*="instagram"]:active,
+#menu-social-links li a[href*="instagram"]:focus,
+#menu-social-links li a[href*="instagram"]:hover {
+  color: #125688;
 }
 
 @media screen and (min-width: 768px) {
   #menu-social-links {
-    border-top: none;
-    list-style-type: none;
-    margin: 0 !important;
+    border: none;
+    margin: 0;
     padding: 0;
     text-align: left;
   }
-
-  #menu-footer-links {
-    margin-top: -10px;
-  }
 }
-#menu-footer-links li {
+#menu-footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+#menu-footer-links li,
+#menu-app-links li {
   display: inline-block;
-  margin-right: 10px;
+  margin: 0 10px 0 0;
 }
 
-#menu-footer-links li a {
+#menu-footer-links li a,
+#menu-app-links li a {
   color: #333333;
   font-size: 13px;
   font-weight: 400;
@@ -8562,22 +8566,32 @@ footer p img {
 
 #menu-footer-links li a:active,
 #menu-footer-links li a:focus,
-#menu-footer-links li a:hover {
+#menu-footer-links li a:hover,
+#menu-app-links li a:active,
+#menu-app-links li a:focus,
+#menu-app-links li a:hover {
   color: #981e32;
   text-decoration: underline;
 }
 
-@media screen and (max-width: 767px) {
-  .brand-section,
-  .social-links,
-  .footer-links {
+@media screen and (max-width: 768px) {
+  #menu-footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     text-align: center;
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
   }
 
-  #menu-social-links {
-    border-top: 1px solid #777777;
-    margin-top: 10px;
-    padding-top: 27px;
+  #menu-footer-links li,
+  #menu-app-links li {
+    display: block;
+    margin: 0;
   }
 }
 /* ------------------------------------------------------

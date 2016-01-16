@@ -5,7 +5,7 @@
  * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : December 2, 2015
- * Updated    : December 21, 2015
+ * Updated    : January 15, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -23,8 +23,8 @@ get_header(); ?>
               $breadcrumbs = yoast_breadcrumb( '<ul class="breadcrumb"><li>', '</li></ul>', false );
               echo str_replace( '|', ' <span class="divider">/</span></li><li>', $breadcrumbs );
             } ?>
-          </div>
-        </div>
+          </div> <!-- /breadcrumbs -->
+        </div> <!-- /breadcrumbs-row -->
         <div class="row content-row">
           <main class="col-xs-12 main-content" role="main">
             <article id="post-<?php the_ID(); ?>" class="<?php post_class(); ?>">

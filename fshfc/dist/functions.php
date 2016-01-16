@@ -56,7 +56,8 @@ if ( ! function_exists( 'covenant_nav_menus' ) ) {
       'top-links'    => 'Top Links',
       'main-links'   => 'Main Links',
       'social-links' => 'Social Links',
-      'footer-links' => 'Footer Links',
+      'app-links'     => 'App Links',
+      'footer-links' => 'Footer Links'
     );
     register_nav_menus( $locations );
 
