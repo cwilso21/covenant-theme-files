@@ -1,0 +1,231 @@
+//
+// Calendar & Event Styling
+// for Covenant Health sites
+//
+// ====================================
+
+#tribe-events-bar {
+  margin-bottom: 0;
+}
+#tribe-events-content h2 {
+  font-size: 38px;
+  text-align: left;
+  font-family: $font-family-sans-serif
+}
+.hentry.vevent {
+  padding: 5px;
+}
+.tribe-bar-date-filter {
+  padding: 0 15px 0 0;
+  width: auto;
+}
+.tribe-bar-search-filter {
+  padding: 0;
+  width: auto;
+}
+.tribe-no-param.form-control {
+  font-size: 14px;
+  height: 36px;
+}
+#tribe-bar-form input[type=text] {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.42857143;
+  color: #555;
+  background: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.tribe-bar-submit {
+  width: auto;
+  margin-left: 0;
+}
+.tribe-bar-views-inner {
+  background: none;
+     padding: 0;
+}
+#tribe-bar-views .tribe-bar-views-inner label {
+  padding: 0;
+}
+.tribe-bar-views-list
+.tribe-bar-views-inner label,
+.tribe-bar-search-filter .form-group label,
+.tribe-bar-date-filter .form-group label {
+  font-weight: 600;
+  font-color: $text-color;
+  font-family: $font-family-sans-serif
+}
+#tribe-events-content .tribe-events-calendar td,
+#tribe-events-content table.tribe-events-calendar {
+  border: 1px solid lighten($text-color, 65%);
+}
+.tribe-events-calendar thead tr th {
+  background-color: $covenant-blue;
+  color: #fff;
+  text-transform: none;
+}
+#tribe-bar-form .tribe-bar-submit input[type=submit],
+#tribe-events .tribe-events-button, .tribe-events-button {
+  background: $covenant-blue;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  text-transform: none;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  width: auto;
+  @include transition(all 300ms ease-in-out);
+}
+#tribe-events .tribe-events-button, .tribe-events-button {
+  font-size: 13px;
+}
+#tribe-bar-form .tribe-bar-submit input[type=submit]:active,
+#tribe-bar-form .tribe-bar-submit input[type=submit]:focus,
+#tribe-bar-form .tribe-bar-submit input[type=submit]:hover,
+#tribe-events .tribe-events-button:active, .tribe-events-button:active,
+#tribe-events .tribe-events-button:focus, .tribe-events-button:focus,
+#tribe-events .tribe-events-button:hover, .tribe-events-button:hover {
+  background: darken($covenant-blue, 10%);
+  color: #fff;
+}
+.tribe-events-gcal {
+  margin-right: 0;
+}
+.tribe-events-list .tribe-events-loop .tribe-events-content {
+  font-weight: 300;
+}
+.tribe-events-event-meta .column,
+.tribe-events-event-meta .tribe-events-meta-group {
+  padding-left: 0;
+}
+.tribe-events-event-meta .column,
+.tribe-events-event-meta .tribe-events-meta-group dl {
+  font-weight: 300;
+}
+.tribe-events-single-section-title:first-of-type {
+  margin-top: 15px;
+}
+#tribe-events-content .updated h2 {
+  margin-top: 0;
+}
+.tribe-events-list-separator-month {
+  background: none;
+  border-bottom: 1px solid lighten($gray, 50%);
+  padding: 0 0 6px;
+}
+.tribe-events-list-separator-month+.type-tribe_events.tribe-events-first {
+  padding: 0;
+}
+#tribe-bar-collapse-toggle {
+  padding-left: 0;
+}
+#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a {
+   background: $covenant-blue;
+        color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+  font-weight: 400;
+  padding: 10px 15px;
+}
+li.tribe-bar-views-option.tribe-bar-views-option-month.tribe-bar-active,
+#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option.tribe-bar-active a:hover,
+#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a:hover {
+  background: $covenant-blue;
+  background-image: none;
+       color: #fff;
+}
+.tribe-bar-view-list a.tribe-icon-month,
+.tribe-bar-views-list span.tribe-icon-month,
+.tribe-select2-results-views span.tribe-icon-month,
+.tribe-bar-view-list span[class^=tribe-icon-],
+.tribe-bar-views-list span.tribe-icon-list,
+.tribe-select2-results-views span.tribe-icon-list,
+.tribe-bar-views-list span.tribe-icon-day,
+.tribe-select2-results-views span.tribe-icon-day {
+  background: none !important;
+}
+.tribe-bar-view-list a[class*=tribe-icon-],
+.tribe-bar-views-list span[class^=tribe-icon-],
+.tribe-select2-results-views span[class^=tribe-icon-] {
+  padding-left: 0;
+
+}
+.tribe-bar-view-list a[class*=tribe-icon-] i.fa,
+.tribe-bar-views-list span[class^=tribe-icon-] i.fa,
+.tribe-select2-results-views span[class^=tribe-icon-] i.fa {
+  padding-right: 15px;
+}
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-],
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a {
+  background-color: $covenant-blue;
+}
+#tribe-bar-form {
+  background: none;
+}
+
+@media screen and (max-width: 992px) {
+  #tribe-bar-form #tribe-bar-views+.tribe-bar-filters {
+    right: 20%;
+    width: auto;
+  }
+  #tribe-bar-form #tribe-bar-views {
+     left: 80%;
+    width: 20%;
+  }
+  .tribe-bar-date-filter,
+  .tribe-bar-search-filter {
+    padding: 0 10px 0 0;
+  }
+  .tribe-bar-submit {
+    padding-left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #tribe-events-content .tribe-events-calendar div[id*=tribe-events-event-] h3.tribe-events-month-event-title {
+    font-weight: 600;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #tribe-bar-form #tribe-bar-views {
+       left: 0;
+    padding: 0 0 10px;
+      width: 100%;
+  }
+  #tribe-bar-form #tribe-bar-views+.tribe-bar-filters {
+     left: 0;
+    right: 0;
+    width: 100%;
+  }
+  .tribe-bar-date-filter,
+  .tribe-bar-search-filter {
+    padding: 0;
+    width: 100%;
+  }
+  .tribe-bar-submit {
+    padding: 0;
+  }
+  .tribe-events-calendar .tribe-events-present,
+  .tribe-events-calendar td.tribe-events-present.mobile-active,
+  .tribe-events-calendar .tribe-events-present.mobile-active div[id*="tribe-events-daynum-"],
+  .tribe-events-calendar .tribe-events-present.mobile-active div[id*="tribe-events-daynum-"] a {
+    background-color: $covenant-blue;
+  }
+}

@@ -1,0 +1,121 @@
+//
+// General structural elements
+// for Covenant Health sites
+//
+// ==========================
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  @include transition(all 300ms ease-in-out);
+}
+header {
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid $covenant-blue;
+  @include transition(all 300ms ease-in-out);
+}
+header:focus,
+header:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+.navbar-fixed-top + .content-wrapper {
+  padding-top: 90px;
+}
+@media (min-width: 768px) {
+  .navbar-fixed-top + .content-wrapper {
+    padding-top: 91px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-fixed-top + .content-wrapper {
+    padding-top: 106px;
+  }
+}
+
+// in-page collapsible panel styles
+// =================================
+.panel.panel-default {
+  border: 0;
+}
+.panel-default > .panel-heading {
+  border: 0;
+  padding: 0;
+}
+
+//scrollToTop style and position
+.scrollToTop {
+  background-color: $covenant-blue;
+     border-radius: 5px 5px 0 0;
+            bottom: 0;
+             color: rgba(255,255,255,0.7);
+           display: none;
+         font-size: 13px;
+           padding: 6px 16px 6px;
+          position: fixed;
+             right: 20px;
+        text-align: center;
+           z-index: 1000;
+}
+.scrollToTop:active,
+.scrollToTop:focus,
+.scrollToTop:hover {
+       color: #fff;
+}
+
+// grids
+// =================================
+.row.breadcrumb-row ~ .row.content-row {
+  padding-top: 15px;
+}
+
+// jumbotrons
+// =================================
+.jumbotron.callout {
+     background: none;
+  margin-bottom: 0;
+        padding: 0;
+}
+.jumbotron.parallax-window {
+  background: transparent;
+  min-height: 450px;
+}
+.jumbotron.parallax-window .container {
+  padding-top: 5%;
+}
+
+.jumbotron.parallax-window.landing-page {
+  min-height: 250px;
+}
+@media screen and (min-width: 768px) {
+  .jumbotron.parallax-window.landing-page {
+    min-height: 350px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .jumbotron.parallax-window.landing-page {
+    min-height: 400px;
+  }
+}
+
+// additional well styling
+.translucent-well {
+  background: rgba(245, 245, 245, 0.8);
+}
+
+// horizontal rules
+// =================================
+
+hr {
+  border-top: 1px solid lighten($text-color, 65%);
+}
+hr ~ div.row div[class*=col] h2 {
+  margin-top: 0;
+}
+
+// sidenav menu styles
+// =================================
+ul.nav.sidenav-menu {
+  padding-left: 0;
+}
