@@ -119,15 +119,18 @@ header:hover {
 }
 
 .jumbotron.parallax-window.landing-page {
+  background: transparent;
   min-height: 250px;
 }
 @media screen and (min-width: 768px) {
   .jumbotron.parallax-window.landing-page {
+    background: transparent;
     min-height: 350px;
   }
 }
 @media screen and (min-width: 1200px) {
   .jumbotron.parallax-window.landing-page {
+    background: transparent;
     min-height: 400px;
   }
 }
