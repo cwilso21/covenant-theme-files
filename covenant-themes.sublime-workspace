@@ -255,6 +255,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 791,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "covenant/dist/page-landing-page-with-hero-image.php",
+			"settings":
+			{
+				"buffer_size": 1432,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "covenant/working/css/style.scss",
+			"settings":
+			{
+				"buffer_size": 25654,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -318,16 +342,26 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/john/webroot/covenant-theme-files"
+		"/Users/john/webroot/covenant-theme-files",
+		"/Users/john/webroot/covenant-theme-files/covenant",
+		"/Users/john/webroot/covenant-theme-files/covenant/dist",
+		"/Users/john/webroot/covenant-theme-files/covenant/dist/js",
+		"/Users/john/webroot/covenant-theme-files/covenant/working",
+		"/Users/john/webroot/covenant-theme-files/covenant/working/css",
+		"/Users/john/webroot/covenant-theme-files/covenant/working/js"
 	],
 	"file_history":
 	[
+		"/Users/john/webroot/8800-0975_internal-med-west-site-updates/imw_physicians_lost.html",
+		"/Users/john/webroot/covenant-theme-files/covenant/dist/functions.php",
+		"/Users/john/webroot/0091-1068_covsafe/gulpfile.js",
+		"/Users/john/webroot/0091-1068_covsafe/package.json",
+		"/Users/john/webroot/covenant-theme-files/covenant-medical-group/gulpfile.js",
 		"/Users/john/webroot/covenant-theme-files/package.json",
 		"/Users/john/webroot/0091-1068_covsafe/_site/index.html",
 		"/Users/john/webroot/0091-1068_covsafe/css/scss/main.scss",
 		"/Users/john/webroot/covenant-theme-files/covenant/working/js/main.js",
 		"/Users/john/webroot/0091-1068_covsafe/js/assets/covsafe_project.js",
-		"/Users/john/webroot/0091-1068_covsafe/gulpfile.js",
 		"/Users/john/webroot/0091-1068_covsafe/_config.yml",
 		"/Users/john/webroot/0091-1068_covsafe/_site/best-practices/index.html",
 		"/Users/john/webroot/0091-1068_covsafe/_site/leadership/index.html",
@@ -445,15 +479,11 @@
 		"/Users/john/webroot/wp-cov/wp-content/themes/covenant-main/page-single-column.php",
 		"/Users/john/webroot/wp-cov/wp-content/themes/covenant-main/page-two-columns-with-content.php",
 		"/Users/john/webroot/wp-cov/wp-content/themes/covenant-main/page-landing-page-with-hero-image.php",
-		"/Users/john/webroot/wp-cov/wp-content/themes/covenant-main/page-two-columns-with-nav.php",
-		"/Users/john/webroot/wp-cov/wp-content/themes/covenant-main/single.php",
-		"/Users/john/webroot/wp-cov/wp-content/themes/covenant-main/page.php",
-		"/Users/john/webroot/wp-cov/wp-content/themes/covenant-main/front-page.php",
-		"/Users/john/webroot/wp-cov/wp-content/themes/covenant-main/functions.php"
+		"/Users/john/webroot/wp-cov/wp-content/themes/covenant-main/page-two-columns-with-nav.php"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 37.0
 	},
 	"find_in_files":
 	{
@@ -476,6 +506,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"shape1",
+			"parallax",
+			"landing",
+			"hero",
+			"footer",
+			"thumbnail",
 			"Source Sans Pro",
 			"source sans",
 			"});\n",
@@ -597,13 +633,7 @@
 			"menu-footer-links",
 			".tribe-events-calendar th",
 			".tribe-events-calendar thead th",
-			".navbar-default .navbar-nav",
-			"nav navbar-nav navbar-right",
-			"navbar-toggle",
-			"$leconte-primary",
-			"primary",
-			"$brand-primary",
-			"#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a"
+			".navbar-default .navbar-nav"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -659,8 +689,276 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 791,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								761,
+								761
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "covenant/dist/page-landing-page-with-hero-image.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1432,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								488,
+								488
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "covenant/working/css/style.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25654,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2969,
+								2969
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 944.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -714,7 +1012,7 @@
 		[
 			[
 				"",
-				"js/assets/covsafe_project.js"
+				"~/webroot/0091-1068_covsafe/gulpfile.js"
 			]
 		],
 		"width": 0.0

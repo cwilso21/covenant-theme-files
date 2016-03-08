@@ -23,14 +23,13 @@
     <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/touch/apple-touch-icon-precomposed.png">
 
     <!-- stylesheets -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- initialize Modernizr so that we can track feature adoption on client browsers -->
-    <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr.cov.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/modernizr-covenant.js"></script>
 
     <?php wp_head(); ?>
   </head>
   <body>
     <a href="#top" data-scroll class="scrollToTop"><i class="fa fa-chevron-up"><span class="sr-only">scroll to top of page</span></i></a>
-
-    <div class="content-wrapper" id="top">
+    <div class="content-wrapper">

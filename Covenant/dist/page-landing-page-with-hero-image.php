@@ -11,9 +11,9 @@
 */
 get_header('landing-page'); ?>
 
-      <?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-
-      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo $url; ?>"><span class="sr-only">This is a hero image</span></div> <!-- /jumbotron -->
+      <div class="jumbotron callout">
+        <?php the_field('hero_image') ?>
+      </div> <!-- /jumbotron -->
       <div class="container content-container">
         <div class="row headline-row landing-page-headline-row">
           <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">

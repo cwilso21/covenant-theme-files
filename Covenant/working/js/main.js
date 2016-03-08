@@ -90,7 +90,7 @@ $(document).ready(function () {
   $('.wp-caption').removeAttr('style');
 
   // remove the automatically generated paragraph tags from hero images
-  $('.jumbotron.callout p a').unwrap();
+  $('.jumbotron.callout p a, .jumbotron-callout p img').unwrap();
 
   // remove empty paragraph tags
   $('p:empty').remove();
