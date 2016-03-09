@@ -5900,16 +5900,15 @@ header:hover {
   padding-top: 15px; }
 
 .jumbotron.masthead {
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 450px;
+  background: transparent;
+  border-bottom: 1px solid #00549f;
   margin-bottom: 0;
-  padding: 40px 0; }
+  padding: 60px 0; }
 
 @media screen and (max-width: 767px) {
   .jumbotron.masthead {
     background: url("http://localhost/wp-dev/wp-content/themes/covenant-main/img/front-page-assets/masthead-mobile-default.jpg") center no-repeat !important;
-    background-size: contain;
+    background-size: cover !important;
     margin-bottom: 0;
     min-height: 0;
     padding: 40px 0; } }
@@ -5917,6 +5916,13 @@ header:hover {
 @media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
   .jumbotron.masthead {
     background: url("http://localhost/wp-dev/wp-content/themes/covenant-main/img/front-page-assets/masthead-mobile-default@2x.jpg"); } }
+
+.jumbotron.masthead .masthead-row {
+  position: relative; }
+
+.jumbotron.masthead .masthead-copy-area {
+  position: absolute;
+  bottom: 0; }
 
 .jumbotron.masthead .masthead-quick-links ul {
   list-style-type: none;
@@ -5928,13 +5934,22 @@ header:hover {
 .jumbotron.masthead .masthead-quick-links ul:last-of-type {
   margin-bottom: 0; }
 
+.jumbotron.masthead .masthead-quick-links ul li a {
+  position: relative; }
+
+.jumbotron.masthead .masthead-quick-links ul li a i {
+  position: absolute;
+  top: 16px;
+  left: 90%; }
+
 .jumbotron.masthead .masthead-quick-links ul li a:link,
 .jumbotron.masthead .masthead-quick-links ul li a:visited {
   background: rgba(255, 255, 255, 0.9);
-  border-left: 10px solid #981e32;
+  border-left: 10px solid #00549f;
   -webkit-box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.3);
   display: block;
+  font-size: 22px;
   font-weight: 600;
   padding: 10px; }
 
@@ -5943,6 +5958,22 @@ header:hover {
 .jumbotron.masthead .masthead-quick-links ul li a:hover {
   background: #fff;
   text-decoration: none; }
+
+.jumbotron.masthead .masthead-copy-area h2 {
+  color: #fff;
+  font-family: 'Oswald', 'Helvetica Neue', sans-serif;
+  font-size: 60px;
+  margin: 0;
+  text-shadow: 1px 1px 6px #000;
+  text-transform: uppercase; }
+
+.jumbotron.masthead .masthead-copy-area p {
+  color: #fff;
+  text-shadow: 1px 1px 6px #000; }
+
+.jumbotron.masthead .masthead-copy-area p a {
+  color: #fff;
+  text-shadow: 1px 1px 6px #000; }
 
 .jumbotron.masthead .alignnone,
 .jumbotron.masthead a img.alignnone,
