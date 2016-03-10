@@ -97,7 +97,7 @@ header:hover {
      background: transparent;
   border-bottom: 1px solid $brand-primary;
   margin-bottom: 0;
-        padding: 60px 0;
+        padding: 100px 0 40px;
 }
 
 @media screen and (max-width:767px) {
@@ -145,7 +145,7 @@ header:hover {
 }
 .jumbotron.masthead .masthead-quick-links ul li a:link,
 .jumbotron.masthead .masthead-quick-links ul li a:visited {
-          background: rgba(255, 255, 255, 0.9);
+          background: rgba(255, 255, 255, 0.8);
          border-left: 10px solid $brand-primary;
   -webkit-box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.3);
           box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.3);
@@ -162,21 +162,45 @@ header:hover {
 }
 
 .jumbotron.masthead .masthead-copy-area h2 {
-  color: #fff;
-  font-family: 'Oswald', 'Helvetica Neue', sans-serif;
-  font-size: 60px;
-  margin: 0;
-  text-shadow: 1px 1px 6px #000;
+           color: #fff;
+     font-family: 'Oswald', 'Helvetica Neue', sans-serif;
+       font-size: 60px;
+          margin: 0;
+     text-shadow: 1px 1px 6px #000;
   text-transform: uppercase;
 }
 .jumbotron.masthead .masthead-copy-area p {
-  color: #fff;
+        color: #fff;
   text-shadow: 1px 1px 6px #000;
 }
 .jumbotron.masthead .masthead-copy-area p a {
-  color: #fff;
+        color: #fff;
   text-shadow: 1px 1px 6px #000;
 }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .jumbotron.masthead .masthead-quick-links ul li a:link {
+    font-size: 19px;
+  }
+  .jumbotron.masthead .masthead-copy-area h2 {
+             color: #fff;
+       font-family: 'Oswald', 'Helvetica Neue', sans-serif;
+         font-size: 45px;
+            margin: 0;
+       text-shadow: 1px 1px 6px #000;
+    text-transform: uppercase;
+  }
+  .jumbotron.masthead .masthead-copy-area p {
+          color: #fff;
+      font-size: 22px;
+    text-shadow: 1px 1px 6px #000;
+  }
+  .jumbotron.masthead .masthead-copy-area p a {
+          color: #fff;
+    text-shadow: 1px 1px 6px #000;
+  }
+}
+
 .jumbotron.masthead .alignnone,
 .jumbotron.masthead a img.alignnone,
 .jumbotron.masthead .aligncenter,

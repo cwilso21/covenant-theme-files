@@ -23,11 +23,11 @@ get_header(); ?>
       <div class="jumbotron masthead" data-parallax="scroll" data-image-src="<?php echo $image; ?>">
         <div class="container masthead-container">
           <div class="row masthead-row">
-            <div class="col-sm-6 col-md-6 col-lg-5 hidden-xs masthead-copy-area">
-              <?php the_field('masthead_ad_text') ?>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 col-lg-offset-3 pull-right masthead-quick-links">
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4 col-lg-offset-3 masthead-quick-links">
               <?php the_field('masthead_quick_links') ?>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-5 hidden-xs pull-right masthead-copy-area">
+              <?php the_field('masthead_ad_text') ?>
             </div>
           </div>
         </div>
