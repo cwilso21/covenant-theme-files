@@ -57,12 +57,9 @@ header:hover {
 
 // in-page collapsible panel styles
 // =================================
-.panel.panel-default {
-  border: 0;
-}
 .panel-default > .panel-heading {
-  border: 0;
-  padding: 0;
+  color: #fff;
+  background-color: $brand-primary;
 }
 
 //scrollToTop style and position

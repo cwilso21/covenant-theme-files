@@ -1,5 +1,5 @@
 /*
- * Theme Name: Covenant Health Test Theme
+ * Theme Name: Morristown-Hamblen Health System Theme
  * Description: Bootstrap-based theme for covenanthealth.com
  * Author: John Galyon
  * Author URI: http://www.covenanthealth.com/
@@ -323,7 +323,7 @@ ul.nav.sidenav-menu {
    border-color: darken($brand-primary, 10%);
      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.4);
   margin-bottom: 0;
-     margin-top: 6px;
+     margin-top: 66px;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
@@ -375,7 +375,7 @@ ul.nav.sidenav-menu {
 @media (min-width: 768px) {
   .navbar-default .navbar-nav {
     padding-bottom: 10px;
-    padding-top: 33px;
+    padding-top: 90px;
   }
   .navbar-fixed-top .navbar-default .container .navbar-collapse .nav.navbar-nav {
     padding-right: 15px;
@@ -433,7 +433,7 @@ ul.nav.sidenav-menu {
   }
   .navbar-default .navbar-nav {
     padding-bottom: 0;
-    padding-top: 35px;
+    padding-top: 105px;
   }
   .navbar-nav > li > .dropdown-menu {
     margin-top: 10px;
