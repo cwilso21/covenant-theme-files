@@ -101,13 +101,13 @@ get_header(); ?>
           </div>
         </div> <!-- /resources-row -->
       </div> <!-- /resources-container -->
-      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/img/front-page-assets/covenant-facilities-map.jpg">
+      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/front-page-assets/roane-building-img-parallax.jpg">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <div class="well translucent-well">
-                <h2>Our Hospitals</h2>
-                <p>Visit our <a href="<?php echo get_page_link(18); ?>">hospitals page</a> for more information about each of our acute care facilities, or to find the facility closest to you.</p>
+                <h2>Our Services</h2>
+                <p>Visit our Services page to learn about all the things we do.</p>
               </div>
             </div>
           </div>

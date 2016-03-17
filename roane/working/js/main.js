@@ -85,12 +85,15 @@ $(document).ready(function () {
     $('.sidenav-menu').attr('aria-labelledby','sidebar-navigation');
   }
 
+  if ((mqxs.matches) && $('.jumbotron.masthead').length) {
+    $('.jumbotron.masthead').removeAttr('data-image-src');
+  }
   // remove the style attribute from wordpress captions altogether
   // so that css can do it's job
   $('.wp-caption').removeAttr('style');
 
   // remove the automatically generated paragraph tags from hero images
-  $('.jumbotron.callout p a').unwrap();
+  $('.jumbotron.callout p a, .jumbotron-callout p img').unwrap();
 
   // remove empty paragraph tags
   $('p:empty').remove();

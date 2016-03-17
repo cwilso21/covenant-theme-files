@@ -1,5 +1,5 @@
 /*
- * Theme Name: Morristown-Hamblen Health System Theme
+ * Theme Name: Morristown-Hamblen Health System
  * Description: Bootstrap-based theme for covenanthealth.com
  * Author: John Galyon
  * Author URI: http://www.covenanthealth.com/
@@ -590,7 +590,8 @@ blockquote > footer {
   font-weight: 600;
 }
 .content-container ul li,
-.introduction-row main ul li {
+.introduction-row main ul li,
+.content-container ol li {
   font-weight: 300;
 }
 .content-container p ul,
@@ -599,15 +600,23 @@ blockquote > footer {
   list-style-type: square;
      padding-left: 20px;
 }
-
+.content-container p ol,
+.content-container ol {
+  padding-left: 20px;
+}
 .content-container ul li a:link,
-.content-container ul li a:visited {
+.content-container ul li a:visited,
+.content-container ol li a:link,
+.content-container ol li a:visited, {
   color: $brand-primary;
   font-weight: 600;
 }
 .content-container ul li a:active,
 .content-container ul li a:focus,
-.content-container ul li a:hover {
+.content-container ul li a:hover,
+.content-container ol li a:active,
+.content-container ol li a:focus,
+.content-container ol li a:hover {
   color: darken($brand-primary, 20%);
 }
 ul.pagination {

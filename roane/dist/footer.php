@@ -16,11 +16,11 @@
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 brand-section pull-right">
             <p>
-              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/covenant-health.svg" alt="Covenant Health logo" title="Covenant Health logo"></a><br>
-              &copy; <?php echo date('Y'); ?> Covenant Health<br>
-              100 Fort Sanders West Blvd.<br>
-              Knoxville, TN 37922<br>
-              (865) 374-1000
+              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/roane-medical-center.svg" alt="Covenant Health logo" title="Covenant Health logo"></a><br>
+              &copy; <?php echo date('Y'); ?> Roane Medical Center<br>
+              8045 Roane Medical Center Drive<br>
+              Harriman, TN 37748<br>
+              (865) 316-1000
             </p>
           </div> <!-- /.brand-section -->
           <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 link-section pull-left">

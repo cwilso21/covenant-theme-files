@@ -61,8 +61,8 @@
               <span class="toggle-text">menu</span>
             </button> <!-- /navbar-toggle -->
             <a class="navbar-brand" href="<?php echo site_url(); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/covenant-health.svg" title="Covenant Health logo" alt="Covenant Health">
-              <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/roane-medical-center.svg" title="<?php get_bloginfo('name'); ?>" alt="<?php get_bloginfo('name'); ?>">
+              <span class="sr-only"><?php get_bloginfo('name'); ?></span>
             </a>
           </div> <!-- /navbar-header -->
 

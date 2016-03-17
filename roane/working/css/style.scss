@@ -1,5 +1,5 @@
 /*
- * Theme Name: Roane Medical Center Theme
+ * Theme Name: Roane Medical Center
  * Description: Bootstrap-based theme for covenanthealth.com
  * Author: John Galyon
  * Author URI: http://www.covenanthealth.com/
@@ -54,7 +54,6 @@ header:hover {
     padding-top: 106px;
   }
 }
-
 
 // in-page collapsible panel styles
 // =================================
@@ -213,10 +212,6 @@ header:hover {
 }
 .jumbotron.parallax-window {
   background: transparent;
-  //min-height: 450px;
-}
-.jumbotron.parallax-window .container {
-  padding-top: 5%;
 }
 
 .jumbotron.parallax-window.landing-page {
@@ -239,6 +234,13 @@ header:hover {
 // additional well styling
 .translucent-well {
   background: rgba(245, 245, 245, 0.8);
+  margin-top: 100px;
+}
+.translucent-well h2 {
+  margin-top: 0;
+}
+.translucent-well p:last-of-type {
+  margin-bottom: 0;
 }
 
 // horizontal rules
@@ -325,7 +327,7 @@ ul.nav.sidenav-menu {
    border-color: darken($brand-primary, 10%);
      box-shadow: 0 1px 4px 0 rgba(0,0,0,0.4);
   margin-bottom: 0;
-     margin-top: 60px;
+     margin-top: 30px;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
@@ -377,7 +379,7 @@ ul.nav.sidenav-menu {
 @media (min-width: 768px) {
   .navbar-default .navbar-nav {
     padding-bottom: 10px;
-    padding-top: 86px;
+    padding-top: 55px;
   }
   .navbar-fixed-top .navbar-default .container .navbar-collapse .nav.navbar-nav {
     padding-right: 15px;
@@ -435,7 +437,7 @@ ul.nav.sidenav-menu {
   }
   .navbar-default .navbar-nav {
     padding-bottom: 0;
-    padding-top: 100px;
+    padding-top: 64px;
   }
   .navbar-nav > li > .dropdown-menu {
     margin-top: 10px;
@@ -592,7 +594,8 @@ blockquote > footer {
   font-weight: 600;
 }
 .content-container ul li,
-.introduction-row main ul li {
+.introduction-row main ul li,
+.content-container ol li {
   font-weight: 300;
 }
 .content-container p ul,
@@ -601,15 +604,23 @@ blockquote > footer {
   list-style-type: square;
      padding-left: 20px;
 }
-
+.content-container p ol,
+.content-container ol {
+  padding-left: 20px;
+}
 .content-container ul li a:link,
-.content-container ul li a:visited {
+.content-container ul li a:visited,
+.content-container ol li a:link,
+.content-container ol li a:visited, {
   color: $brand-primary;
   font-weight: 600;
 }
 .content-container ul li a:active,
 .content-container ul li a:focus,
-.content-container ul li a:hover {
+.content-container ul li a:hover,
+.content-container ol li a:active,
+.content-container ol li a:focus,
+.content-container ol li a:hover {
   color: darken($brand-primary, 20%);
 }
 ul.pagination {
