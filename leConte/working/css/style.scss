@@ -1,5 +1,5 @@
 /*
- * Theme Name: LeConte Medical Center Theme
+ * Theme Name: LeConte Medical Center
  * Description: Bootstrap-based theme for covenanthealth.com
  * Author: John Galyon
  * Author URI: http://www.covenanthealth.com/
@@ -90,29 +90,118 @@ header:hover {
 
 // jumbotrons
 // =================================
-.jumbotron.callout {
-     background: none;
-  margin-bottom: 0;
-        padding: 0;
-}
-.jumbotron.callout .alignnone,
-.jumbotron.callout a img.alignnone,
-.jumbotron.callout .aligncenter,
-.jumbotron.callout a img.aligncenter {
+.jumbotron.masthead {
+     background: transparent;
   border-bottom: 1px solid $brand-primary;
-         margin: 0;
-        padding: 0;
+  margin-bottom: 0;
+        padding: 160px 0 40px;
 }
-.jumbotron.callout img {
-  height: auto;
-   width: 100%;
+
+@media screen and (max-width: 767px) {
+  .jumbotron.masthead {
+         background: url('img/front-page-assets/masthead-mobile-default-364.jpg') center no-repeat !important;
+    background-size: cover !important;
+      margin-bottom: 0;
+         min-height: 0;
+            padding: 40px 0;
+  }
+}
+
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2) {
+  .jumbotron.masthead {
+         background: url('img/front-page-assets/masthead-mobile-default-364@2x.jpg') center no-repeat !important;
+    background-size: cover !important;
+  }
+}
+
+.jumbotron.masthead .masthead-row {
+  position: relative;
+}
+
+.jumbotron.masthead .masthead-copy-area {
+    position: absolute;
+      bottom: 0;
+       right: 0;
+  text-align: right;
+}
+
+.jumbotron.masthead .masthead-quick-links ul {
+  list-style-type: none;
+           margin: 0;
+          padding: 0;
+}
+.jumbotron.masthead .masthead-quick-links ul li {
+  margin-bottom: 13px;
+}
+.jumbotron.masthead .masthead-quick-links ul li:last-of-type {
+  margin: 0;
+}
+.jumbotron.masthead .masthead-quick-links ul li a:link,
+.jumbotron.masthead .masthead-quick-links ul li a:visited {
+          background: rgba(255, 255, 255, 0.7);
+              border: 1px solid #fff;
+       border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.3);
+          box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.3);
+               color: $brand-primary;
+             display: block;
+           font-size: 22px;
+             padding: 5px 5px 5px 10px;
+}
+.jumbotron.masthead .masthead-quick-links ul li a:active,
+.jumbotron.masthead .masthead-quick-links ul li a:focus,
+.jumbotron.masthead .masthead-quick-links ul li a:hover {
+  background: rgba(255, 255, 255, 8);
+  text-decoration: none;
+}
+.jumbotron.masthead .masthead-quick-links ul li a i {
+  margin-right: 15px;
+}
+
+.jumbotron.masthead .masthead-copy-area h2 {
+           color: #fff;
+     font-family: 'Oswald', 'Helvetica Neue', sans-serif;
+       font-size: 60px;
+          margin: 0;
+     text-shadow: 1px 1px 6px #000;
+  text-transform: uppercase;
+}
+.jumbotron.masthead .masthead-copy-area p {
+        color: #fff;
+  text-shadow: 1px 1px 6px #000;
+}
+.jumbotron.masthead .masthead-copy-area p a {
+        color: #fff;
+  text-shadow: 1px 1px 6px #000;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .jumbotron.masthead .masthead-quick-links ul li a:link {
+    font-size: 19px;
+  }
+  .jumbotron.masthead .masthead-copy-area h2 {
+             color: #fff;
+       font-family: 'Oswald', 'Helvetica Neue', sans-serif;
+         font-size: 45px;
+            margin: 0;
+       text-shadow: 1px 1px 6px #000;
+    text-transform: uppercase;
+  }
+  .jumbotron.masthead .masthead-copy-area p {
+          color: #fff;
+      font-size: 22px;
+    text-shadow: 1px 1px 6px #000;
+  }
+  .jumbotron.masthead .masthead-copy-area p a {
+          color: #fff;
+    text-shadow: 1px 1px 6px #000;
+  }
 }
 .jumbotron.parallax-window {
   background: transparent;
-  min-height: 450px;
 }
 .jumbotron.parallax-window .container {
-  padding-top: 5%;
+  padding-top: 200px;
 }
 
 .jumbotron.parallax-window.landing-page {
@@ -132,6 +221,12 @@ header:hover {
 // additional well styling
 .translucent-well {
   background: rgba(245, 245, 245, 0.8);
+}
+.translucent-well h2 {
+  margin-top: 0;
+}
+.translucent-well p:last-of-type {
+  margin-bottom: 0;
 }
 
 // horizontal rules
@@ -488,7 +583,8 @@ blockquote > footer {
   font-weight: 600;
 }
 .content-container ul li,
-.introduction-row main ul li {
+.introduction-row main ul li,
+.content-container ol li {
   font-weight: 300;
 }
 .content-container p ul,
@@ -497,15 +593,23 @@ blockquote > footer {
   list-style-type: square;
      padding-left: 20px;
 }
-
+.content-container p ol,
+.content-container ol {
+  padding-left: 20px;
+}
 .content-container ul li a:link,
-.content-container ul li a:visited {
+.content-container ul li a:visited,
+.content-container ol li a:link,
+.content-container ol li a:visited, {
   color: $brand-primary;
   font-weight: 600;
 }
 .content-container ul li a:active,
 .content-container ul li a:focus,
-.content-container ul li a:hover {
+.content-container ul li a:hover,
+.content-container ol li a:active,
+.content-container ol li a:focus,
+.content-container ol li a:hover {
   color: darken($brand-primary, 20%);
 }
 ul.pagination {

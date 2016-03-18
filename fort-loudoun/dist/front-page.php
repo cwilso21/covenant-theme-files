@@ -101,7 +101,7 @@ get_header(); ?>
           </div>
         </div> <!-- /resources-row -->
       </div> <!-- /resources-container -->
-      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/img/front-page-assets/covenant-facilities-map.jpg">
+      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/img/front-page-assets/loudoun-building-img.jpg">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6">

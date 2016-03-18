@@ -97,12 +97,12 @@ header:hover {
      background: transparent;
   border-bottom: 1px solid $brand-primary;
   margin-bottom: 0;
-        padding: 100px 0 40px;
+        padding: 160px 0 40px;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .jumbotron.masthead {
-         background: url('http://localhost/wp-dev/wp-content/themes/covenant-main/img/front-page-assets/masthead-mobile-default.jpg') center no-repeat !important;
+         background: url('img/front-page-assets/masthead-mobile-default-294.jpg') center no-repeat !important;
     background-size: cover !important;
       margin-bottom: 0;
          min-height: 0;
@@ -110,9 +110,10 @@ header:hover {
   }
 }
 
-@media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2) {
   .jumbotron.masthead {
-    background: url('http://localhost/wp-dev/wp-content/themes/covenant-main/img/front-page-assets/masthead-mobile-default@2x.jpg');
+         background: url('img/front-page-assets/masthead-mobile-default-294@2x.jpg') center no-repeat !important;
+    background-size: cover !important;
   }
 }
 
@@ -121,44 +122,43 @@ header:hover {
 }
 
 .jumbotron.masthead .masthead-copy-area {
-  position: absolute;
-  bottom: 0;
+    position: absolute;
+      bottom: 0;
+       right: 0;
+  text-align: right;
 }
 
 .jumbotron.masthead .masthead-quick-links ul {
   list-style-type: none;
-  padding: 0;
+           margin: 0;
+          padding: 0;
 }
 .jumbotron.masthead .masthead-quick-links ul li {
   margin-bottom: 13px;
 }
-.jumbotron.masthead .masthead-quick-links ul:last-of-type {
-  margin-bottom: 0;
-}
-.jumbotron.masthead .masthead-quick-links ul li a {
-  position: relative;
-}
-.jumbotron.masthead .masthead-quick-links ul li a i {
-  position: absolute;
-  top: 16px;
-  left: 90%;
+.jumbotron.masthead .masthead-quick-links ul li:last-of-type {
+  margin: 0;
 }
 .jumbotron.masthead .masthead-quick-links ul li a:link,
 .jumbotron.masthead .masthead-quick-links ul li a:visited {
-          background: rgba(255, 255, 255, 0.8);
-         border-left: 10px solid $brand-primary;
+          background: rgba(255, 255, 255, 0.7);
+              border: 1px solid #fff;
+       border-radius: 4px;
   -webkit-box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.3);
           box-shadow: 2px 2px 8px 0 rgba(0,0,0,0.3);
+               color: $brand-primary;
              display: block;
            font-size: 22px;
-         font-weight: 600;
-             padding: 10px;
+             padding: 5px 5px 5px 10px;
 }
 .jumbotron.masthead .masthead-quick-links ul li a:active,
 .jumbotron.masthead .masthead-quick-links ul li a:focus,
 .jumbotron.masthead .masthead-quick-links ul li a:hover {
-  background: #fff;
+  background: rgba(255, 255, 255, 8);
   text-decoration: none;
+}
+.jumbotron.masthead .masthead-quick-links ul li a i {
+  margin-right: 15px;
 }
 
 .jumbotron.masthead .masthead-copy-area h2 {
@@ -200,40 +200,23 @@ header:hover {
     text-shadow: 1px 1px 6px #000;
   }
 }
-
-.jumbotron.masthead .alignnone,
-.jumbotron.masthead a img.alignnone,
-.jumbotron.masthead .aligncenter,
-.jumbotron.masthead a img.aligncenter {
-  border-bottom: 1px solid $brand-primary;
-         margin: 0;
-        padding: 0;
-}
-.jumbotron.masthead img {
-  height: auto;
-   width: 100%;
-}
 .jumbotron.parallax-window {
   background: transparent;
-  min-height: 450px;
 }
 .jumbotron.parallax-window .container {
-  padding-top: 5%;
+  padding-top: 200px;
 }
 
 .jumbotron.parallax-window.landing-page {
-  background: transparent;
   min-height: 250px;
 }
 @media screen and (min-width: 768px) {
   .jumbotron.parallax-window.landing-page {
-    background: transparent;
     min-height: 350px;
   }
 }
 @media screen and (min-width: 1200px) {
   .jumbotron.parallax-window.landing-page {
-    background: transparent;
     min-height: 400px;
   }
 }
@@ -241,6 +224,12 @@ header:hover {
 // additional well styling
 .translucent-well {
   background: rgba(245, 245, 245, 0.8);
+}
+.translucent-well h2 {
+  margin-top: 0;
+}
+.translucent-well p:last-of-type {
+  margin-bottom: 0;
 }
 
 // horizontal rules
@@ -594,7 +583,8 @@ blockquote > footer {
   font-weight: 600;
 }
 .content-container ul li,
-.introduction-row main ul li {
+.introduction-row main ul li,
+.content-container ol li {
   font-weight: 300;
 }
 .content-container p ul,
@@ -603,15 +593,23 @@ blockquote > footer {
   list-style-type: square;
      padding-left: 20px;
 }
-
+.content-container p ol,
+.content-container ol {
+  padding-left: 20px;
+}
 .content-container ul li a:link,
-.content-container ul li a:visited {
+.content-container ul li a:visited,
+.content-container ol li a:link,
+.content-container ol li a:visited, {
   color: $brand-primary;
   font-weight: 600;
 }
 .content-container ul li a:active,
 .content-container ul li a:focus,
-.content-container ul li a:hover {
+.content-container ul li a:hover,
+.content-container ol li a:active,
+.content-container ol li a:focus,
+.content-container ol li a:hover {
   color: darken($brand-primary, 20%);
 }
 ul.pagination {

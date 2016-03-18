@@ -197,39 +197,23 @@ header:hover {
     text-shadow: 1px 1px 6px #000;
   }
 }
-
-.jumbotron.masthead .alignnone,
-.jumbotron.masthead a img.alignnone,
-.jumbotron.masthead .aligncenter,
-.jumbotron.masthead a img.aligncenter {
-  border-bottom: 1px solid $brand-primary;
-         margin: 0;
-        padding: 0;
-}
-.jumbotron.masthead img {
-  height: auto;
-   width: 100%;
-}
 .jumbotron.parallax-window {
   background: transparent;
 }
 .jumbotron.parallax-window .container {
-  padding-top: 5%;
+  padding-top: 200px;
 }
 
 .jumbotron.parallax-window.landing-page {
-  background: transparent;
   min-height: 250px;
 }
 @media screen and (min-width: 768px) {
   .jumbotron.parallax-window.landing-page {
-    background: transparent;
     min-height: 350px;
   }
 }
 @media screen and (min-width: 1200px) {
   .jumbotron.parallax-window.landing-page {
-    background: transparent;
     min-height: 400px;
   }
 }
@@ -237,6 +221,12 @@ header:hover {
 // additional well styling
 .translucent-well {
   background: rgba(245, 245, 245, 0.8);
+}
+.translucent-well h2 {
+  margin-top: 0;
+}
+.translucent-well p:last-of-type {
+  margin-bottom: 0;
 }
 
 // horizontal rules

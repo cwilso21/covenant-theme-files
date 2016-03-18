@@ -11,8 +11,26 @@
 */
 get_header(); ?>
 
-      <div class="jumbotron callout">
-        <?php the_field('hero_image') ?>
+      <?php if (has_post_thumbnail($post->ID)): ?>
+      <?php
+        $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full-size' );
+        $image = $image[0];
+      ?>
+      <?php else :
+        $image = get_bloginfo('stylesheet_directory') . '/img/front-page-assets/default-masthead.jpg';
+      ?>
+      <?php endif; ?>
+      <div class="jumbotron masthead" data-parallax="scroll" data-image-src="<?php echo $image; ?>">
+        <div class="container masthead-container">
+          <div class="row masthead-row">
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4 masthead-quick-links">
+              <?php the_field('masthead_quick_links') ?>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-5 hidden-xs pull-right masthead-copy-area">
+              <?php the_field('masthead_ad_text') ?>
+            </div>
+          </div>
+        </div>
       </div> <!-- /jumbotron -->
       <div class="container welcome-container">
         <div class="row introduction-row">

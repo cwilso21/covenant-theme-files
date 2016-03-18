@@ -89,6 +89,9 @@ $(document).ready(function () {
   // so that css can do it's job
   $('.wp-caption').removeAttr('style');
 
+  //add scrolling functionality to sidebar anchor links
+  $('.sidenav-menu li a[href^="#"').attr('data-scroll','');
+
   // remove the automatically generated paragraph tags from hero images
   $('.jumbotron.callout p a').unwrap();
 
@@ -97,15 +100,6 @@ $(document).ready(function () {
 
   // remove last hr from blog archive pages
   $('.text-center').prev('hr').css('display','none');
-
-  // remove last hr element on a page
-  // if it appears after a link
-  // $('.main-content a ~ hr:last-of-type').remove();
-
-  // add 'data scroll' selector to anchor links
-  $('a[href^="#"]').each(function() {
-    $(this).attr('data-scroll', '');
-  });
 
   // collect everything that might contain embedded content
   var $allIframes = $("iframe[src*='//player.vimeo.com'], iframe[src*='//www.youtube.com'], iframe[src*='//www.google.com/maps'], object, embed");

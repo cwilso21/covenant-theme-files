@@ -4,7 +4,7 @@
  * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : November 9, 2015
- * Updated    : December 21, 2015
+ * Updated    : March 17, 2016
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -61,7 +61,7 @@
               <span class="toggle-text">menu</span>
             </button> <!-- /navbar-toggle -->
             <a class="navbar-brand" href="<?php echo site_url(); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/covenant-health.svg" title="Covenant Health logo" alt="Covenant Health">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/covenant-health.svg" title="<?php get_bloginfo('name'); ?>" alt="<?php get_bloginfo('name'); ?>">
               <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
             </a>
           </div> <!-- /navbar-header -->
@@ -88,7 +88,7 @@
                   <div class="input-group">
                     <input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search',''); ?>">
                     <span class="input-group-btn">
-                      <button class="btn btn-primary" type="button">Go</button>
+                      <button class="btn btn-primary" type="submit">Go</button>
                     </span>
                   </div>
                 </form>
@@ -97,11 +97,11 @@
                 <a href="#" title="Search" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-search"></i></a>
                 <ul class="dropdown-menu" role="menu">
                   <li>
-                    <form class="navbar-form" role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <form class="navbar-form" role="search" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                       <div class="input-group">
                         <input name="s" id="s" type="text" class="search-query form-control" autocomplete="off" placeholder="<?php _e('Search',''); ?>">
                         <span class="input-group-btn">
-                          <button class="btn btn-primary" type="button">Go</button>
+                          <button class="btn btn-primary" type="submit">Go</button>
                         </span>
                       </div>
                     </form>
