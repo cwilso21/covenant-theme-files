@@ -1,0 +1,118 @@
+figure.wp-caption.alignright {
+   border: 1px solid lighten($text-color, 65%);
+    float: right;
+   margin: 0 0 20px 20px;
+  padding: 5px;
+    width: 50%;
+}
+img.alignright {
+  float: right;
+   margin: 0 0 20px 20px;
+  padding: 5px;
+    width: 50%;
+}
+figure.wp-caption.aligncenter {
+   border: 1px solid lighten($text-color, 65%);
+   margin: 0 0 20px;
+  padding: 5px;
+    width: 100%;
+}
+img.aligncenter {
+  margin: 0 0 20px;
+  padding: 5px;
+    width: 100%;
+}
+.jumbotron.masthead img.aligncenter {
+  margin: 0;
+  padding: 0;
+}
+.jumbotron.masthead p {
+  margin: 0;
+}
+figure.wp-caption.alignnone {
+   border: 1px solid lighten($text-color, 65%);
+    float: right;
+   margin: 0 0 20px;
+  padding: 5px;
+    width: 100%;
+}
+img.alignnone {
+   float: right;
+   margin: 0 0 20px;
+  padding: 5px;
+    width: 100%;
+}
+figure.wp-caption.alignleft {
+   border: 1px solid lighten($text-color, 65%);
+    float: left;
+   margin: 0 20px 20px 0;
+  padding: 5px;
+    width: 50%;
+}
+img.alignleft {
+  float: left;
+   margin: 0 20px 20px 0;
+  padding: 5px;
+    width: 50%;
+}
+figure.wp-caption.alignright img,
+figure.wp-caption.alignnone img,
+figure.wp-caption.alignleft img,
+figure.wp-caption.aligncenter img {
+  height: auto;
+   width: 100%;
+}
+figure.wp-caption.alignright figcaption.wp-caption-text,
+figure.wp-caption.alignnone figcaption.wp-caption-text,
+figure.wp-caption.alignleft figcaption.wp-caption-text,
+figure.wp-caption.aligncenter figcaption.wp-caption-text {
+    font-size: 15px;
+   font-style: italic;
+  font-weight: 300;
+  padding-top: 5px;
+}
+@media screen and (max-width: 767px) {
+  figure.wp-caption.alignright,
+  figure.wp-caption.alignleft,
+  img.alignright {
+    width: 100%;
+  }
+}
+@media screen and (min-width:768px) {
+  figure.wp-caption.alignnone {
+    width: 100%;
+  }
+}
+
+// content-wrapper special image and figure styling
+.half,
+.caption-half,
+.wp-caption.half {
+   width: 50%;
+   height: auto;
+   float: right;
+}
+.quarter,
+.caption-quarter,
+.wp-caption.quarter {
+   width: 25%;
+}
+.post-thumbnail-img {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .half,
+  .caption-half,
+  .wp-caption.half {
+     float: right;
+    margin: 0 0 20px;
+     width: 100%;
+  }
+  .quarter,
+  .caption-quarter,
+  .wp-caption.quarter {
+     float: right;
+    margin: 0 0 20px;
+     width: 100%;
+  }
+}

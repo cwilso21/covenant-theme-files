@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  border-bottom: 1px solid $brand-primary;
+}
+
+// in-page collapsible panel styles
+// =================================
+.panel-default > .panel-heading {
+  color: #fff;
+  background-color: $brand-primary;
+}
+
+//scrollToTop style and position
+.scrollToTop {
+  background-color: $brand-primary;
+     border-radius: 5px 5px 0 0;
+            bottom: 0;
+             color: rgba(255,255,255,0.7);
+           display: none;
+         font-size: 13px;
+           padding: 6px 16px 6px;
+          position: fixed;
+             right: 20px;
+        text-align: center;
+           z-index: 1000;
+}
+.scrollToTop:active,
+.scrollToTop:focus,
+.scrollToTop:hover {
+       color: #fff;
+}
+
+// grids
+// =================================
+.row.breadcrumb-row ~ .row.content-row {
+  padding-top: 15px;
+}

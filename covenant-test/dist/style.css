@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
- * Theme Name: Covenant Health Test Theme
+ * Theme Name: Covenant Health Test
  * Description: Bootstrap-based theme for covenanthealth.com
  * Author: John Galyon
  * Author URI: http://www.covenanthealth.com/
@@ -5830,46 +5830,11 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-@media print {
-  header,
-  footer,
-  .post-edit-link {
-    display: none; } }
-
-/* ------------------------------------------------------
- *
- * General structure styles
- *
- * --------------------------------------------------- */
 * {
   box-sizing: border-box; }
 
-a {
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out; }
-
-header {
-  background: rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid #00549f;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out; }
-
-header:focus,
-header:hover {
-  background: rgba(255, 255, 255, 0.9); }
-
-.navbar-fixed-top + .content-wrapper {
-  padding-top: 90px; }
-
-@media (min-width: 768px) {
-  .navbar-fixed-top + .content-wrapper {
-    padding-top: 91px; } }
-
-@media (min-width: 992px) {
-  .navbar-fixed-top + .content-wrapper {
-    padding-top: 106px; } }
+.header {
+  border-bottom: 1px solid #00549f; }
 
 .panel-default > .panel-heading {
   color: #fff;
@@ -5896,149 +5861,6 @@ header:hover {
 .row.breadcrumb-row ~ .row.content-row {
   padding-top: 15px; }
 
-.jumbotron.masthead {
-  background: transparent;
-  border-bottom: 1px solid #00549f;
-  margin-bottom: 0;
-  padding: 160px 0 40px; }
-
-@media screen and (max-width: 767px) {
-  .jumbotron.masthead {
-    background: url("img/front-page-assets/masthead-mobile-default.jpg") center no-repeat !important;
-    background-size: cover !important;
-    margin-bottom: 0;
-    min-height: 0;
-    padding: 40px 0; } }
-
-@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2) {
-  .jumbotron.masthead {
-    background: url("img/front-page-assets/masthead-mobile-default@2x.jpg") center no-repeat !important;
-    background-size: cover !important; } }
-
-.jumbotron.masthead .masthead-row {
-  position: relative; }
-
-.jumbotron.masthead .masthead-copy-area {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  text-align: right; }
-
-.jumbotron.masthead .masthead-quick-links ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-.jumbotron.masthead .masthead-quick-links ul li {
-  margin-bottom: 13px; }
-
-.jumbotron.masthead .masthead-quick-links ul li:last-of-type {
-  margin: 0; }
-
-.jumbotron.masthead .masthead-quick-links ul li a:link,
-.jumbotron.masthead .masthead-quick-links ul li a:visited {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid #fff;
-  border-radius: 4px;
-  -webkit-box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.3);
-  color: #00549f;
-  display: block;
-  font-size: 22px;
-  padding: 5px 5px 5px 10px; }
-
-.jumbotron.masthead .masthead-quick-links ul li a:active,
-.jumbotron.masthead .masthead-quick-links ul li a:focus,
-.jumbotron.masthead .masthead-quick-links ul li a:hover {
-  background: white;
-  text-decoration: none; }
-
-.jumbotron.masthead .masthead-quick-links ul li a i {
-  margin-right: 15px; }
-
-.jumbotron.masthead .masthead-copy-area h2 {
-  color: #fff;
-  font-family: 'Oswald', 'Helvetica Neue', sans-serif;
-  font-size: 60px;
-  margin: 0;
-  text-shadow: 1px 1px 6px #000;
-  text-transform: uppercase; }
-
-.jumbotron.masthead .masthead-copy-area p {
-  color: #fff;
-  text-shadow: 1px 1px 6px #000; }
-
-.jumbotron.masthead .masthead-copy-area p a {
-  color: #fff;
-  text-shadow: 1px 1px 6px #000; }
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .jumbotron.masthead .masthead-quick-links ul li a:link {
-    font-size: 19px; }
-  .jumbotron.masthead .masthead-copy-area h2 {
-    color: #fff;
-    font-family: 'Oswald', 'Helvetica Neue', sans-serif;
-    font-size: 45px;
-    margin: 0;
-    text-shadow: 1px 1px 6px #000;
-    text-transform: uppercase; }
-  .jumbotron.masthead .masthead-copy-area p {
-    color: #fff;
-    font-size: 22px;
-    text-shadow: 1px 1px 6px #000; }
-  .jumbotron.masthead .masthead-copy-area p a {
-    color: #fff;
-    text-shadow: 1px 1px 6px #000; } }
-
-.jumbotron.masthead .alignnone,
-.jumbotron.masthead a img.alignnone,
-.jumbotron.masthead .aligncenter,
-.jumbotron.masthead a img.aligncenter {
-  border-bottom: 1px solid #00549f;
-  margin: 0;
-  padding: 0; }
-
-.jumbotron.masthead img {
-  height: auto;
-  width: 100%; }
-
-.jumbotron.parallax-window {
-  background: transparent; }
-
-.jumbotron.parallax-window .container {
-  padding-top: 5%; }
-
-.jumbotron.parallax-window.landing-page {
-  background: transparent;
-  min-height: 250px; }
-
-@media screen and (min-width: 768px) {
-  .jumbotron.parallax-window.landing-page {
-    background: transparent;
-    min-height: 350px; } }
-
-@media screen and (min-width: 1200px) {
-  .jumbotron.parallax-window.landing-page {
-    background: transparent;
-    min-height: 400px; } }
-
-.translucent-well {
-  background: rgba(245, 245, 245, 0.8); }
-
-hr {
-  border-top: 1px solid #d9d9d9; }
-
-hr ~ div.row div[class*=col] h2 {
-  margin-top: 0; }
-
-ul.nav.sidenav-menu {
-  padding-left: 0; }
-
-/* ------------------------------------------------------
- *
- * Top link styles
- *
- * --------------------------------------------------- */
 .top-links {
   list-style-type: none;
   text-align: right;
@@ -6079,11 +5901,6 @@ ul.nav.sidenav-menu {
     font-size: 11px;
     font-weight: 0; } }
 
-/* ------------------------------------------------------
- *
- * Navbar styles
- *
- * --------------------------------------------------- */
 .navbar-default {
   background: none;
   border: none;
@@ -6201,11 +6018,126 @@ ul.nav.sidenav-menu {
   .navbar-default .navbar-nav > li > a {
     padding: 0 0 0 35px; } }
 
-/* ------------------------------------------------------
- *
- * Type styles
- *
- * --------------------------------------------------- */
+.jumbotron.masthead {
+  background: transparent;
+  border-bottom: 1px solid #00549f;
+  margin-bottom: 0;
+  padding: 160px 0 40px; }
+
+@media screen and (max-width: 767px) {
+  .jumbotron.masthead {
+    background: url("img/front-page-assets/masthead-mobile-default-294.jpg") center no-repeat !important;
+    background-size: cover !important;
+    margin-bottom: 0;
+    min-height: 0;
+    padding: 40px 0; } }
+
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), only screen and (max-width: 767px) and (min-device-pixel-ratio: 2) {
+  .jumbotron.masthead {
+    background: url("img/front-page-assets/masthead-mobile-default-294@2x.jpg") center no-repeat !important;
+    background-size: cover !important; } }
+
+.jumbotron.masthead .masthead-row {
+  position: relative; }
+
+.jumbotron.masthead .masthead-copy-area {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right; }
+
+.jumbotron.masthead .masthead-quick-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.jumbotron.masthead .masthead-quick-links ul li {
+  margin-bottom: 13px; }
+
+.jumbotron.masthead .masthead-quick-links ul li:last-of-type {
+  margin: 0; }
+
+.jumbotron.masthead .masthead-quick-links ul li a:link,
+.jumbotron.masthead .masthead-quick-links ul li a:visited {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.3);
+  color: #00549f;
+  display: block;
+  font-size: 22px;
+  padding: 5px 5px 5px 10px; }
+
+.jumbotron.masthead .masthead-quick-links ul li a:active,
+.jumbotron.masthead .masthead-quick-links ul li a:focus,
+.jumbotron.masthead .masthead-quick-links ul li a:hover {
+  background: white;
+  text-decoration: none; }
+
+.jumbotron.masthead .masthead-quick-links ul li a i {
+  margin-right: 15px; }
+
+.jumbotron.masthead .masthead-copy-area h2 {
+  color: #fff;
+  font-family: 'Oswald', 'Helvetica Neue', sans-serif;
+  font-size: 60px;
+  margin: 0;
+  text-shadow: 1px 1px 6px #000;
+  text-transform: uppercase; }
+
+.jumbotron.masthead .masthead-copy-area p {
+  color: #fff;
+  text-shadow: 1px 1px 6px #000; }
+
+.jumbotron.masthead .masthead-copy-area p a {
+  color: #fff;
+  text-shadow: 1px 1px 6px #000; }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .jumbotron.masthead .masthead-quick-links ul li a:link {
+    font-size: 19px; }
+  .jumbotron.masthead .masthead-copy-area h2 {
+    color: #fff;
+    font-family: 'Oswald', 'Helvetica Neue', sans-serif;
+    font-size: 45px;
+    margin: 0;
+    text-shadow: 1px 1px 6px #000;
+    text-transform: uppercase; }
+  .jumbotron.masthead .masthead-copy-area p {
+    color: #fff;
+    font-size: 22px;
+    text-shadow: 1px 1px 6px #000; }
+  .jumbotron.masthead .masthead-copy-area p a {
+    color: #fff;
+    text-shadow: 1px 1px 6px #000; } }
+
+.jumbotron.parallax-window {
+  background: transparent; }
+
+.jumbotron.parallax-window .container {
+  padding-top: 200px; }
+
+.jumbotron.parallax-window.landing-page {
+  min-height: 250px; }
+
+@media screen and (min-width: 768px) {
+  .jumbotron.parallax-window.landing-page {
+    min-height: 350px; } }
+
+@media screen and (min-width: 1200px) {
+  .jumbotron.parallax-window.landing-page {
+    min-height: 400px; } }
+
+.translucent-well {
+  background: rgba(245, 245, 245, 0.8); }
+
+.translucent-well h2 {
+  margin-top: 0; }
+
+.translucent-well p:last-of-type {
+  margin-bottom: 0; }
+
 h1.error-headline {
   font-family: 'Oswald', 'Helvetica Neue', sans-serif;
   font-size: 100px;
@@ -6262,6 +6194,31 @@ h2[id^="post"] {
 p {
   font-weight: 300; }
 
+.post-date {
+  font-weight: 400; }
+
+strong {
+  font-weight: 600; }
+
+small.posted-on {
+  font-size: 14px;
+  font-style: italic; }
+
+blockquote {
+  font-weight: 300;
+  font-style: italic; }
+
+blockquote > footer {
+  background: none;
+  border-top: 0;
+  font-style: normal;
+  margin-top: 0; }
+
+a {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
+
 p a:link,
 p a:visited,
 .tribe-events-list .tribe-events-loop .tribe-events-content a:link,
@@ -6286,27 +6243,6 @@ dd.url a:active,
 dd.url a:focus,
 dd.url a:hover {
   color: #001e39; }
-
-.post-date {
-  font-weight: 400; }
-
-strong {
-  font-weight: normal;
-  font-weight: 600; }
-
-small.posted-on {
-  font-size: 14px;
-  font-style: italic; }
-
-blockquote {
-  font-weight: 300;
-  font-style: italic; }
-
-blockquote > footer {
-  background: none;
-  border-top: 0;
-  font-style: normal;
-  margin-top: 0; }
 
 .front-page-subnav {
   list-style-type: none !important;
@@ -6381,13 +6317,6 @@ ul.list--block-display li a:visited {
 .sitemap ul .children {
   padding-left: 30px; }
 
-.table thead tr th {
-  color: #00549f;
-  font-weight: 600; }
-
-.table tbody tr td {
-  font-weight: 300; }
-
 .breadcrumb {
   background: none;
   font-size: 13px;
@@ -6423,11 +6352,6 @@ ul.list--block-display li a:visited {
     color: #00549f;
     font-weight: 600; } }
 
-/* ------------------------------------------------------
- *
- * Image styles
- *
- * --------------------------------------------------- */
 figure.wp-caption.alignright {
   border: 1px solid #d9d9d9;
   float: right;
@@ -6540,11 +6464,13 @@ figure.wp-caption.aligncenter figcaption.wp-caption-text {
     margin: 0 0 20px;
     width: 100%; } }
 
-/* ------------------------------------------------------
- *
- * Widget styles
- *
- * --------------------------------------------------- */
+.table thead tr th {
+  color: #00549f;
+  font-weight: 600; }
+
+.table tbody tr td {
+  font-weight: 300; }
+
 .widget {
   list-style-type: none; }
 
@@ -6617,11 +6543,6 @@ ul.bloglist {
   border: none !important;
   padding: 20px 0 0; }
 
-/* ------------------------------------------------------
- *
- * Calendar and event styles
- *
- * --------------------------------------------------- */
 #tribe-events-bar {
   margin-bottom: 0; }
 
@@ -6835,11 +6756,6 @@ li.tribe-bar-views-option.tribe-bar-views-option-month.tribe-bar-active,
   .tribe-events-calendar .tribe-events-present.mobile-active div[id*="tribe-events-daynum-"] a {
     background-color: #00549f; } }
 
-/* ------------------------------------------------------
- *
- * Footer styles
- *
- * --------------------------------------------------- */
 footer {
   background: #eeeeee;
   border-top: 1px solid #777777;
@@ -6963,11 +6879,6 @@ footer p img {
     display: block;
     margin: 0; } }
 
-/* ------------------------------------------------------
- *
- * Additional print styles
- *
- * --------------------------------------------------- */
 @media print {
   header,
   footer,

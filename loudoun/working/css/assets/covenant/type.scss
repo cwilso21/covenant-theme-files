@@ -1,0 +1,240 @@
+h1.error-headline {
+     font-family: 'Oswald', 'Helvetica Neue', sans-serif;
+       font-size: 100px;
+  text-transform: uppercase;
+}
+
+.landing-page-headline-row h1 {
+           color: $brand-primary;
+     font-family: $font-family-display;
+       font-size: 45px;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 992px) {
+  .landing-page-headline-row h1 {
+    font-size: 60px;
+  }
+}
+h1 {
+  font-weight: 600;
+  margin: 13px 0;
+}
+h1,h2,h3 {
+  color: $brand-primary;
+}
+article > h2 {
+  margin-top: 0;
+}
+.sidebar h2:first-of-type,
+.sidebar h3:first-of-type {
+  margin-top: 0;
+}
+.news-col h2,
+.intro-col h3 {
+  margin-top: 0;
+}
+h2 + p,
+h3 + p {
+  margin-top: 0;
+}
+h2[id^="post"]:first-of-type {
+  margin-top: 13px;
+}
+h1[id^="post"],
+h2[id^="post"] {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 36px;
+    line-height: 1;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+}
+
+p {
+  font-weight: 300;
+}
+
+.post-date {
+  font-weight: 400;
+}
+strong {
+  font-weight: 600;
+}
+small.posted-on {
+   font-size: 14px;
+  font-style: italic;
+}
+blockquote {
+  font-weight: 300;
+  font-style: italic;
+}
+blockquote > footer {
+  background: none;
+  border-top: 0;
+  font-style: normal;
+  margin-top: 0;
+}
+
+// links
+// =================================
+a {
+  @include transition(all 300ms ease-in-out);
+}
+p a:link,
+p a:visited,
+.tribe-events-list .tribe-events-loop .tribe-events-content a:link,
+.tribe-events-list .tribe-events-loop .tribe-events-content a:visited,
+.tribe-events-address a:link,
+.tribe-events-address a:visited,
+dd.url a:link,
+dd.url a:visited {
+  color: $brand-primary;
+  font-weight: 600;
+}
+p a:active,
+p a:focus,
+p a:hover
+.tribe-events-list .tribe-events-loop .tribe-events-content a:active,
+.tribe-events-list .tribe-events-loop .tribe-events-content a:focus,
+.tribe-events-list .tribe-events-loop .tribe-events-content a:hover,
+.tribe-events-address a:active,
+.tribe-events-address a:focus,
+.tribe-events-address a:hover,
+dd.url a:active,
+dd.url a:focus,
+dd.url a:hover {
+  color: darken($brand-primary, 20%);
+}
+
+// lists
+// =================================
+
+.front-page-subnav {
+  list-style-type: none !important;
+    margin-bottom: 0;
+}
+.front-page-subnav li {
+     font-weight: 300;
+  padding-bottom: 10px;
+}
+.front-page-subnav li:first-of-type {
+  margin-top: 10px;
+}
+.front-page-subnav li:last-of-type {
+  padding-bottom: 0;
+}
+.front-page-subnav a:link,
+.front-page-subnav a:visited {
+    font-size: 24px;
+  font-weight: 600;
+}
+.content-container ul li,
+.introduction-row main ul li {
+  font-weight: 300;
+}
+.content-container p ul,
+.content-container ul,
+.introduction-row main ul {
+  list-style-type: square;
+     padding-left: 20px;
+}
+
+.content-container ul li a:link,
+.content-container ul li a:visited {
+  color: $brand-primary;
+  font-weight: 600;
+}
+.content-container ul li a:active,
+.content-container ul li a:focus,
+.content-container ul li a:hover {
+  color: darken($brand-primary, 20%);
+}
+ul.pagination {
+  padding-left: 0;
+}
+ul.list--multi-col {
+  list-style-type: none;
+  padding-left: 0;
+}
+ul.list--multi-col li a {
+  font-weight: 600;
+}
+ul.list--block-display {
+  list-style-type: none;
+  padding-left: 0;
+}
+ul.list--block-display li {
+  display: block;
+}
+ul.list--block-display li a:link,
+ul.list--block-display li a:visited {
+  font-weight: 600;
+}
+@media screen and (min-width: 767px) {
+  ul.list--multi-col {
+    @include columns(2 20px);
+  }
+}
+.sitemap ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.sitemap ul .children {
+  padding-left: 30px;
+}
+
+// breadcrumbs
+// =================================
+
+.breadcrumb {
+  background: none;
+   font-size: 13px;
+      margin: 0;
+     padding: 20px 0 0 !important;
+}
+
+// button styling
+// =================================
+
+.btn-primary {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.btn-primary:focus,
+.btn-primary:hover {
+  color: #fff;
+}
+.btn-primary + .btn-primary {
+  margin-left: 15px;
+}
+.btn-edit-page {
+  font-size: 13px;
+     margin: 0 0 13px;
+}
+@media screen and (max-width: 1023px) {
+  .btn.btn-primary.dropdown-toggle.btn-lg {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+// sidenav menu styles
+// =================================
+@media screen and (max-width: 1023px) {
+  .sidenav-menu.dropdown-menu {
+    list-style-type: none;
+    padding: 5px 0;
+    width: 100%;
+    margin-top: -20px;
+  }
+  .sidenav-menu.dropdown-menu li a {
+    color: $brand-primary;
+    font-weight: 600;
+  }
+}
