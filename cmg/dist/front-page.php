@@ -101,13 +101,13 @@ get_header(); ?>
           </div>
         </div> <!-- /resources-row -->
       </div> <!-- /resources-container -->
-      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/front-page-assets/covenant-facilities-map.jpg">
+      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo get_bloginfo('stylesheet_directory'); ?>/img/front-page-assets/specialties-background-parallax.jpg">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <div class="well translucent-well">
-                <h2>Our Services</h2>
-                <p>Visit our Services page to learn about all the things we do.</p>
+                <h2>Our Specialties</h2>
+                <p>Visit our <a href="<?php echo get_permalink( get_page_by_path( 'specialties' ) ) ?>">specialties</a> page to learn about all different medical specialties that we have at CMG.</p>
               </div>
             </div>
           </div>

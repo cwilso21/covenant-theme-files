@@ -96,18 +96,19 @@ get_header(); ?>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col feed-col">
             <div class="well">
+              <h3>Facebook Feed</h3>
               <?php echo do_shortcode('[custom-facebook-feed]') ?>
             </div>
           </div>
         </div> <!-- /resources-row -->
       </div> <!-- /resources-container -->
-      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/img/front-page-assets/loudoun-building-img.jpg">
+      <?php $thumbnail = $dynamic_featured_image -> get_image_url( 784, "full-size" ); ?>
+        <div class="jumbotron masthead" data-parallax="scroll" data-image-src="<?php echo $thumbnail; ?>">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <div class="well translucent-well">
-                <h2>Our Hospitals</h2>
-                <p>Visit our <a href="<?php echo get_page_link(18); ?>">hospitals page</a> for more information about each of our acute care facilities, or to find the facility closest to you.</p>
+                <?php the_field('call_to_action') ?>
               </div>
             </div>
           </div>

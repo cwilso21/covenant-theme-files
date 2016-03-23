@@ -6167,8 +6167,8 @@ article > h2 {
 .sidebar h3:first-of-type {
   margin-top: 0; }
 
-.news-col h2,
-.intro-col h3 {
+.intro-col h3,
+.well h3:first-of-type {
   margin-top: 0; }
 
 h2 + p,
@@ -6351,6 +6351,9 @@ ul.list--block-display li a:visited {
   .sidenav-menu.dropdown-menu li a {
     color: #981e32;
     font-weight: 600; } }
+
+a[href$=".pdf"]:after {
+  content: " (PDF)"; }
 
 figure.wp-caption.alignright {
   border: 1px solid #d9d9d9;
