@@ -106,8 +106,7 @@ get_header(); ?>
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <div class="well translucent-well">
-                <h2>Our Specialties</h2>
-                <p>Visit our <a href="<?php echo get_permalink( get_page_by_path( 'specialties' ) ) ?>">specialties</a> page to learn about all different medical specialties that we have at CMG.</p>
+                <?php the_field('call_to_action') ?>
               </div>
             </div>
           </div>
@@ -116,9 +115,7 @@ get_header(); ?>
       <div class="container system-news">
         <div class="row news-intro-text">
           <div class="col-xs-12 news-col">
-            <div class="col-xs-12 news-col">
-              <?php the_field('news_content') ?>
-            </div>
+            <?php the_field('news_content') ?>
           </div>
         </div> <!-- /news-intro-text -->
         <div class="row posts-row">

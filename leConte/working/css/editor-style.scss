@@ -32,6 +32,7 @@ body#tinymce.wp-editor h5,
 body#tinymce.wp-editor h6,
 body#tinymce.wp-editor p,
 body#tinymce.wp-editor ul,
+body#tinymce.wp-editor ol,
 body#tinymce.wp-editor blockquote,
 body#tinymce.wp-editor table,
 body#tinymce.wp-editor th,
@@ -61,25 +62,32 @@ body#tinymce.wp-editor h3,
 body#tinymce.wp-editor h4,
 body#tinymce.wp-editor h5,
 body#tinymce.wp-editor h6 {
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.1;
 }
 
 body#tinymce.wp-editor h1 {
-  font-size: 46px;
+    font-size: 46px;
+  font-weight: 600;
 }
 body#tinymce.wp-editor h2 {
-  font-size: 38px;
+   font-size: 38px;
+  font-weight: 500;
 }
 body#tinymce.wp-editor h3 {
-  font-size: 31px;
+    font-size: 31px;
+  font-weight: 500;
 }
 body#tinymce.wp-editor h4 {
   font-size: 24px;
 }
+body#tinymce.wp-editor h5 {
+  font-size: 18px;
+}
 
 body#tinymce.wp-editor p,
 body#tinymce.wp-editor ul,
+body#tinymce.wp-editor ol,
 body#tinymce.wp-editor blockquote {
     font-size: 18px;
   font-weight: 300;
@@ -89,23 +97,11 @@ body#tinymce.wp-editor blockquote {
   padding: 13px 27px;
   margin: 0 0 27px;
   font-size: 22px;
-  font-style: italic;
   border-left: 5px solid #eee;
 }
 body#tinymce.wp-editor dl.wp-caption.alignright {
   width: 50%;
   float: right;
-}
-body#tinymce.wp-editor .img-half.alignright {
-   float: right;
-  height: auto;
-  margin: 0 0 20px 20px;
-   width: 50%;
-}
-@media screen and (min-width: 768px) {
-  body#tinymce.wp-editor .img-half.alignright {
-    width: 25%;
-  }
 }
 body#tinymce.wp-editor dd {
         color: $text-color;
@@ -117,8 +113,13 @@ body#tinymce.wp-editor ul {
   list-style-type: square;
      padding-left: 20px;
 }
+body#tinymce.wp-editor ol {
+  padding-left: 20px;
+}
 body#tinymce.wp-editor ul li a:link,
 body#tinymce.wp-editor ul li a:visited,
+body#tinymce.wp-editor ol li a:link,
+body#tinymce.wp-editor ol li a:visited,
 body#tinymce.wp-editor ul.list--multi-col li a:link,
 body#tinymce.wp-editor ul.list--multi-col li a:visited,
 body#tinymce.wp-editor p a:link,
@@ -130,6 +131,9 @@ body#tinymce.wp-editor p a:visited, {
 body#tinymce.wp-editor ul li a:active,
 body#tinymce.wp-editor ul li a:focus,
 body#tinymce.wp-editor ul li a:hover,
+body#tinymce.wp-editor ol li a:active,
+body#tinymce.wp-editor ol li a:focus,
+body#tinymce.wp-editor ol li a:hover,
 body#tinymce.wp-editor ul.list--multi-col li a:active,
 body#tinymce.wp-editor ul.list--multi-col li a:focus,
 body#tinymce.wp-editor ul.list--multi-col li a:hover,

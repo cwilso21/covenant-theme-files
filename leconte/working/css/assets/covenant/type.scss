@@ -30,7 +30,8 @@ article > h2 {
   margin-top: 0;
 }
 .news-col h2,
-.intro-col h3 {
+.intro-col h3,
+.main-content .well h3:first-of-type {
   margin-top: 0;
 }
 h2 + p,
@@ -135,25 +136,25 @@ dd.url a:hover {
     font-size: 24px;
   font-weight: 600;
 }
-.content-container ul li,
+.main-content ul li,
 .introduction-row main ul li {
   font-weight: 300;
 }
-.content-container p ul,
-.content-container ul,
+.main-content p ul,
+.main-content ul,
 .introduction-row main ul {
   list-style-type: square;
      padding-left: 20px;
 }
 
-.content-container ul li a:link,
-.content-container ul li a:visited {
+.main-content ul li a:link,
+.main-content ul li a:visited {
   color: $brand-primary;
   font-weight: 600;
 }
-.content-container ul li a:active,
-.content-container ul li a:focus,
-.content-container ul li a:hover {
+.main-content ul li a:active,
+.main-content ul li a:focus,
+.main-content ul li a:hover {
   color: darken($brand-primary, 20%);
 }
 ul.pagination {

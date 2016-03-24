@@ -106,8 +106,7 @@ get_header(); ?>
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <div class="well translucent-well">
-                <h2>Classes &amp; Events</h2>
-                <p>Visit our <a href="<?php echo site_url(); ?>/events">events page</a> for more information about the classes and events held at LeConte Medical Center.</p>
+                <?php the_field('call_to_action') ?>
               </div>
             </div>
           </div>

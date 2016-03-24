@@ -92,9 +92,6 @@ $(document).ready(function () {
   //add scrolling functionality to sidebar anchor links
   $('.sidenav-menu li a[href^="#"').attr('data-scroll','');
 
-  // remove the automatically generated paragraph tags from hero images
-  $('.jumbotron.callout p a').unwrap();
-
   // remove empty paragraph tags
   $('p:empty').remove();
 
