@@ -48,17 +48,16 @@ get_header(); ?>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col services-col">
             <div class="well">
               <h3>Fitness &amp; Sports</h3>
-              <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha.</p>
+              <p>We strive to bring our members safe and effective fitness programs while providing a wide range of different styles and formats to accommodate different fitness levels.</p>
               <ul class="list--block-display">
-                <li><a href="#">Aquatics</a></li>
-                <li><a href="#">Group Fitness</a></li>
-                <li><a href="#">Weight Management</a></li>
-                <li><a href="#">Performance Training</a></li>
-                <li><a href="#">Personal Training</a></li>
-                <li><a href="#">Racquet Sports</a></li>
-                <li><a href="#">Youth Programs</a></li>
+                <li><a href="<?php echo get_permalink(get_page_by_path('aquatics')); ?>">Aquatics</a></li>
+                <li><a href="<?php echo get_permalink(get_page_by_path('group-fitness')); ?>">Group Fitness</a></li>
+                <li><a href="<?php echo get_permalink(get_page_by_path('weight-management')); ?>">Weight Management</a></li>
+                <li><a href="<?php echo get_permalink(get_page_by_path('personal-training')); ?>">Personal Training</a></li>
+                <li><a href="<?php echo get_permalink(get_page_by_path('racquet-sports')); ?>">Racquet Sports</a></li>
+                <li><a href="<?php echo get_permalink(get_page_by_path('amenities/youth-programs')); ?>">Youth Programs</a></li>
               </ul>
-              <p>For a full listing of our services, please visit our <a href="<?php echo get_page_link(14); ?>">services page</a>.</p>
+              <p>For a full listing of our services, please visit our <a href="<?php echo get_permalink( get_page_by_path( 'fitness-sports' ) ) ?>">Fitness &amp; Sports page</a>.</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col account-col">
@@ -67,7 +66,7 @@ get_header(); ?>
               <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha.</p>
               <ul class="front-page-subnav fa-ul">
                 <li>
-                  <a href="https://clients.mindbodyonline.com/classic/home?studioid=28506"><i class="fa-li fa fa-user-md"></i> Class Schedule</a><br>
+                  <a href="https://clients.mindbodyonline.com/classic/home?studioid=28506"><i class="fa-li fa fa-child"></i> Class Schedule</a><br>
                   Browse our group fitness classes.
                 </li>
                 <li>
@@ -75,7 +74,7 @@ get_header(); ?>
                   Programming and special events.
                 </li>
                 <li>
-                  <a href="<?php echo get_page_link(32); ?>"><i class="fa-li fa fa-sign-in"></i> Member Rewards</a><br>
+                  <a href="<?php echo get_page_link(32); ?>"><i class="fa-li fa fa-trophy"></i> Member Rewards</a><br>
                   Benefits for loyal members.
                 </li>
               </ul>
