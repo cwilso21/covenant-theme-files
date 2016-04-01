@@ -106,8 +106,7 @@ get_header(); ?>
           <div class="row">
             <div class="col-xs-12 col-sm-6">
               <div class="well translucent-well">
-                <h2>Our Hospitals</h2>
-                <p>Visit our <a href="<?php echo get_page_link(18); ?>">hospitals page</a> for more information about each of our acute care facilities, or to find the facility closest to you.</p>
+                <?php the_field('call_to_action') ?>
               </div>
             </div>
           </div>
@@ -116,9 +115,7 @@ get_header(); ?>
       <div class="container system-news">
         <div class="row news-intro-text">
           <div class="col-xs-12 news-col">
-            <div class="col-xs-12 news-col">
-              <?php the_field('news_content') ?>
-            </div>
+            <h2><?php echo bloginfo('name'); ?> News</h2>
           </div>
         </div> <!-- /news-intro-text -->
         <div class="row posts-row">

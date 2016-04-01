@@ -6189,7 +6189,9 @@ h2[id^="post"] {
   h2 {
     font-size: 28px; }
   h3 {
-    font-size: 22px; } }
+    font-size: 22px; }
+  h4 {
+    font-size: 18px; } }
 
 p {
   font-weight: 300; }
@@ -6264,6 +6266,7 @@ dd.url a:hover {
   font-weight: 600; }
 
 .main-content ul li,
+.main-content ol li,
 .introduction-row main ul li {
   font-weight: 300; }
 
@@ -6273,11 +6276,19 @@ dd.url a:hover {
   list-style-type: square;
   padding-left: 20px; }
 
+.main-content ol {
+  padding-left: 20px; }
+
+.main-content ol li a:link,
+.main-content ol li a:visited,
 .main-content ul li a:link,
 .main-content ul li a:visited {
   color: #981e32;
   font-weight: 600; }
 
+.main-content ol li a:active,
+.main-content ol li a:focus,
+.main-content ol li a:hover
 .main-content ul li a:active,
 .main-content ul li a:focus,
 .main-content ul li a:hover {
@@ -6351,6 +6362,9 @@ ul.list--block-display li a:visited {
   .sidenav-menu.dropdown-menu li a {
     color: #981e32;
     font-weight: 600; } }
+
+table tr td {
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 a[href$=".pdf"]:after {
   content: " (PDF)"; }

@@ -116,9 +116,7 @@ get_header(); ?>
       <div class="container system-news">
         <div class="row news-intro-text">
           <div class="col-xs-12 news-col">
-            <div class="col-xs-12 news-col">
-              <?php the_field('news_content') ?>
-            </div>
+            <h2><?php echo bloginfo('name'); ?> News</h2>
           </div>
         </div> <!-- /news-intro-text -->
         <div class="row posts-row">

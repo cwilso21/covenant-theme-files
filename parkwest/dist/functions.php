@@ -217,3 +217,18 @@ function add_page_excerpts() {
   add_post_type_support('page', 'excerpt');
 }
 add_action('init', 'add_page_excerpts');
+
+function my_remove_page_template() {
+    global $pagenow;
+    if ( in_array( $pagenow, array( 'post-new.php', 'post.php') ) && get_post_type() == 'page' ) { ?>
+        <script type="text/javascript">
+            (function($){
+                $(document).ready(function(){
+                    $('#page_template option[value="default"]').remove();
+                })
+            })(jQuery)
+        </script>
+    <?php
+    }
+}
+add_action('admin_footer', 'my_remove_page_template', 10);

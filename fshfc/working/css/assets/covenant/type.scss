@@ -29,8 +29,8 @@ article > h2 {
 .sidebar h3:first-of-type {
   margin-top: 0;
 }
-.news-col h2,
-.intro-col h3 {
+.intro-col h3,
+.well h3:first-of-type {
   margin-top: 0;
 }
 h2 + p,
@@ -54,6 +54,9 @@ h2[id^="post"] {
   }
   h3 {
     font-size: 22px;
+  }
+  h4 {
+    font-size: 18px;
   }
 }
 
@@ -135,7 +138,8 @@ dd.url a:hover {
     font-size: 24px;
   font-weight: 600;
 }
-.content-container ul li,
+.main-content ul li,
+.main-content ol li,
 .introduction-row main ul li {
   font-weight: 300;
 }
@@ -145,15 +149,23 @@ dd.url a:hover {
   list-style-type: square;
      padding-left: 20px;
 }
+.main-content ol {
+  padding-left: 20px;
+}
 
-.content-container ul li a:link,
-.content-container ul li a:visited {
+.main-content ol li a:link,
+.main-content ol li a:visited,
+.main-content ul li a:link,
+.main-content ul li a:visited {
   color: $brand-primary;
   font-weight: 600;
 }
-.content-container ul li a:active,
-.content-container ul li a:focus,
-.content-container ul li a:hover {
+.main-content ol li a:active,
+.main-content ol li a:focus,
+.main-content ol li a:hover
+.main-content ul li a:active,
+.main-content ul li a:focus,
+.main-content ul li a:hover {
   color: darken($brand-primary, 20%);
 }
 ul.pagination {
@@ -237,4 +249,17 @@ ul.list--block-display li a:visited {
     color: $brand-primary;
     font-weight: 600;
   }
+}
+
+// table styles
+// =================================
+
+table tr td {
+  font-family: $font-family-sans-serif;
+}
+
+// Add " (PDF)" text after links that go to PDFs
+// =================================
+a[href$=".pdf"]:after {
+  content: " (PDF)";
 }

@@ -17,7 +17,7 @@ body#tinymce.wp-editor dd {
 body#tinymce.wp-editor h1,
 body#tinymce.wp-editor h2,
 body#tinymce.wp-editor h3 {
-  color: #00549f; }
+  color: #981e32; }
 
 body#tinymce.wp-editor h4,
 body#tinymce.wp-editor h5,
@@ -84,7 +84,7 @@ body#tinymce.wp-editor ul.list--multi-col li a:link,
 body#tinymce.wp-editor ul.list--multi-col li a:visited,
 body#tinymce.wp-editor p a:link,
 body#tinymce.wp-editor p a:visited {
-  color: #00549f;
+  color: #981e32;
   font-weight: 600;
   text-decoration: none; }
 
@@ -97,7 +97,7 @@ body#tinymce.wp-editor ul.list--multi-col li a:hover,
 body#tinymce.wp-editor p a:active,
 body#tinymce.wp-editor p a:focus,
 body#tinymce.wp-editor p a:hover {
-  color: #001e39;
+  color: #430d16;
   text-decoration: underline; }
 
 body#tinymce.wp-editor ul.list--multi-col {
@@ -108,7 +108,7 @@ body#tinymce.wp-editor ul.list--multi-col {
   padding-left: 0; }
 
 body#tinymce.wp-editor .table thead tr th {
-  color: #00549f;
+  color: #981e32;
   font-weight: 600; }
 
 body#tinymce.wp-editor .table tbody tr td {

@@ -1,9 +1,10 @@
 <?php
 /**
- * Version    : 1.2.0
+ * Version    : 1.3.0
  * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
- * Created    : January 13, 2015
+ * Created    : November 9, 2015
+ * Updated    : March 31, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -60,8 +61,8 @@
               <span class="toggle-text">menu</span>
             </button> <!-- /navbar-toggle -->
             <a class="navbar-brand" href="<?php echo site_url(); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/pnrc.svg" title="<?php get_bloginfo('name'); ?> logo" alt="<?php $blog_title = get_bloginfo('name'); ?>">
-              <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/pnrc.svg" alt="<?php echo bloginfo( 'name' ); ?>" title="<?php echo bloginfo( 'name' ); ?>">
+              <span class="sr-only"><?php echo bloginfo( 'name' ); ?></span>
             </a>
           </div> <!-- /navbar-header -->
 

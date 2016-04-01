@@ -10,7 +10,7 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         #981e32 !default; // #337ab7
+$brand-primary:         #981e32 !default; // PMS 201
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -26,6 +26,7 @@ body#tinymce.wp-editor h5,
 body#tinymce.wp-editor h6,
 body#tinymce.wp-editor p,
 body#tinymce.wp-editor ul,
+body#tinymce.wp-editor ol,
 body#tinymce.wp-editor blockquote,
 body#tinymce.wp-editor table,
 body#tinymce.wp-editor th,
@@ -60,20 +61,27 @@ body#tinymce.wp-editor h6 {
 }
 
 body#tinymce.wp-editor h1 {
-  font-size: 46px;
+    font-size: 46px;
+  font-weight: 600;
 }
 body#tinymce.wp-editor h2 {
-  font-size: 38px;
+   font-size: 38px;
+  font-weight: 500;
 }
 body#tinymce.wp-editor h3 {
-  font-size: 31px;
+    font-size: 31px;
+  font-weight: 500;
 }
 body#tinymce.wp-editor h4 {
   font-size: 24px;
 }
+body#tinymce.wp-editor h5 {
+  font-size: 18px;
+}
 
 body#tinymce.wp-editor p,
 body#tinymce.wp-editor ul,
+body#tinymce.wp-editor ol,
 body#tinymce.wp-editor blockquote {
     font-size: 18px;
   font-weight: 300;
@@ -99,8 +107,13 @@ body#tinymce.wp-editor ul {
   list-style-type: square;
      padding-left: 20px;
 }
+body#tinymce.wp-editor ol {
+  padding-left: 20px;
+}
 body#tinymce.wp-editor ul li a:link,
 body#tinymce.wp-editor ul li a:visited,
+body#tinymce.wp-editor ol li a:link,
+body#tinymce.wp-editor ol li a:visited,
 body#tinymce.wp-editor ul.list--multi-col li a:link,
 body#tinymce.wp-editor ul.list--multi-col li a:visited,
 body#tinymce.wp-editor p a:link,
@@ -112,6 +125,9 @@ body#tinymce.wp-editor p a:visited, {
 body#tinymce.wp-editor ul li a:active,
 body#tinymce.wp-editor ul li a:focus,
 body#tinymce.wp-editor ul li a:hover,
+body#tinymce.wp-editor ol li a:active,
+body#tinymce.wp-editor ol li a:focus,
+body#tinymce.wp-editor ol li a:hover,
 body#tinymce.wp-editor ul.list--multi-col li a:active,
 body#tinymce.wp-editor ul.list--multi-col li a:focus,
 body#tinymce.wp-editor ul.list--multi-col li a:hover,

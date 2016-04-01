@@ -1,10 +1,10 @@
 <?php
 /**
- * Version    : 1.1.0
+ * Version    : 1.2.0
  * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : December 12, 2015
- * Updated    : December 21, 2015
+ * Updated    : March 31, 2016
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -16,8 +16,8 @@
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 brand-section pull-right">
             <p>
-              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/morristown-hamblen.svg" alt="Covenant Health logo" title="Covenant Health logo"></a><br>
-              &copy; <?php echo date('Y'); ?> Morristown Hamblen Healthcare System<br>
+              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/morristown-hamblen.svg" alt="<?php echo bloginfo( 'name' ); ?>" title="<?php echo bloginfo( 'name' ); ?>"></a><br>
+              &copy; <?php echo date('Y'); ?> <?php echo bloginfo( 'name' ); ?><br>
               908 West Fourth North Street<br>
               Morristown, TN 37814<br>
               (423)492-9000

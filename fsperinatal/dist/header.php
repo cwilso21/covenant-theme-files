@@ -1,11 +1,10 @@
 <?php
 /**
- * Fort Sanders Perinatal Center Theme header file
- * Version    : 1.1.0
+ * Version    : 1.3.0
  * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
- * Created    : December 8, 2015
- * Updated    : March 29, 2015
+ * Created    : November 9, 2015
+ * Updated    : March 31, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -62,7 +61,7 @@
               <span class="toggle-text">menu</span>
             </button> <!-- /navbar-toggle -->
             <a class="navbar-brand" href="<?php echo site_url(); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/fs-perinatal-center.png" title="<?php echo bloginfo('name'); ?>" alt="<?php echo bloginfo('name'); ?>">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/fs-perinatal-center.png" alt="<?php echo bloginfo( 'name' ); ?>" title="<?php echo bloginfo( 'name' ); ?>">
               <span class="sr-only"><?php echo bloginfo( 'name' ); ?></span>
             </a>
           </div> <!-- /navbar-header -->
