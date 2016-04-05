@@ -8,6 +8,18 @@ smoothScroll.init({
   offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
 });
 
+// code for the bmi form
+$('#get-bmi').click(function() {
+  if ($('#height').val() && $('#weight').val()) {
+    var height = $('#height').val();
+    var weight = $('#weight').val();
+    var output = (703 * weight) / Math.pow(height,2);
+    $('#bmi-output').text(Math.ceil(output * 100) / 100);
+  } else {
+    alert("Please fill out all fields in the form.");
+  }
+});
+
 $(document).ready(function () {
 
   // Modernizr polyfill for SVG

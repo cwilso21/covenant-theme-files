@@ -117,6 +117,7 @@ output {
   height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
   padding: $padding-base-vertical $padding-base-horizontal;
   font-size: $font-size-base;
+  font-weight: 300;
   line-height: $line-height-base;
   color: $input-color;
   background-color: $input-bg;
