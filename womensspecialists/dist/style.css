@@ -2267,7 +2267,7 @@ legend {
   margin-bottom: 27px;
   font-size: 27px;
   line-height: inherit;
-  color: #333333;
+  color: #2c76bd;
   border: 0;
   border-bottom: 1px solid #e5e5e5; }
 
@@ -2319,6 +2319,7 @@ output {
   height: 41px;
   padding: 6px 12px;
   font-size: 18px;
+  font-weight: 300;
   line-height: 1.52;
   color: #555555;
   background-color: #fff;

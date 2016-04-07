@@ -48,54 +48,33 @@ get_header(); ?>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col services-col">
             <div class="well">
               <h3>Services Quick Links</h3>
-              <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha.</p>
+              <p>At the Fort Sanders Perinatal Center we provide a comprehensive range of procedures to assess your baby’s condition, rule out or confirm potential medical complications, and help physicians manage or prevent difficulties.</p>
               <ul class="list--block-display">
-                <li><a href="#">Bariatrics</a></li>
-                <li><a href="#">Cancer</a></li>
-                <li><a href="#">Cardiology</a></li>
-                <li><a href="#">Neuroscience &amp; Stroke</a></li>
-                <li><a href="#">Orthopedics</a></li>
-                <li><a href="#">Rehabilitation</a></li>
-                <li><a href="#">Women's Services</a></li>
+                <li><a href="#">Pre-conceptual and Pregnancy Consultations</a></li>
+                <li><a href="<?php echo site_url(); ?>/diagnostics/">Prenatal Diagnostic Services</a></li>
+                <li><a href="<?php echo site_url(); ?>/screeningandtesting/">Prenatal Screening</a></li>
+                <li><a href="<?php echo site_url(); ?>/ultrasound/">High Resolution Ultrasound Services</a></li>
+                <li><a href="<?php echo site_url(); ?>/geneticcounseling/">Genetic Counseling</a></li>
+                <li><a href="<?php echo site_url(); ?>/diabeticcounseling/">Diabetic Counseling</a></li>
               </ul>
-              <p>For a full listing of our services, please visit our <a href="<?php echo get_page_link(19); ?>">services page</a>.</p>
+              <p>For a full listing of our services, please visit our <a href="<?php echo site_url(); ?>/services">services page</a>.</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col account-col">
             <div class="well">
               <h3>Patient Resources</h3>
-              <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha leberkas cupim dolor ea.</p>
-              <ul class="front-page-subnav fa-ul">
-                <li>
-                  <a href="<?php echo get_page_link(21); ?>"><i class="fa-li fa fa-user-md"></i> Physician Directory</a>
-                  <select class="form-control">
-                    <option>Select from the list below</option>
-                    <option value="#">Show all facilities</option>
-                    <option value="#">Claiborne Medical Center</option>
-                    <option value="#">Cumberland Medical Center</option>
-                    <option value="#">Fort Sanders Regional Medical Center</option>
-                    <option value="#">Fort Loudoun Medical Center</option>
-                    <option value="#">LeConte Medical Center</option>
-                    <option value="#">Methodist Medical Center of Oak Ridge</option>
-                    <option value="#">Morristown-Hamblen Health System</option>
-                    <option value="#">Parkwest Medical Center</option>
-                    <option value="#">Roane Medical Center</option>
-                    <option value="#">Thompson Cancer Survival Center</option>
-                  </select>
-                </li>
-                <li>
-                  <a href="<?php echo site_url(); ?>/events"><i class="fa-li fa fa-calendar"></i> Classes and Events</a><br>
-                  Register for a class or event.
-                </li>
-                <li>
-                  <a href="<?php echo get_page_link(33); ?>"><i class="fa-li fa fa-sign-in"></i> Your Account</a><br>
-                  Register for a new account or log into an existing account.
-                </li>
+              <p>We’ve served women in East Tennessee for more than 20 years, delivering more than 20,000 babies. Our main office is located in Knoxville at one of East Tennessee’s premier medical centers, Fort Sanders Regional Medical Center. We have additional offices in Morristown and Sevierville in order to conveniently provide elite high-risk pregnancy care throughout the region.</p>
+              <ul class="list--block-display">
+                <li><a href="<?php echo site_url(); ?>/patientinfo/">Prepare for your visit</a></li>
+                <li><a href="<?php echo site_url(); ?>/locations/">Our locations</a></li>
+                <li><a href="<?php echo site_url(); ?>/contactus/">Contact Us</a></li>
               </ul>
+              <p>Make an appointment today, call (865) 541-2020.</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col feed-col">
             <div class="well">
+              <h3>Facebook Feed</h3>
               <?php echo do_shortcode('[custom-facebook-feed]') ?>
             </div>
           </div>
