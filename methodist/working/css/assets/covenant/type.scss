@@ -263,3 +263,6 @@ table tr td {
 a[href$=".pdf"]:after {
   content: " (PDF)";
 }
+a[href$=".pdf"] img:after {
+  content: "";
+}
