@@ -65,6 +65,7 @@ get_header(); ?>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col feed-col">
             <div class="well">
+              <h3>Facebook Feed</h3>
               <?php echo do_shortcode('[custom-facebook-feed]') ?>
             </div>
           </div>

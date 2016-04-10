@@ -50,15 +50,15 @@ get_header(); ?>
               <h3>Services Quick Links</h3>
               <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha.</p>
               <ul class="list--block-display">
-                <li><a href="#">Bariatrics</a></li>
-                <li><a href="#">Cancer</a></li>
-                <li><a href="#">Cardiology</a></li>
-                <li><a href="#">Neuroscience &amp; Stroke</a></li>
-                <li><a href="#">Orthopedics</a></li>
-                <li><a href="#">Rehabilitation</a></li>
-                <li><a href="#">Women's Services</a></li>
+                <li><a href="http://covdevsrv.com/bariatrics/">Bariatrics</a></li>
+                <li><a href="<?php echo site_url(); ?>/cancer/">Cancer</a></li>
+                <li><a href="<?php echo site_url(); ?>/cardiology/">Cardiology</a></li>
+                <li><a href="<?php echo site_url(); ?>/emergency-services/">Emergency Services</a></li>
+                <li><a href="<?php echo site_url(); ?>/imaging-services/">Imaging Services</a></li>
+                <li><a href="<?php echo site_url(); ?>/therapy-services/">Rehabilitation</a></li>
+                <li><a href="<?php echo site_url(); ?>/womens-services/">Women's Services</a></li>
               </ul>
-              <p>For a full listing of our services, please visit our <a href="<?php echo get_page_link(14); ?>">services page</a>.</p>
+              <p>For a full listing of our services, please visit our <a href="<?php echo site_url(); ?>/services/">services page</a>.</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col account-col">

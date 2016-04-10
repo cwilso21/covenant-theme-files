@@ -65,9 +65,10 @@ get_header(); ?>
               <h3>Patient Resources</h3>
               <p>We’ve served women in East Tennessee for more than 20 years, delivering more than 20,000 babies. Our main office is located in Knoxville at one of East Tennessee’s premier medical centers, Fort Sanders Regional Medical Center. We have additional offices in Morristown and Sevierville in order to conveniently provide elite high-risk pregnancy care throughout the region.</p>
               <ul class="list--block-display">
-                <li><a href="<?php echo site_url(); ?>/patientinfo/">Prepare for your visit</a></li>
-                <li><a href="<?php echo site_url(); ?>/locations/">Our locations</a></li>
                 <li><a href="<?php echo site_url(); ?>/contactus/">Contact Us</a></li>
+                <li><a href="<?php echo site_url(); ?>/locations/">Our locations</a></li>
+                <li><a href="<?php echo site_url(); ?>/patientinfo/">Prepare for your visit</a></li>
+                <li><a href="https://www.medfusion.net/fortsandersperinatalwomensspecialists-23659/portal/#/user/login">Secure Patient Portal</a></li>
               </ul>
               <p>Make an appointment today, call (865) 541-2020.</p>
             </div>

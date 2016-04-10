@@ -47,18 +47,17 @@ get_header(); ?>
         <div class="row resources-row">
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col services-col">
             <div class="well">
-              <h3>Services Quick Links</h3>
-              <p>Bacon ipsum dolor amet velit ut ut cow voluptate ham hock cupim ut eiusmod ribeye fatback lorem. Et leberkas enim fatback ham hock. Irure proident magna beef ribs, flank deserunt short ribs picanha.</p>
+              <h3>Primary Diagnoses</h3>
+              <p>The Patricia Neal Rehabilitation Center’s primary focus is to assist patients in returning to home and restoring optimal physical and cognitive condition. Click one of the links below to learn about the conditions we treat.</p>
               <ul class="list--block-display">
-                <li><a href="#">Bariatrics</a></li>
-                <li><a href="#">Cancer</a></li>
-                <li><a href="#">Cardiology</a></li>
-                <li><a href="#">Neuroscience &amp; Stroke</a></li>
-                <li><a href="#">Orthopedics</a></li>
-                <li><a href="#">Rehabilitation</a></li>
-                <li><a href="#">Women's Services</a></li>
+                <li><a href="<?php echo site_url(); ?>/brain-injury/">Brain Injury</a></li>
+                <li><a href="<?php echo site_url(); ?>/cancer/">Cancer</a></li>
+                <li><a href="<?php echo site_url(); ?>/deconditioning/">Deconditioning</a></li>
+                <li><a href="<?php echo site_url(); ?>/orthopedics/">Orthopedics/Amputees</a></li>
+                <li><a href="<?php echo site_url(); ?>/spinal-cord-injury/">Spinal Cord Injury</a></li>
+                <li><a href="<?php echo site_url(); ?>/stroke/">Stroke</a></li>
               </ul>
-              <p>For a full listing of our services, please visit our <a href="<?php echo get_page_link(14); ?>">services page</a>.</p>
+              <p>For a full listing of the services we provide, please visit our <a href="<?php echo site_url(); ?>/services/">services page</a>.</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col account-col">
@@ -96,6 +95,7 @@ get_header(); ?>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col feed-col">
             <div class="well">
+              <h3>Facebook Feed</h3>
               <?php echo do_shortcode('[custom-facebook-feed]') ?>
             </div>
           </div>

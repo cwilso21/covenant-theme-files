@@ -56,12 +56,13 @@ get_header(); ?>
                 <li><a href="<?php echo site_url(); ?>/robotics/">Robotics/Minimally Invasive Surgery</a></li>
                 <li><a href="<?php echo site_url(); ?>/vaginal-rejuvenation/">Vaginal Rejuvenation</a></li>
               </ul>
+              <p>For more information on how we can help you, visit our <a href="<?php echo site_url(); ?>//services-procedures/">Services &amp; Procedures</a> page.</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col account-col">
             <div class="well">
               <h3>Patient Resources</h3>
-              <p>We the physicians and caregivers of Fort Sanders Women’s Specialists commit to providing a healthcare environment where  Trust, Mutual Respect, and Cooperation is the foundation of our relationship. We will treat you as an individual. We emphasize  old-fashioned personal attention with a focus on modern, leading edge services. </p>
+              <p>We the physicians and caregivers of Fort Sanders Women’s Specialists commit to providing a healthcare environment where  Trust, Mutual Respect, and Cooperation is the foundation of our relationship. We will treat you as an individual.</p>
               <ul class="list--block-display">
                 <li><a href="<?php echo site_url(); ?>/accepted-insurances/">Accepted Insurances</a></li>
                 <li><a href="<?php echo site_url(); ?>/patient-registration-forms/">Patient Forms</a></li>
@@ -69,6 +70,7 @@ get_header(); ?>
                 <li><a href="<?php echo site_url(); ?>/patient-portal/">Patient Portal</a></li>
                 <li><a href="<?php echo site_url(); ?>/locations/">Office Locations</a></li>
               </ul>
+              <p>Call (865) 541-1975 Monday-Friday from 9 am – 4 pm or fill out our <a href="<?php echo site_url(); ?>//contact-us/">contact form</a> at least 24 hours in advance to request an appointment.</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col feed-col">
