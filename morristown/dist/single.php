@@ -1,11 +1,10 @@
 <?php
 /*
- * The template for displaying all single blog posts and attachments
- * Version    : 1.1.1
+ * Version    : 1.2.0
  * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : November 9, 2015
- * Updated    : December 21, 2015
+ * Updated    : April, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -31,6 +30,8 @@ get_header(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class($post->post_name); ?>>
               <?php edit_post_link('<i class="fa fa-pencil"></i> Edit This Page'); ?>
               <?php the_content(); ?>
+              <hr>
+              <p><?php the_tags( '<strong>Tags for this post</strong>:<br> ', ', ', '<br />' ); ?></p>
             </article>
           </main> <!-- /main -->
           <?php get_sidebar(); ?>

@@ -53,8 +53,8 @@ get_header(); ?>
                 <li><a href="http://covdevsrv.com/bariatrics/">Bariatrics</a></li>
                 <li><a href="<?php echo site_url(); ?>/cancer/">Cancer</a></li>
                 <li><a href="<?php echo site_url(); ?>/cardiology/">Cardiology</a></li>
-                <li><a href="<?php echo site_url(); ?>/emergency-services/">Emergency Services</a></li>
                 <li><a href="<?php echo site_url(); ?>/imaging-services/">Imaging Services</a></li>
+                <li><a href="<?php echo site_url(); ?>/primary-care-internal-medicine/">Primary Care &amp; Internal Medicine</a></li>
                 <li><a href="<?php echo site_url(); ?>/therapy-services/">Rehabilitation</a></li>
                 <li><a href="<?php echo site_url(); ?>/womens-services/">Women's Services</a></li>
               </ul>
