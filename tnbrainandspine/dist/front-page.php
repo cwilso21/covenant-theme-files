@@ -102,7 +102,7 @@ get_header(); ?>
           </div>
         </div> <!-- /resources-row -->
       </div> <!-- /resources-container -->
-      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/img/front-page-assets/perinatal-center-lower-masthead.jpg">
+      <div class="jumbotron parallax-window" data-parallax="scroll" data-image-src="<?php echo get_template_directory_uri(); ?>/img/front-page-assets/brown-surgery-lower-masthead.jpg">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 col-sm-6">
