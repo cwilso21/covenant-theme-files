@@ -23,28 +23,21 @@ if ( ! function_exists('custom_theme_features') ) {
 }
 
 // enqueue style and script for covenant health theme
-function add_covenant_scripts() {
+function covenant_scripts() {
+    // deregister the version of jquery that gets loaded with Wordpress
+    wp_deregister_script('jquery');
 
-  // deregister the version of jquery that gets loaded with Wordpress
-  wp_deregister_script('jquery');
+    // register the scrips that need to be loaded with the theme
+    wp_register_script('main', get_template_directory_uri() . '/js/ch-main.js');
 
-  // register the script that need to be loaded with the theme
-  // jquery is included here, along with bootstrap.js, parallax.js
-  // and smoothscroll.js
-  wp_register_script('master-script', get_template_directory_uri() . '/js/ch-main.js', false, false, true);
+    // enqeue the master stylesheet
+    wp_enqueue_style('covenant-main', get_stylesheet_uri());
 
-  // register the master stylesheet for the theme
-  wp_register_style('master-stylesheet', get_stylesheet_uri());
-
-  // enqueue the master scripts
-  wp_enqueue_script('master-script');
-
-  // enqeue the master stylesheet for the theme
-  wp_enqueue_style('master-stylesheet');
-
+    // enqueue the master scripts
+    wp_enqueue_script('main', get_template_directory_uri() . '/js/ch-main.js', false, false, true);
+    // wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
 }
-
-add_action( 'wp_enqueue_scripts', 'add_covenant_scripts' );
+add_action( 'wp_enqueue_scripts', 'covenant_scripts' );
 
 // registration for menus that exist outside of the main page navigation
 if ( ! function_exists( 'covenant_nav_menus' ) ) {
@@ -224,3 +217,183 @@ function add_page_excerpts() {
   add_post_type_support('page', 'excerpt');
 }
 add_action('init', 'add_page_excerpts');
+
+function my_remove_page_template() {
+    global $pagenow;
+    if ( in_array( $pagenow, array( 'post-new.php', 'post.php') ) && get_post_type() == 'page' ) { ?>
+        <script type="text/javascript">
+            (function($){
+                $(document).ready(function(){
+                    $('#page_template option[value="default"]').remove();
+                })
+            })(jQuery)
+        </script>
+    <?php
+    }
+}
+add_action('admin_footer', 'my_remove_page_template', 10);
+
+// function to prevent certain html tags
+// from being stripped out of the editor
+// on save in a multisite installation
+
+function allowed_multisite_tags($multisite_tags) {
+  $multisite_tags['audio'] = array(
+    'autoplay'  => true,
+    'controls'  => true,
+    'loop'      => true,
+    'muted'     => true,
+    'preload'   => true,
+    'src'       => true
+  );
+  $multisite_tags['button'] = array(
+    'autofocus'       => true,
+    'class'           => true,
+    'disabled'        => true,
+    'form'            => true,
+    'formaction'      => true,
+    'formenctype'     => true,
+    'formmethod'      => true,
+    'formnovalidate'  => true,
+    'formtarget'      => true,
+    'name'            => true,
+    'type'            => true,
+    'value'           => true
+  );
+  $multisite_tags['embed'] = array(
+    'class'   => true,
+    'height'  => true,
+    'src'     => true,
+    'style'   => true,
+    'type'    => true,
+    'width'   => true
+  );
+  $multisite_tags['form'] = array(
+    'accept'      => true,
+    'action'      => true,
+    'autcomplete' => true,
+    'method'      => true,
+    'name'        => true,
+    'target'      => true
+  );
+  $multisite_tags['fieldset'] = array(
+    'disabled'  => true,
+    'form'      => true,
+    'name'      => true
+  );
+  $multisite_tags['iframe'] = array(
+    'allowfullscreen' => true,
+    'frameborder'     => true,
+    'height'          => true,
+    'name'            => true,
+    'src'             => true,
+    'style'           => true,
+    'width'           => true
+  );
+  $multisite_tags['input'] = array(
+    'accept'          => true,
+    'autocomplete'    => true,
+    'autofocus'       => true,
+    'class'           => true,
+    'disabled'        => true,
+    'form'            => true,
+    'formaction'      => true,
+    'formenctype'     => true,
+    'formmethod'      => true,
+    'formnovalidate'  => true,
+    'formtarget'      => true,
+    'height'          => true,
+    'id'              => true,
+    'list'            => true,
+    'max'             => true,
+    'maxlength'       => true,
+    'min'             => true,
+    'multiple'        => true,
+    'name'            => true,
+    'pattern'         => true,
+    'placeholder'     => true,
+    'readonly'        => true,
+    'required'        => true,
+    'size'            => true,
+    'src'             => true,
+    'step'            => true,
+    'type'            => true,
+    'value'           => true,
+    'width'           => true
+  );
+  $multisite_tags['label'] = array(
+    'for'   => true,
+    'form'  => true
+  );
+  $multisite_tags['legend'] = array(
+    'align' => true
+  );
+  $multisite_tags['object'] = array(
+    'data'    => true,
+    'form'    => true,
+    'height'  => true,
+    'name'    => true,
+    'type'    => true,
+    'width'   => true,
+  );
+  $multisite_tags['optgroup'] = array(
+    'disabled'  => true,
+    'label'     => true
+  );
+  $multisite_tags['option'] = array(
+    'disabled'  => true,
+    'label'     => true,
+    'selected'  => true,
+    'value'     => true
+  );
+  $multisite_tags['param'] = array(
+    'name'      => true,
+    'type'      => true,
+    'value'     => true,
+    'valuetype' => true
+  );
+  $multisite_tags['select'] = array(
+    'autofocus' => true,
+    'disabled'  => true,
+    'form'      => true,
+    'multiple'  => true,
+    'name'      => true,
+    'required'  => true,
+    'size'      => true
+  );
+  $multisite_tags['script'] = array(
+    'async'   => true,
+    'charset' => true,
+    'defer'   => true,
+    'src'     => true,
+    'type'    => true
+  );
+  $multisite_tags['textarea'] = array(
+    'autofocus'   => true,
+    'cols'        => true,
+    'dirname'     => true,
+    'disabled'    => true,
+    'form'        => true,
+    'maxlength'   => true,
+    'name'        => true,
+    'placeholder' => true,
+    'readonly'    => true,
+    'required'    => true,
+    'rows'        => true,
+    'wrap'        => true
+  );
+  $multisite_tags['video'] = array(
+    'autoplay'  => true,
+    'controls'  => true,
+    'height'    => true,
+    'loop'      => true,
+    'muted'     => true,
+    'poster'    => true,
+    'preload'   => true,
+    'src'       => true,
+    'width'     => true
+  );
+
+  return $multisite_tags;
+}
+add_filter('wp_kses_allowed_html', 'allowed_multisite_tags', 1);

@@ -136,30 +136,59 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 // Bootstrap pagination function
 
-function wp_bs_pagination($pages = '', $range = 4)
+function wp_bs_pagination($pages = '', $range = 4) {
 
-{
+ $showitems = ($range * 2) + 1;
 
-     $showitems = ($range * 2) + 1;
+ global $paged;
 
-     global $paged;
-
-     if(empty($paged)) $paged = 1;
+ if(empty($paged)) $paged = 1;
 
 
-     if($pages == '')
+ if($pages == '')
+
+ {
+
+  global $wp_query;
+
+ $pages = $wp_query->max_num_pages;
+
+     if(!$pages)
 
      {
 
-         global $wp_query;
+         $pages = 1;
 
-     $pages = $wp_query->max_num_pages;
+     }
 
-         if(!$pages)
+ }
+
+
+
+ if(1 != $pages)
+
+ {
+
+    echo '<div class="text-center">';
+    echo '<nav><ul class="pagination"><li class="disabled hidden-xs"><span><span aria-hidden="true">Page '.$paged.' of '.$pages.'</span></span></li>';
+
+     if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link(1)."' aria-label='First'>&laquo;<span class='hidden-xs'> First</span></a></li>";
+
+     if($paged > 1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged - 1)."' aria-label='Previous'>&lsaquo;<span class='hidden-xs'> Previous</span></a></li>";
+
+
+
+     for ($i=1; $i <= $pages; $i++)
+
+     {
+
+         if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
 
          {
 
-             $pages = 1;
+             echo ($paged == $i)? "<li class=\"active\"><span>".$i." <span class=\"sr-only\">(current)</span></span>
+
+</li>":"<li><a href='".get_pagenum_link($i)."'>".$i."</a></li>";
 
          }
 
@@ -167,45 +196,13 @@ function wp_bs_pagination($pages = '', $range = 4)
 
 
 
-     if(1 != $pages)
+     if ($paged < $pages && $showitems < $pages) echo "<li><a href=\"".get_pagenum_link($paged + 1)."\"  aria-label='Next'><span class='hidden-xs'>Next </span>&rsaquo;</a></li>";
 
-     {
+     if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($pages)."' aria-label='Last'><span class='hidden-xs'>Last </span>&raquo;</a></li>";
 
-        echo '<div class="text-center">';
-        echo '<nav><ul class="pagination"><li class="disabled hidden-xs"><span><span aria-hidden="true">Page '.$paged.' of '.$pages.'</span></span></li>';
-
-         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link(1)."' aria-label='First'>&laquo;<span class='hidden-xs'> First</span></a></li>";
-
-         if($paged > 1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged - 1)."' aria-label='Previous'>&lsaquo;<span class='hidden-xs'> Previous</span></a></li>";
-
-
-
-         for ($i=1; $i <= $pages; $i++)
-
-         {
-
-             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
-
-             {
-
-                 echo ($paged == $i)? "<li class=\"active\"><span>".$i." <span class=\"sr-only\">(current)</span></span>
-
-    </li>":"<li><a href='".get_pagenum_link($i)."'>".$i."</a></li>";
-
-             }
-
-         }
-
-
-
-         if ($paged < $pages && $showitems < $pages) echo "<li><a href=\"".get_pagenum_link($paged + 1)."\"  aria-label='Next'><span class='hidden-xs'>Next </span>&rsaquo;</a></li>";
-
-         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($pages)."' aria-label='Last'><span class='hidden-xs'>Last </span>&raquo;</a></li>";
-
-         echo "</ul></nav>";
-         echo "</div>";
-     }
-
+     echo "</ul></nav>";
+     echo "</div>";
+ }
 }
 
 function my_theme_add_editor_styles() {
@@ -219,16 +216,181 @@ function add_page_excerpts() {
 add_action('init', 'add_page_excerpts');
 
 function my_remove_page_template() {
-    global $pagenow;
-    if ( in_array( $pagenow, array( 'post-new.php', 'post.php') ) && get_post_type() == 'page' ) { ?>
-        <script type="text/javascript">
-            (function($){
-                $(document).ready(function(){
-                    $('#page_template option[value="default"]').remove();
-                })
-            })(jQuery)
-        </script>
-    <?php
-    }
+  global $pagenow;
+  if ( in_array( $pagenow, array( 'post-new.php', 'post.php') ) && get_post_type() == 'page' ) { ?>
+    <script type="text/javascript">
+      (function($){
+        $(document).ready(function(){
+          $('#page_template option[value="default"]').remove();
+        })
+      })(jQuery)
+    </script>
+  <?php
+  }
 }
 add_action('admin_footer', 'my_remove_page_template', 10);
+
+// function to prevent certain html tags
+// from being stripped out of the editor
+// on save in a multisite installation
+
+function allowed_multisite_tags($multisite_tags) {
+  $multisite_tags['audio'] = array(
+    'autoplay'  => true,
+    'controls'  => true,
+    'loop'      => true,
+    'muted'     => true,
+    'preload'   => true,
+    'src'       => true
+  );
+  $multisite_tags['button'] = array(
+    'autofocus'       => true,
+    'class'           => true,
+    'disabled'        => true,
+    'form'            => true,
+    'formaction'      => true,
+    'formenctype'     => true,
+    'formmethod'      => true,
+    'formnovalidate'  => true,
+    'formtarget'      => true,
+    'name'            => true,
+    'type'            => true,
+    'value'           => true
+  );
+  $multisite_tags['embed'] = array(
+    'class'   => true,
+    'height'  => true,
+    'src'     => true,
+    'style'   => true,
+    'type'    => true,
+    'width'   => true
+  );
+  $multisite_tags['form'] = array(
+    'accept'      => true,
+    'action'      => true,
+    'autcomplete' => true,
+    'method'      => true,
+    'name'        => true,
+    'target'      => true
+  );
+  $multisite_tags['fieldset'] = array(
+    'disabled'  => true,
+    'form'      => true,
+    'name'      => true
+  );
+  $multisite_tags['iframe'] = array(
+    'allowfullscreen' => true,
+    'frameborder'     => true,
+    'height'          => true,
+    'name'            => true,
+    'src'             => true,
+    'style'           => true,
+    'width'           => true
+  );
+  $multisite_tags['input'] = array(
+    'accept'          => true,
+    'autocomplete'    => true,
+    'autofocus'       => true,
+    'class'           => true,
+    'disabled'        => true,
+    'form'            => true,
+    'formaction'      => true,
+    'formenctype'     => true,
+    'formmethod'      => true,
+    'formnovalidate'  => true,
+    'formtarget'      => true,
+    'height'          => true,
+    'id'              => true,
+    'list'            => true,
+    'max'             => true,
+    'maxlength'       => true,
+    'min'             => true,
+    'multiple'        => true,
+    'name'            => true,
+    'pattern'         => true,
+    'placeholder'     => true,
+    'readonly'        => true,
+    'required'        => true,
+    'size'            => true,
+    'src'             => true,
+    'step'            => true,
+    'type'            => true,
+    'value'           => true,
+    'width'           => true
+  );
+  $multisite_tags['label'] = array(
+    'for'   => true,
+    'form'  => true
+  );
+  $multisite_tags['legend'] = array(
+    'align' => true
+  );
+  $multisite_tags['object'] = array(
+    'data'    => true,
+    'form'    => true,
+    'height'  => true,
+    'name'    => true,
+    'type'    => true,
+    'width'   => true,
+  );
+  $multisite_tags['optgroup'] = array(
+    'disabled'  => true,
+    'label'     => true
+  );
+  $multisite_tags['option'] = array(
+    'disabled'  => true,
+    'label'     => true,
+    'selected'  => true,
+    'value'     => true
+  );
+  $multisite_tags['param'] = array(
+    'name'      => true,
+    'type'      => true,
+    'value'     => true,
+    'valuetype' => true
+  );
+  $multisite_tags['select'] = array(
+    'autofocus' => true,
+    'disabled'  => true,
+    'form'      => true,
+    'multiple'  => true,
+    'name'      => true,
+    'required'  => true,
+    'size'      => true
+  );
+  $multisite_tags['script'] = array(
+    'async'   => true,
+    'charset' => true,
+    'defer'   => true,
+    'src'     => true,
+    'type'    => true
+  );
+  $multisite_tags['textarea'] = array(
+    'autofocus'   => true,
+    'cols'        => true,
+    'dirname'     => true,
+    'disabled'    => true,
+    'form'        => true,
+    'maxlength'   => true,
+    'name'        => true,
+    'placeholder' => true,
+    'readonly'    => true,
+    'required'    => true,
+    'rows'        => true,
+    'wrap'        => true
+  );
+  $multisite_tags['video'] = array(
+    'autoplay'  => true,
+    'controls'  => true,
+    'height'    => true,
+    'loop'      => true,
+    'muted'     => true,
+    'poster'    => true,
+    'preload'   => true,
+    'src'       => true,
+    'width'     => true
+  );
+
+  return $multisite_tags;
+}
+add_filter('wp_kses_allowed_html', 'allowed_multisite_tags', 1);
