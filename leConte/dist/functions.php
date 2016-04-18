@@ -205,6 +205,8 @@ function wp_bs_pagination($pages = '', $range = 4) {
  }
 }
 
+// fix editor styles so that they match the
+// appearance of content styles on the live page
 function my_theme_add_editor_styles() {
     add_editor_style('editor-style.css');
 }
@@ -215,6 +217,9 @@ function add_page_excerpts() {
 }
 add_action('init', 'add_page_excerpts');
 
+// remove certain page templates that,
+// while necessary for the site to function
+// may be confusing for some users
 function my_remove_page_template() {
   global $pagenow;
   if ( in_array( $pagenow, array( 'post-new.php', 'post.php') ) && get_post_type() == 'page' ) { ?>
@@ -233,7 +238,6 @@ add_action('admin_footer', 'my_remove_page_template', 10);
 // function to prevent certain html tags
 // from being stripped out of the editor
 // on save in a multisite installation
-
 function allowed_multisite_tags($multisite_tags) {
   $multisite_tags['audio'] = array(
     'autoplay'  => true,

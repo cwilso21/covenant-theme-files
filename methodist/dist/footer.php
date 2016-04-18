@@ -16,7 +16,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 brand-section pull-right">
             <p>
-              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/methodist.svg" alt="<?php echo bloginfo( 'name' ); ?>" title="<?php echo bloginfo( 'name' ); ?>"></a><br>
+              <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logos/logo.svg" alt="<?php echo bloginfo( 'name' ); ?>" title="<?php echo bloginfo( 'name' ); ?>"></a><br>
               &copy; <?php echo date('Y'); ?> <?php echo bloginfo( 'name' ); ?><br>
               990 Oak Ridge Turnpike<br>
               Oak Ridge, TN 37831-2529<br>

@@ -136,30 +136,59 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 // Bootstrap pagination function
 
-function wp_bs_pagination($pages = '', $range = 4)
+function wp_bs_pagination($pages = '', $range = 4) {
 
-{
+ $showitems = ($range * 2) + 1;
 
-     $showitems = ($range * 2) + 1;
+ global $paged;
 
-     global $paged;
-
-     if(empty($paged)) $paged = 1;
+ if(empty($paged)) $paged = 1;
 
 
-     if($pages == '')
+ if($pages == '')
+
+ {
+
+  global $wp_query;
+
+ $pages = $wp_query->max_num_pages;
+
+     if(!$pages)
 
      {
 
-         global $wp_query;
+         $pages = 1;
 
-     $pages = $wp_query->max_num_pages;
+     }
 
-         if(!$pages)
+ }
+
+
+
+ if(1 != $pages)
+
+ {
+
+    echo '<div class="text-center">';
+    echo '<nav><ul class="pagination"><li class="disabled hidden-xs"><span><span aria-hidden="true">Page '.$paged.' of '.$pages.'</span></span></li>';
+
+     if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link(1)."' aria-label='First'>&laquo;<span class='hidden-xs'> First</span></a></li>";
+
+     if($paged > 1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged - 1)."' aria-label='Previous'>&lsaquo;<span class='hidden-xs'> Previous</span></a></li>";
+
+
+
+     for ($i=1; $i <= $pages; $i++)
+
+     {
+
+         if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
 
          {
 
-             $pages = 1;
+             echo ($paged == $i)? "<li class=\"active\"><span>".$i." <span class=\"sr-only\">(current)</span></span>
+
+</li>":"<li><a href='".get_pagenum_link($i)."'>".$i."</a></li>";
 
          }
 
@@ -167,47 +196,17 @@ function wp_bs_pagination($pages = '', $range = 4)
 
 
 
-     if(1 != $pages)
+     if ($paged < $pages && $showitems < $pages) echo "<li><a href=\"".get_pagenum_link($paged + 1)."\"  aria-label='Next'><span class='hidden-xs'>Next </span>&rsaquo;</a></li>";
 
-     {
+     if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($pages)."' aria-label='Last'><span class='hidden-xs'>Last </span>&raquo;</a></li>";
 
-        echo '<div class="text-center">';
-        echo '<nav><ul class="pagination"><li class="disabled hidden-xs"><span><span aria-hidden="true">Page '.$paged.' of '.$pages.'</span></span></li>';
-
-         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link(1)."' aria-label='First'>&laquo;<span class='hidden-xs'> First</span></a></li>";
-
-         if($paged > 1 && $showitems < $pages) echo "<li><a href='".get_pagenum_link($paged - 1)."' aria-label='Previous'>&lsaquo;<span class='hidden-xs'> Previous</span></a></li>";
-
-
-
-         for ($i=1; $i <= $pages; $i++)
-
-         {
-
-             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
-
-             {
-
-                 echo ($paged == $i)? "<li class=\"active\"><span>".$i." <span class=\"sr-only\">(current)</span></span>
-
-    </li>":"<li><a href='".get_pagenum_link($i)."'>".$i."</a></li>";
-
-             }
-
-         }
-
-
-
-         if ($paged < $pages && $showitems < $pages) echo "<li><a href=\"".get_pagenum_link($paged + 1)."\"  aria-label='Next'><span class='hidden-xs'>Next </span>&rsaquo;</a></li>";
-
-         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<li><a href='".get_pagenum_link($pages)."' aria-label='Last'><span class='hidden-xs'>Last </span>&raquo;</a></li>";
-
-         echo "</ul></nav>";
-         echo "</div>";
-     }
-
+     echo "</ul></nav>";
+     echo "</div>";
+ }
 }
 
+// fix editor styles so that they match the
+// appearance of content styles on the live page
 function my_theme_add_editor_styles() {
     add_editor_style('editor-style.css');
 }
@@ -218,25 +217,27 @@ function add_page_excerpts() {
 }
 add_action('init', 'add_page_excerpts');
 
+// remove certain page templates that,
+// while necessary for the site to function
+// may be confusing for some users
 function my_remove_page_template() {
-    global $pagenow;
-    if ( in_array( $pagenow, array( 'post-new.php', 'post.php') ) && get_post_type() == 'page' ) { ?>
-        <script type="text/javascript">
-            (function($){
-                $(document).ready(function(){
-                    $('#page_template option[value="default"]').remove();
-                })
-            })(jQuery)
-        </script>
-    <?php
-    }
+  global $pagenow;
+  if ( in_array( $pagenow, array( 'post-new.php', 'post.php') ) && get_post_type() == 'page' ) { ?>
+    <script type="text/javascript">
+      (function($){
+        $(document).ready(function(){
+          $('#page_template option[value="default"]').remove();
+        })
+      })(jQuery)
+    </script>
+  <?php
+  }
 }
 add_action('admin_footer', 'my_remove_page_template', 10);
 
 // function to prevent certain html tags
 // from being stripped out of the editor
 // on save in a multisite installation
-
 function allowed_multisite_tags($multisite_tags) {
   $multisite_tags['audio'] = array(
     'autoplay'  => true,

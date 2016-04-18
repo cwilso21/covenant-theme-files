@@ -61,7 +61,7 @@
               <span class="toggle-text">menu</span>
             </button> <!-- /navbar-toggle -->
             <a class="navbar-brand" href="<?php echo site_url(); ?>">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/caet.svg" alt="<?php echo bloginfo( 'name' ); ?>" title="<?php echo bloginfo( 'name' ); ?>">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/logos/logo.svg" alt="<?php echo bloginfo( 'name' ); ?>" title="<?php echo bloginfo( 'name' ); ?>">
               <span class="sr-only"><?php echo bloginfo( 'name' ); ?></span>
             </a>
           </div> <!-- /navbar-header -->
