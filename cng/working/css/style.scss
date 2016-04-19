@@ -1,0 +1,50 @@
+/*
+ * Theme Name: Cumberland Neurology Group
+ * Description: Bootstrap-based theme for covenanthealth.com/cng
+ * Author: John Galyon
+ * Author URI: http://www.covenanthealth.com/
+ * Version: 1.1.6
+ *
+ *Twitter Bootstrap v3.3.5 used under MIT license, h/t @fat & @mdo; Bourbon Mixin Library used under MIT license, h/t @thoughtbot.
+ */
+
+@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600,300italic,400italic,500italic,600italic|Oswald:700);
+
+// import bootstrap
+@import "assets/bootstrap/_bootstrap";
+
+// import bourbon
+@import "bourbon";
+
+// styles that don't fit anywhere else
+@import "assets/covenant/general";
+
+// top links
+@import "assets/covenant/top-links";
+
+// top links
+@import "assets/covenant/navbar";
+
+// jumbotrons
+@import "assets/covenant/jumbotrons";
+
+// type
+@import "assets/covenant/type";
+
+// images
+@import "assets/covenant/images";
+
+// tables
+@import "assets/covenant/tables";
+
+// widgets
+@import "assets/covenant/widgets";
+
+// calendar
+@import "assets/covenant/calendar";
+
+// footer
+@import "assets/covenant/footer";
+
+// print styles
+@import "assets/covenant/print";

@@ -1,11 +1,11 @@
 <?php
 /*
  * Template Name: Front-Page Template
- * Version    : 1.0.1
+ * Version    : 1.0.2
  * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : December 7, 2015
- * Updated    : December 21, 2015
+ * Updated    : April 18, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -109,7 +109,7 @@ get_header(); ?>
             <article class="well">
               <h2 class="sr-only"><?php the_title_attribute(); ?></h2>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail('post-thumbnail', array( 'class' => "img-responsive post-thumbnail-img")); ?></a>
-              <?php the_excerpt(); ?>
+              <p><?php echo excerpt(20); ?></p>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read more</a>
             </article>
           </div>

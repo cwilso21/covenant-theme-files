@@ -6,7 +6,8 @@
 @media print {
   header,
   footer,
-  .post-edit-link {
+  .post-edit-link,
+  .sidebar-content.column-right {
     display: none;
   }
 }

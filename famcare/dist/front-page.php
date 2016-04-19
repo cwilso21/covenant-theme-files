@@ -1,11 +1,11 @@
 <?php
 /*
- * Template Name: Front-Page Template
- * Version    : 1.0.1
+ * Template Name: Front Page Template
+ * Version    : 1.0.2
  * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
- * Created    : December 7, 2015
- * Updated    : December 21, 2015
+ * Created    : November 9, 2015
+ * Updated    : April 18, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -48,27 +48,26 @@ get_header(); ?>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col services-col">
             <div class="well">
               <h3>Services Quick Links</h3>
-              <p>All of our physicians and caregivers are available to provide annual exams, counseling on contraception, and recommendations about ongoing health maintenance. We also have experts in abnormal pap smears, hormone replacement options, painless in-office procedures, and minimally invasive surgery.</p>
+              <p>Our practice is a multi-physician group of reputable Family Practice doctors who have served the Knoxville area for more than 20 years. We provide complete and personalized patient care that includes preventive medicine and chronic disease management. Learn more about our services below.</p>
               <ul class="list--block-display">
-                <li><a href="<?php echo site_url(); ?>/bioidenticalhormones/">BioIdentical Hormones</a></li>
-                <li><a href="<?php echo site_url(); ?>/gynecology/">Gynecology</a></li>
-                <li><a href="<?php echo site_url(); ?>/obstetrics/">Obstetrics</a></li>
-                <li><a href="<?php echo site_url(); ?>/robotics/">Robotics/Minimally Invasive Surgery</a></li>
-                <li><a href="<?php echo site_url(); ?>/vaginal-rejuvenation/">Vaginal Rejuvenation</a></li>
+                <li><a href="<?php echo site_url(); ?>/services-procedures/#walk-in-clinic">Walk-in Clinic</a></li>
+                <li><a href="<?php echo site_url(); ?>/medcare-specialists/">MedCare Specialists</a></li>
+                <li><a href="<?php echo site_url(); ?>/medcare-specialists/">DOT Physicals</a></li>
+                <li><a href="http://www.veinspecialists.net/">Vein Specialists</a></li>
+                <li><a href="http://ptknox.com/new_services.shtml">Physical Therapy</a></li>
               </ul>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col account-col">
             <div class="well">
               <h3>Patient Resources</h3>
-              <p>We the physicians and caregivers of Fort Sanders Women’s Specialists commit to providing a healthcare environment where  Trust, Mutual Respect, and Cooperation is the foundation of our relationship. We will treat you as an individual. We emphasize  old-fashioned personal attention with a focus on modern, leading edge services. </p>
+              <p>We believe excellent care is the only kind of care. That's why we commit to excellence – every patient, every time. We strive to achieve the highest level of quality service in primary care, and look forward to providing excellent care to you and your family.</p>
               <ul class="list--block-display">
-                <li><a href="<?php echo site_url(); ?>/accepted-insurances/">Accepted Insurances</a></li>
-                <li><a href="<?php echo site_url(); ?>/patient-registration-forms/">Patient Forms</a></li>
-                <li><a href="<?php echo site_url(); ?>/frequently-asked-questions/">Frequently Asked Questions</a></li>
-                <li><a href="<?php echo site_url(); ?>/patient-portal/">Patient Portal</a></li>
-                <li><a href="<?php echo site_url(); ?>/locations/">Office Locations</a></li>
+                <li><a href="http://www.covenanthealth.com/insuranceparticipation">Accepted Insurances</a></li>
+                <li><a href="<?php echo site_url(); ?>/hours-directions/">Office Locations</a></li>
+                <li><a href="<?php echo site_url(); ?>/for-patients/">Patient Forms</a></li>
               </ul>
+              <p>Already a patient? Please let us know how we are doing by and completing a <a href="http://www.surveymonkey.com/r/cmgptsatisfaction">quick survey</a>.</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col feed-col">
@@ -107,7 +106,7 @@ get_header(); ?>
             <article class="well">
               <h2 class="sr-only"><?php the_title_attribute(); ?></h2>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail('post-thumbnail', array( 'class' => "img-responsive post-thumbnail-img")); ?></a>
-              <?php the_excerpt(); ?>
+              <p><?php echo excerpt(20); ?></p>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read more</a>
             </article>
           </div>

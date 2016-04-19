@@ -7,6 +7,7 @@ body#tinymce.wp-editor h5,
 body#tinymce.wp-editor h6,
 body#tinymce.wp-editor p,
 body#tinymce.wp-editor ul,
+body#tinymce.wp-editor ol,
 body#tinymce.wp-editor blockquote,
 body#tinymce.wp-editor table,
 body#tinymce.wp-editor th,
@@ -51,8 +52,12 @@ body#tinymce.wp-editor h3 {
 body#tinymce.wp-editor h4 {
   font-size: 24px; }
 
+body#tinymce.wp-editor h5 {
+  font-size: 18px; }
+
 body#tinymce.wp-editor p,
 body#tinymce.wp-editor ul,
+body#tinymce.wp-editor ol,
 body#tinymce.wp-editor blockquote {
   font-size: 18px;
   font-weight: 300;
@@ -78,8 +83,13 @@ body#tinymce.wp-editor ul {
   list-style-type: square;
   padding-left: 20px; }
 
+body#tinymce.wp-editor ol {
+  padding-left: 20px; }
+
 body#tinymce.wp-editor ul li a:link,
 body#tinymce.wp-editor ul li a:visited,
+body#tinymce.wp-editor ol li a:link,
+body#tinymce.wp-editor ol li a:visited,
 body#tinymce.wp-editor ul.list--multi-col li a:link,
 body#tinymce.wp-editor ul.list--multi-col li a:visited,
 body#tinymce.wp-editor p a:link,
@@ -91,6 +101,9 @@ body#tinymce.wp-editor p a:visited {
 body#tinymce.wp-editor ul li a:active,
 body#tinymce.wp-editor ul li a:focus,
 body#tinymce.wp-editor ul li a:hover,
+body#tinymce.wp-editor ol li a:active,
+body#tinymce.wp-editor ol li a:focus,
+body#tinymce.wp-editor ol li a:hover,
 body#tinymce.wp-editor ul.list--multi-col li a:active,
 body#tinymce.wp-editor ul.list--multi-col li a:focus,
 body#tinymce.wp-editor ul.list--multi-col li a:hover,

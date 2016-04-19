@@ -66,6 +66,7 @@ p {
 
 .post-date {
   font-weight: 400;
+  padding-top: 5px;
 }
 strong {
   font-weight: 600;
@@ -202,6 +203,17 @@ ul.list--block-display li a:visited {
   padding-left: 30px;
 }
 
+.widget.widget_recent_entries ul li {
+  margin-bottom: 10px;
+}
+.widget.widget_recent_entries ul li:last-of-type {
+  margin-bottom: 0;
+}
+.widget.widget_recent_entries ul li a {
+  font-size: $font-size-base;
+  font-weight: 600;
+}
+
 // breadcrumbs
 // =================================
 
@@ -262,7 +274,4 @@ table tr td {
 // =================================
 a[href$=".pdf"]:after {
   content: " (PDF)";
-}
-a[href$=".pdf"] img:after {
-  content: "";
 }

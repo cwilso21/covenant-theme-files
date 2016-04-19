@@ -98,39 +98,25 @@ function remove_width_attribute( $html )
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
-function wp_trim_all_excerpt($text) {
-// Creates an excerpt if needed; and shortens the manual excerpt as well
-global $post;
-  $raw_excerpt = $text;
-  if ( '' == $text ) {
-    $text = get_the_content('');
-    $text = strip_shortcodes( $text );
-    $text = apply_filters('the_content', $text);
-    $text = str_replace(']]>', ']]&gt;', $text);
-  }
 
-$text = strip_tags($text);
-$excerpt_length = apply_filters('excerpt_length', 55);
-$excerpt_more = apply_filters('excerpt_more', '...');
-$text = wp_trim_words( $text, $excerpt_length, $excerpt_more ); //since wp3.3
-/*$words = explode(' ', $text, $excerpt_length + 1);
-  if (count($words)> $excerpt_length) {
-    array_pop($words);
-    $text = implode(' ', $words);
-    $text = $text . $excerpt_more;
+// function to automatically trim the excerpt length
+// to acceptable limits on the front page
+function excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).'...';
   } else {
-    $text = implode(' ', $words);
+    $excerpt = implode(" ",$excerpt);
   }
-return $text;*/
-return apply_filters('wp_trim_excerpt', $text, $raw_excerpt); //since wp3.3
+  $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+  return $excerpt;
 }
 
-remove_filter('get_the_excerpt', 'wp_trim_excerpt');
-add_filter('get_the_excerpt', 'wp_trim_all_excerpt');
 
 // set the custom excerpt length
 function custom_excerpt_length( $length ) {
-  return 30;
+  return 55;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -139,35 +125,24 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function wp_bs_pagination($pages = '', $range = 4) {
 
  $showitems = ($range * 2) + 1;
-
  global $paged;
 
  if(empty($paged)) $paged = 1;
 
-
- if($pages == '')
-
- {
+ if($pages == '') {
 
   global $wp_query;
 
- $pages = $wp_query->max_num_pages;
+  $pages = $wp_query->max_num_pages;
 
-     if(!$pages)
+  if(!$pages) {
 
-     {
+    $pages = 1;
+  }
 
-         $pages = 1;
+}
 
-     }
-
- }
-
-
-
- if(1 != $pages)
-
- {
+ if(1 != $pages) {
 
     echo '<div class="text-center">';
     echo '<nav><ul class="pagination"><li class="disabled hidden-xs"><span><span aria-hidden="true">Page '.$paged.' of '.$pages.'</span></span></li>';

@@ -6206,7 +6206,8 @@ p {
   font-weight: 300; }
 
 .post-date {
-  font-weight: 400; }
+  font-weight: 400;
+  padding-top: 5px; }
 
 strong {
   font-weight: 600; }
@@ -6336,6 +6337,16 @@ ul.list--block-display li a:visited {
 
 .sitemap ul .children {
   padding-left: 30px; }
+
+.widget.widget_recent_entries ul li {
+  margin-bottom: 10px; }
+
+.widget.widget_recent_entries ul li:last-of-type {
+  margin-bottom: 0; }
+
+.widget.widget_recent_entries ul li a {
+  font-size: 18px;
+  font-weight: 600; }
 
 .breadcrumb {
   background: none;
@@ -6908,5 +6919,6 @@ footer p img {
 @media print {
   header,
   footer,
-  .post-edit-link {
+  .post-edit-link,
+  .sidebar-content.column-right {
     display: none; } }

@@ -1,11 +1,11 @@
 <?php
 /*
- * Template Name: Front-Page Template
- * Version    : 1.0.1
+ * Template Name: Front Page Template
+ * Version    : 1.0.2
  * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
- * Created    : December 7, 2015
- * Updated    : December 21, 2015
+ * Created    : November 9, 2015
+ * Updated    : April 18, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
@@ -50,12 +50,12 @@ get_header(); ?>
               <h3>Services Quick Links</h3>
               <p>Cardiothoracic surgery is the field of medicine involved in the surgical treatment of organs inside the thorax (chest). This may include treatment of conditions in the heart, lungs and esophagus. Learn more about our services below.</p>
               <ul class="list--block-display">
-                <li><a href="<?php echo site_url(); ?>/aorticsurgery/">Aortic Surgery</a></li>
-                <li><a href="<?php echo site_url(); ?>/cardiacsurgery/">Cardiac Surgery</a></li>
-                <li><a href="<?php echo site_url(); ?>/esophagealsurgery/">Esophageal Surgery</a></li>
-                <li><a href="<?php echo site_url(); ?>/minimallyinvasivesurgery/">Minimally Invasive Surgery</a></li>
-                <li><a href="<?php echo site_url(); ?>/TAVR/">Transcatheter Aortic Valve Replacement (TAVR)</a></li>
-                <li><a href="<?php echo site_url(); ?>/thoracicsurgery/">Thoracic Surgery</a></li>
+                <li><a href="<?php echo site_url(); ?>/aortic-surgery/">Aortic Surgery</a></li>
+                <li><a href="<?php echo site_url(); ?>/cardiac-surgery/">Cardiac Surgery</a></li>
+                <li><a href="<?php echo site_url(); ?>/endovascular-surgery/">Endovascular Surgery</a></li>
+                <li><a href="<?php echo site_url(); ?>/minimally-invasive-surgery/">Minimally Invasive Surgery</a></li>
+                <li><a href="<?php echo site_url(); ?>/tavr/">Transcatheter Aortic Valve Replacement (TAVR)</a></li>
+                <li><a href="<?php echo site_url(); ?>/thoracic-surgery/">Thoracic Surgery</a></li>
               </ul>
             </div>
           </div>
@@ -64,10 +64,10 @@ get_header(); ?>
               <h3>Patient Resources</h3>
               <p>Whether you were referred to us by your primary care physician, cardiologist or pulmonologist, referral to a cardiothoracic surgeon is an emotional experience for you and your family. Learn more below.</p>
               <ul class="list--block-display">
-                <li><a href="<?php echo site_url(); ?>/insurancequestions/">Accepted Insurances</a></li>
-                <li><a href="<?php echo site_url(); ?>/frequently-asked-questions/">Frequently Asked Questions</a></li>
+                <li><a href="http://www.covenanthealth.com/insuranceparticipation">Accepted Insurances</a></li>
+                <li><a href="<?php echo site_url(); ?>/additional-resources/">Additional Resources</a></li>
                 <li><a href="<?php echo site_url(); ?>/locations/">Locations</a></li>
-                <li><a href="<?php echo site_url(); ?>/downloadsandforms/">Patient Forms</a></li>
+                <li><a href="<?php echo site_url(); ?>/downloads-forms/">Patient Forms</a></li>
               </ul>
               <h4>Already a patient?</h4>
               <p>Please let us know how we are doing by and completing a <a href="http://www.surveymonkey.com/r/cmgptsatisfaction">quick survey</a>.</p>
@@ -109,7 +109,7 @@ get_header(); ?>
             <article class="well">
               <h2 class="sr-only"><?php the_title_attribute(); ?></h2>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_post_thumbnail('post-thumbnail', array( 'class' => "img-responsive post-thumbnail-img")); ?></a>
-              <?php the_excerpt(); ?>
+              <p><?php echo excerpt(20); ?></p>
               <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">Read more</a>
             </article>
           </div>
