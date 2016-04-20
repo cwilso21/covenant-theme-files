@@ -8,15 +8,21 @@ smoothScroll.init({
   offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
 });
 
-// code for the bmi form
 $('#get-bmi').click(function() {
-  if ($('#height').val() && $('#weight').val()) {
-    var height = $('#height').val();
-    var weight = $('#weight').val();
+  if ($('#height-ft').val() && $('#height-in').val() && $('#weight').val()) {
+    // if all the fields are populated store each of those numbers in variables
+    var height = Number($('#height-ft').val()) * 12 + Number($('#height-in').val());
+    var weight = Number($('#weight').val());
+
+    // do math and store the output as a new variable
     var output = (703 * weight) / Math.pow(height,2);
-    $('#bmi-output').text(Math.ceil(output * 100) / 100);
+
+    // output it to the page
+    $('#bmi-output').text(Math.round(output * 100) / 100);
   } else {
-    alert("Please fill out all fields in the form.");
+    // if any of the fields are missing information, kick the form back
+    alert("Please fill out all the fields in the form, then submit your information again.");
+    return false;
   }
 });
 
@@ -73,6 +79,13 @@ $(document).ready(function () {
     $('.row .col-xs-6.col-sm-3:nth-of-type(2n)').after('<div class="clearfix visible-xs-block"></div>');
   }
 
+  // if the screen width is less than 767px
+  // remove the data-img-src attribute from the
+  // top masthead
+
+  if ((mqxs.matches) && $('.jumbotron.masthead').length) {
+    $('.jumbotron.masthead').removeAttr('data-image-src');
+  }
   // if the screen width is less than 767px and
   // the sidebar has a child div with a classname
   // of "sidenav-menu" convert the sidenav menu
@@ -101,6 +114,9 @@ $(document).ready(function () {
   // so that css can do it's job
   $('.wp-caption').removeAttr('style');
 
+  //add scrolling functionality to sidebar anchor links
+  $('.sidenav-menu li a[href^="#"').attr('data-scroll','');
+
   // remove the automatically generated paragraph tags from hero images
   $('.jumbotron.callout p a').unwrap();
 
@@ -109,15 +125,6 @@ $(document).ready(function () {
 
   // remove last hr from blog archive pages
   $('.text-center').prev('hr').css('display','none');
-
-  // remove last hr element on a page
-  // if it appears after a link
-  // $('.main-content a ~ hr:last-of-type').remove();
-
-  // add 'data scroll' selector to anchor links
-  $('a[href^="#"]').each(function() {
-    $(this).attr('data-scroll', '');
-  });
 
   // collect everything that might contain embedded content
   var $allIframes = $("iframe[src*='//player.vimeo.com'], iframe[src*='//www.youtube.com'], iframe[src*='//www.google.com/maps'], object, embed");

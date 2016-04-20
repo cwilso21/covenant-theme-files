@@ -6271,11 +6271,13 @@ dd.url a:hover {
 
 .main-content ul li,
 .main-content ol li,
+.content-sidebar .well ul li,
 .introduction-row main ul li {
   font-weight: 300; }
 
 .main-content p ul,
 .main-content ul,
+.content-sidebar .well ul,
 .introduction-row main ul {
   list-style-type: square;
   padding-left: 20px; }
@@ -6286,7 +6288,9 @@ dd.url a:hover {
 .main-content ol li a:link,
 .main-content ol li a:visited,
 .main-content ul li a:link,
-.main-content ul li a:visited {
+.main-content ul li a:visited,
+.content-sidebar .well ul li a:link,
+.content-sidebar .well ul li a:visited {
   color: #2c76bd;
   font-weight: 600; }
 
@@ -6295,7 +6299,10 @@ dd.url a:hover {
 .main-content ol li a:hover
 .main-content ul li a:active,
 .main-content ul li a:focus,
-.main-content ul li a:hover {
+.main-content ul li a:hover,
+.content-sidebar .well ul li a:active,
+.content-sidebar .well ul li a:focus,
+.content-sidebar .well ul li a:hover {
   color: #19426a; }
 
 ul.pagination {
@@ -6310,7 +6317,11 @@ ul.list--multi-col li a {
 
 ul.list--block-display {
   list-style-type: none;
+  margin-bottom: 0;
   padding-left: 0; }
+
+ul.list--block-display ~ p {
+  margin: 14px 0 0; }
 
 ul.list--block-display li {
   display: block; }

@@ -51,7 +51,7 @@ $(document).ready(function () {
 
   // add sidenav-menu functionality to navigation
   // sidebars that don't have it already
-  if ($('.nav-sidebar')) {
+  if ($('.nav-sidebar') && !($('.nav-sidebar .well'))) {
     if (!($('.nav.sidenav-menu').length)) {
       $('.nav-sidebar ul').addClass('nav sidenav-menu');
     }

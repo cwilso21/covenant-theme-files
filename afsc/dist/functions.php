@@ -373,3 +373,12 @@ function allowed_multisite_tags($multisite_tags) {
   return $multisite_tags;
 }
 add_filter('wp_kses_allowed_html', 'allowed_multisite_tags', 1);
+
+// function to restore image titles to
+// images posted to live pages
+function restore_image_title( $html, $id ) {
+  $attachment = get_post($id);
+  $mytitle = $attachment->post_title;
+  return str_replace('<img', '<img title="' . $mytitle . '" '  , $html);
+}
+add_filter( 'media_send_to_editor', 'restore_image_title', 15, 2 );

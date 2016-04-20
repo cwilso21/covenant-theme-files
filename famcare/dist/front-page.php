@@ -67,7 +67,7 @@ get_header(); ?>
                 <li><a href="<?php echo site_url(); ?>/hours-directions/">Office Locations</a></li>
                 <li><a href="<?php echo site_url(); ?>/for-patients/">Patient Forms</a></li>
               </ul>
-              <p>Already a patient? Please let us know how we are doing by and completing a <a href="http://www.surveymonkey.com/r/cmgptsatisfaction">quick survey</a>.</p>
+              <p>Already a patient? Please let us know how we are doing by completing a <a href="http://www.surveymonkey.com/r/cmgptsatisfaction">quick survey</a>.</p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col feed-col">

@@ -1,15 +1,16 @@
 <?php
 /*
  * Template Name: Two Column Page With Content
- * Version    : 1.1.3
+ * Version    : 1.1.5
  * Author     : John Galyon
  * Author URI : http://www.covenanthealth.com
  * Created    : November 9, 2015
- * Updated    : December 21, 2015
+ * Updated    : April 19, 2015
  * @package WordPress
  * @subpackage Covenant_Health
 */
 get_header(); ?>
+
       <div class="container content-container">
         <div class="row breadcrumb-row">
           <div class="col-xs-12 breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
@@ -32,7 +33,7 @@ get_header(); ?>
             </article>
           </main> <!-- /main -->
           <aside class="col-xs-12 col-sm-12 col-md-4 col-lg-4 sidebar-content column-right" role="complementary">
-            <div class="sidebar nav-sidebar">
+            <div class="sidebar content-sidebar">
               <div class="well">
                 <?php the_field('sidebar_content') ?>
               </div>

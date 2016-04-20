@@ -48,26 +48,27 @@ get_header(); ?>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col services-col">
             <div class="well">
               <h3>Services Quick Links</h3>
-              <p>All of our physicians and caregivers are available to provide annual exams, counseling on contraception, and recommendations about ongoing health maintenance. We also have experts in abnormal pap smears, hormone replacement options, painless in-office procedures, and minimally invasive surgery.</p>
+              <p>Gastroenterology is the field of medicine devoted to the study, diagnosis and treatment of disorders of the digestive system. This may include treatment of conditions in the esophagus, stomach, small and large intestines, rectum, liver, gallbladder, or pancreas. Learn more about our services below.</p>
               <ul class="list--block-display">
-                <li><a href="<?php echo site_url(); ?>/bioidenticalhormones/">BioIdentical Hormones</a></li>
-                <li><a href="<?php echo site_url(); ?>/gynecology/">Gynecology</a></li>
-                <li><a href="<?php echo site_url(); ?>/obstetrics/">Obstetrics</a></li>
-                <li><a href="<?php echo site_url(); ?>/robotics/">Robotics/Minimally Invasive Surgery</a></li>
-                <li><a href="<?php echo site_url(); ?>/vaginal-rejuvenation/">Vaginal Rejuvenation</a></li>
+                <li><a href="<?php echo site_url() ?>/colonoscopy/">Colonoscopy</a></li>
+                <li><a href="<?php echo site_url() ?>/colon-cancer-screening/">Colon Cancer Screening</a></li>
+                <li><a href="<?php echo site_url() ?>/esophageal-acid-ph-testing/">Esophageal Acid (pH) Testing</a></li>
+                <li><a href="<?php echo site_url() ?>/internal-hemorrhoid-banding/">Internal Hemorrhoid Banding</a></li>
+                <li><a href="<?php echo site_url() ?>/small-bowel-enteroscopy/">Small Bowel Enteroscopy</a></li>
+                <li><a href="<?php echo site_url() ?>/upper-endoscopy/">Upper Endoscopy</a></li>
               </ul>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 intro-col account-col">
             <div class="well">
               <h3>Patient Resources</h3>
-              <p>We the physicians and caregivers of Fort Sanders Women’s Specialists commit to providing a healthcare environment where  Trust, Mutual Respect, and Cooperation is the foundation of our relationship. We will treat you as an individual. We emphasize  old-fashioned personal attention with a focus on modern, leading edge services. </p>
+              <p>Over the last 37 years, we have served the Oak Ridge area and delivered quality care for digestive disorders. From simple problems like hemorrhoids and acid reflux to complex issues like celiac disease and GI cancers, we can help.  The physicians and staff take pride in the exceptional care delivered in a safe, comfortable, and caring environment.</p>
               <ul class="list--block-display">
-                <li><a href="<?php echo site_url(); ?>/accepted-insurances/">Accepted Insurances</a></li>
-                <li><a href="<?php echo site_url(); ?>/patient-registration-forms/">Patient Forms</a></li>
-                <li><a href="<?php echo site_url(); ?>/frequently-asked-questions/">Frequently Asked Questions</a></li>
-                <li><a href="<?php echo site_url(); ?>/patient-portal/">Patient Portal</a></li>
-                <li><a href="<?php echo site_url(); ?>/locations/">Office Locations</a></li>
+                <li><a href="//www.covenanthealth.com/cmginsurance">Accepted Insurances</a></li>
+                <li><a href="<?php echo site_url(); ?>/hours-directions/">Hours &amp; Directions</a></li>
+                <li><a href="<?php echo site_url(); ?>/for-patients/">Patient Information</a></li>
+                <li><a href="<?php echo site_url(); ?>/patient-privacy/">Patient Privacy Notice</a></li>
+                <li><a href="<?php echo site_url(); ?>/referrals/">Referrals</a></li>
               </ul>
             </div>
           </div>
